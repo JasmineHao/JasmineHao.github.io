@@ -1,0 +1,5 @@
+I"�
+<p>In dynamic decision problems, agents can make both discrete and continuous choices at the same time. 
+The existence of both types of choices is natural under some circumstances. For example, empirical industrial organization literature examines firms’ entry and investment decisions. 
+The decision of entry is discrete, and the decision of investment is continuous.  \citet{Blevins2010} provides identification results of the class of dynamic discrete-and-continuous-choice models. We show the discrete-and-continuous model is equivalent to the agents’ making decisions that map every possible state to an outcome simultaneously.  With the property, the agent’s future value can be represented as the discounted payoff from repeatedly taking an arbitrary action.  The estimation technique is the first to account for the Dynamic decision models with discrete-continuous-mix choices.</p>
+:ET

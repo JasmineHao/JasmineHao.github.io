@@ -1,0 +1,7 @@
+I"�
+<p>This project uses administrative vehicle registration data from one of China’s major cities to identify consumers’ preference over household vehicles’ gas-efficient attributes over time. 
+We propose to evaluate the long-run effect of electric vehicles(EV) adoption policy on the consumer’s preference using administrative data from one major city in China. The data contains registration, transfer and disposal record from January 2010 to the present. The administrative data include the Vehicle Identification Number(VIN) of the registered vehicle, the household district information, the gender, and the consumer’s date of birth.
+The identification relies on the relative preference of high displacement vehicles and low displacement vehicles. 
+The Chinese tax structure creates a discontinuity in demand for the displacement attribute. The Chinese government imposes a 7.5 % consumption tax for a vehicle with engine displacement below 1.6 litres and a 10 % tax for those above 1.6 litres.
+The level of the difference between vehicle above 1.6-litre displacement compared to those below 1.6 litres conditional on rebate program for electric cars over time can explain whether the consumers’ preference for environmentally friendly cars has changed.</p>
+:ET

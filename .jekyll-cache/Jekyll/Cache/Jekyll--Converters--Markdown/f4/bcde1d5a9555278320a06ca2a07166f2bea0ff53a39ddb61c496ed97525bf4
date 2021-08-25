@@ -1,0 +1,17 @@
+I"ý<!-- ![](/images/demo/demo-landscape.jpg) -->
+
+<h2 id="package-under-development">Package Under Development</h2>
+
+<ul>
+  <li>Nonparametric Econometric Tool <a href="https://github.com/JasmineHao/NonparEconometricsTool.jl">(Julia)</a></li>
+  <li>Estimation of dynamic model with continuous   and discrete choice <a href="https://github.com/JasmineHao/DCDC.jl">(R)</a></li>
+  <li>Testing of number of component in panel normal regression <a href="https://github.com/JasmineHao/normalRegPanelMix">(R)</a></li>
+  <li>Estimation of non-finite dependent dynamic discrete choice model with unobserved heterogeneity <a href="https://github.com/JasmineHao/DDCMixture_NFD">(Matlab)</a></li>
+</ul>
+
+<h2 id="replication">Replication</h2>
+<ul>
+  <li>Aguirregabiria, V., &amp; Magesan, A. (2019). Estimation of dynamic discrete games when players beliefs are not in equilibrium. Manuscript, Department of Economics, Univeristy of Toronto. <a href="https://github.com/JasmineHao/Sandbox/tree/master/Python/AM2019">(link)</a></li>
+  <li>Grieco, P. L., &amp; McDevitt, R. C. (2016). Productivity and quality in health care: Evidence from the dialysis industry. The Review of Economic Studies, 84(3), 1071-1105. <a href="https://github.com/JasmineHao/Grieco_McDevitt_2007">(link)</a></li>
+</ul>
+:ET
