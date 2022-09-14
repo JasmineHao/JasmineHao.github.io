@@ -5,6 +5,10 @@ subtitle:
 featured_image: 
 ---
 
+I have served as an instructor for the following courses at the University of Hong Kong. 
+
+* ECON 6001  &nbsp; &nbsp;  *Applied Econometrics* &nbsp; **2021 - 2022**
+* ECON 2216  &nbsp; &nbsp;  *Industrial Organization* &nbsp; **2021 - 2022**
 
 
 I have served as a teaching assistant for the following courses at the Vancouver School of Economics. 
