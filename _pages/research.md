@@ -12,14 +12,12 @@ featured_image:
 
 ### **Building up Trust in a Dynamic Game: A study on Collusive Price-fixing in the Chilean Pharmaceutical Retail Industry**[Job Market Paper]
 <!-- 
-<span style="text-decoration: underline">**Abstract**</span> This paper discusses firms' coordination issues when initiating collusion. 
-By understanding the economics behind the initiation of collusion, the government can tailor policies to prevent collusion from emerging. The paper is the first to model the firms' initiation problem. 
-The work contributes to understanding the firms' learning-to-coordination process. From empirical researches, we observe that firms exhibit post-cartel tacit collusion. The observations indicate that once firms build up trust, the market is vulnerable to collusion. 
-Literature in collusion focuses on the *implementation* but overlooks the *initiation* of collusion. This paper provides a tractable model that considers firms' *incentive problems* and *coordination problems* separately. 
-We relaxes the rational expectations by estimating firm-specific "belief parameter" that disentangle firms' information acquisition processes from firms' strategic interactions. 
-Identifying the belief parameters relies on two exclusion restrictions: 
-(1) one firm's lagged pricing decision affects his payoff through adjustment costs while other firms' lagged pricing decisions do not. 
-(2) The profits on a given market are not affected by the market outcomes in other markets. The framework with nonequilibrium belief represents the data observed better than the rational expectation model. -->
+<span style="text-decoration: underline">**Abstract**</span> We propose a dynamic pricing game of incomplete information where firms' beliefs about competitors' prices can be biased, what creates a coordination problem to achieve a collusive outcome.
+We apply the model to study the initiation stage of a price-fixing cartel in Chilean pharmaceutical retailing industry.
+In this case, firms initially collude to raise prices on a small set of markets and later expand this collusion to a larger set of markets.  
+We show that the coordination problems explain the slow transition of firms' pricing from a non-collusive equilibrium to a collusive equilibrium: without accounting for the coordination problem, the firms raise prices on all markets instantly. 
+We evaluate the effect of a counterfactual "divestiture" policy on the initiation stage, where a "divestiture" requires firms to sell part of their assets to a non-cartel member.  We show the importance of accounting for the coordination problems problem in policy evaluation.
+ -->
 
 
 <span style="text-decoration: underline">**Award**</span>: [Bank of Canada Graduate Student Paper Award 2020](https://economics.ubc.ca/news/2020/vse-phd-students-paper-wins-top-prize-from-bank-of-canada/#.X5L9TYj0n-g)
@@ -49,13 +47,7 @@ In the dynamic discrete choice analysis, controlling for unobserved heterogeneit
 
 <br />
 
-### **Testing the number of components in finite mixture model with normal panel regression**(with [Hiro Kasahara](https://economics.ubc.ca/faculty-and-staff/hiro-kasahara/))
-
-
-<!-- {% capture details %}
-This paper develops the likelihood-ratio based test of the null hypothesis of a $m_0$-component model against an alternative of $(m_0+1)$-component model in the normal mixture panel regression. I show that the normal mixture panel regression does not suffer from the Fisher Information matrix degeneracy under the reparameterization proposed in Kasahara and Shimotsu(2012). As a result, the likelihood ratio test statistic can be approximated by a local quadratic expansion of squares and products of the reparameterized parameters. Moreover, I obtain the data-driven penalty function via computational experiments to attend to unbounded likelihood ratio. In addition, I apply the test to random coefficient Cobb-Douglas production function estimation following the framework of Gandhi et al.(2013) and Kasahara and Shimotsu(2015). The empirical findings suggest evidence of heterogeneous production technology beyond Hicks-neutral technology factor.
-{% endcapture %}
-{% capture summary %}<span style="text-decoration: underline">**Abstract**</span>{% endcapture %}{% include details.html %} -->
+### **Testing the number of components in finite mixture model with normal panel regression**(with [Hiro Kasahara](https://economics.ubc.ca/faculty-and-staff/hiro-kasahara/) *submitted* )
 
 
 
@@ -64,7 +56,19 @@ This paper develops the likelihood-ratio based test of the null hypothesis of a 
  Vancouver School of Economics.
 
 [Slides](/files/IAAE_2019.pdf)
-[Draft Paper](/files/NumComponentPanelMain.pdf)
+[Draft Paper](https://arxiv.org/abs/2210.02824)
+
+<br />
+
+### **Losing Market Share in a Growing Industry: BYD Company and Electric Vehicles in China**(with [Victor Aguirregabiria](https://sites.google.com/view/victoraguirregabiriaswebsite/home) and Yiran Hao)
+
+
+<span style="text-decoration: underline">**Presentation**</span>: Vancouver School of Economics, Econometric Lunch; 
+Asia-Pacific Industrial Organisation Conference 2022 Sydney; 
+ Dynamic Structural Econometrics Conference 2022 Canberra.
+
+[Slides](/files/EV_Presentation.pdf)
+[Draft Paper](http://www.google.com/url?q=http%3A%2F%2Faguirregabiria.net%2Fwpapers%2Fbyd_ev_14042022.pdf&sa=D&sntz=1&usg=AOvVaw2QBMzYE2Kt-BvnZ9SlMko9)
 
 ## Work in Progress
 
