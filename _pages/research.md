@@ -10,20 +10,20 @@ featured_image:
 
 ## Working Papers
 
-<SPAN STYLE="font-size:12pt">**Building up Trust in a Dynamic Game: A study on Collusive Price-fixing in the Chilean Pharmaceutical Retail Industry** </span> [Job Market Paper]  
+**Building up Trust in a Dynamic Game: A study on Collusive Price-fixing in the Chilean Pharmaceutical Retail Industry**  [Job Market Paper]  
 [Slide](/files/CollusionSeminar.pdf)
 [JMP Version](/files/CollusionDynamic.pdf)  
     Award: [Bank of Canada Graduate Student Paper Award 2020](https://economics.ubc.ca/news/2020/vse-phd-students-paper-wins-top-prize-from-bank-of-canada/#.X5L9TYj0n-g)  
     Presentation: WEAI International Conference 2021(scheduled); Econometric Society DSE Winter School 2020; Bank of Canada Graduate Student Paper Award Workshop 2020; 
     Vancouver School of Economics.
 
-<SPAN STYLE="font-size:12pt">**Testing the number of components in finite mixture model with normal panel regression**</span> (with [Hiro Kasahara](https://economics.ubc.ca/faculty-and-staff/hiro-kasahara/) ) *submitted*    
+**Testing the number of components in finite mixture model with normal panel regression**(with [Hiro Kasahara](https://economics.ubc.ca/faculty-and-staff/hiro-kasahara/) ) *submitted*    
 [Slide](/files/IAAE_2019.pdf)
 [Draft Paper](https://arxiv.org/abs/2210.02824)  
 Presentation: Canadian Economics Association 2019 Annual Meeting; Seattle-Vancouver Econometrics Conference 2020; Bank of Canada; Vancouver School of Economics.
 
 
-<SPAN STYLE="font-size:12pt">**Using Euler equation to estimate non-finite-dependent dynamic discrete choice model with unobserved heterogeneity**</span> (with [Hiro Kasahara](https://economics.ubc.ca/faculty-and-staff/hiro-kasahara/))   
+**Using Euler equation to estimate non-finite-dependent dynamic discrete choice model with unobserved heterogeneity** (with [Hiro Kasahara](https://economics.ubc.ca/faculty-and-staff/hiro-kasahara/))   
 [Slides](/files/DDC_CEA2019.pdf) [Draft Paper](/files/DDCMain.pdf)  
 Presentation: International Association for Applied Econometrics 2019 Annual Meeting; 
 China Meeting of the Econometric Society 2019 Guangzhou China;
@@ -31,7 +31,7 @@ Vancouver School of Economics.
 
 
 
-<SPAN STYLE="font-size:12pt">**Losing Market Share in a Growing Industry: BYD Company and Electric Vehicles in China**</span> (with [Victor Aguirregabiria](https://sites.google.com/view/victoraguirregabiriaswebsite/home) and Yiran Hao)  
+**Losing Market Share in a Growing Industry: BYD Company and Electric Vehicles in China** (with [Victor Aguirregabiria](https://sites.google.com/view/victoraguirregabiriaswebsite/home) and Yiran Hao)  
 [Slides](/files/EV_Presentation.pdf) [Draft Paper](http://www.google.com/url?q=http%3A%2F%2Faguirregabiria.net%2Fwpapers%2Fbyd_ev_14042022.pdf&sa=D&sntz=1&usg=AOvVaw2QBMzYE2Kt-BvnZ9SlMko9)  
 Presentation: Vancouver School of Economics, Econometric Lunch;  Asia-Pacific Industrial Organisation Conference 2022 Sydney;  Dynamic Structural Econometrics Conference 2022 Canberra.
 
