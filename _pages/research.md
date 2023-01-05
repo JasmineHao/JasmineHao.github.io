@@ -10,8 +10,9 @@ featured_image:
 
 ## Working Papers
 
-**Building up Trust in a Dynamic Game: A study on Collusive Price-fixing in the Chilean Pharmaceutical Retail Industry**  [Job Market Paper]  
+**Building up Trust in a Dynamic Game: A study on Collusive Price-fixing in the Chilean Pharmaceutical Retail Industry**  [Job Market Paper]  *submitted*
 [Slide](/files/CollusionSeminar.pdf)
+[Paper](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4318280)
 [JMP Version](/files/CollusionDynamic.pdf)  
     Award: [Bank of Canada Graduate Student Paper Award 2020](https://economics.ubc.ca/news/2020/vse-phd-students-paper-wins-top-prize-from-bank-of-canada/#.X5L9TYj0n-g)  
     Presentation: WEAI International Conference 2021(scheduled); Econometric Society DSE Winter School 2020; Bank of Canada Graduate Student Paper Award Workshop 2020; 
@@ -19,7 +20,7 @@ featured_image:
 
 **Testing the number of components in finite mixture model with normal panel regression**(with [Hiro Kasahara](https://economics.ubc.ca/faculty-and-staff/hiro-kasahara/) ) *submitted*    
 [Slide](/files/IAAE_2019.pdf)
-[Draft Paper](https://arxiv.org/abs/2210.02824)  
+[Paper](https://arxiv.org/abs/2210.02824)  
 Presentation: Canadian Economics Association 2019 Annual Meeting; Seattle-Vancouver Econometrics Conference 2020; Bank of Canada; Vancouver School of Economics.
 
 
