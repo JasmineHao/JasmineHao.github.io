@@ -10,7 +10,7 @@ featured_image:
 
 ## Working Papers
 
-**Building up Trust in a Dynamic Game: A study on Collusive Price-fixing in the Chilean Pharmaceutical Retail Industry**  [Job Market Paper]  *submitted*
+**Building up Trust in a Dynamic Game: A study on Collusive Price-fixing in the Chilean Pharmaceutical Retail Industry**  [Job Market Paper](with [Jorge Alé-Chilet](https://sites.google.com/site/jorgealechilet/))  *submitted*  
 [Slide](/files/CollusionSeminar.pdf)
 [Paper](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4318280)
 [JMP Version](/files/CollusionDynamic.pdf)  
