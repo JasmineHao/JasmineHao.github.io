@@ -10,9 +10,8 @@ featured_image:
 
 ## Working Papers
 
-**Building up Trust in a Dynamic Game: A study on Collusive Price-fixing in the Chilean Pharmaceutical Retail Industry**  [Job Market Paper] (with [Jorge Alé-Chilet](https://sites.google.com/site/jorgealechilet/))  *submitted*  
+**Building up Trust in a Dynamic Game: A study on Collusive Price-fixing in the Chilean Pharmaceutical Retail Industry**  [Job Market Paper]  *submitted*  
 [Slide](/files/CollusionSeminar.pdf)
-[Paper](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4318280)
 [JMP Version](/files/CollusionDynamic.pdf)  
     Award: [Bank of Canada Graduate Student Paper Award 2020](https://economics.ubc.ca/news/2020/vse-phd-students-paper-wins-top-prize-from-bank-of-canada/#.X5L9TYj0n-g)  
     Presentation: WEAI International Conference 2021(scheduled); Econometric Society DSE Winter School 2020; Bank of Canada Graduate Student Paper Award Workshop 2020; 
