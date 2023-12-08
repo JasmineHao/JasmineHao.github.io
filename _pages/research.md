@@ -17,7 +17,7 @@ featured_image:
     Presentation: WEAI International Conference 2021(scheduled); Econometric Society DSE Winter School 2020; Bank of Canada Graduate Student Paper Award Workshop 2020; 
     Vancouver School of Economics.
 
-**Testing the number of components in finite mixture model with normal panel regression**(with [Hiro Kasahara](https://economics.ubc.ca/faculty-and-staff/hiro-kasahara/) ) *submitted*    
+**Testing the number of components in finite mixture model with normal panel regression**(with [Hiro Kasahara](https://economics.ubc.ca/faculty-and-staff/hiro-kasahara/) ) *Revision Requested*    
 [Slide](/files/IAAE_2019.pdf)
 [Paper](https://arxiv.org/abs/2210.02824)  
 Presentation: Canadian Economics Association 2019 Annual Meeting; Seattle-Vancouver Econometrics Conference 2020; Bank of Canada; Vancouver School of Economics.
