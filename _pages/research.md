@@ -11,13 +11,13 @@ featured_image:
 ## Working Papers
 
 **Building up Trust in a Dynamic Game: A study on Collusive Price-fixing in the Chilean Pharmaceutical Retail Industry**  [Job Market Paper]  *submitted*  
-[Slide](/files/CollusionSeminar.pdf)
-[JMP Version](/files/CollusionDynamic.pdf)  
+[Slide](/files/_Presentation__Dynamic_Collusion.pdf)
+[JMP Version](/files/CollusionDynamic.pdf)  [Recent Version](/files/ChileDrug%20Nov%202023.pdf)
     Award: [Bank of Canada Graduate Student Paper Award 2020](https://economics.ubc.ca/news/2020/vse-phd-students-paper-wins-top-prize-from-bank-of-canada/#.X5L9TYj0n-g)  
-    Presentation: WEAI International Conference 2021(scheduled); Econometric Society DSE Winter School 2020; Bank of Canada Graduate Student Paper Award Workshop 2020; 
+    Presentation: APIOC 2023 Hong Kong; WEAI International Conference 2021; Econometric Society DSE Winter School 2020; Bank of Canada Graduate Student Paper Award Workshop 2020; 
     Vancouver School of Economics.
 
-**Testing the number of components in finite mixture model with normal panel regression**(with [Hiro Kasahara](https://economics.ubc.ca/faculty-and-staff/hiro-kasahara/) ) *Revision Requested*    
+**Testing the number of components in finite mixture model with normal panel regression**(with [Hiro Kasahara](https://economics.ubc.ca/faculty-and-staff/hiro-kasahara/) ) *Revision Requested from Quantitative Economics*    
 [Slide](/files/IAAE_2019.pdf)
 [Paper](https://arxiv.org/abs/2210.02824)  
 Presentation: Canadian Economics Association 2019 Annual Meeting; Seattle-Vancouver Econometrics Conference 2020; Bank of Canada; Vancouver School of Economics.
