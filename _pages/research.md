@@ -22,13 +22,15 @@ featured_image:
 [Paper](https://arxiv.org/abs/2210.02824)  
 Presentation: Canadian Economics Association 2019 Annual Meeting; Seattle-Vancouver Econometrics Conference 2020; Bank of Canada; Vancouver School of Economics.
 
+**Conditional Choice Probability Estimation of Dynamic Discrete Choice Models with 2-period Finite Dependence** (with [Hiro Kasahara](https://economics.ubc.ca/faculty-and-staff/hiro-kasahara/) ) 
+[Slide](/files/Presentation_DynamicDiscreteChoiceFiniteDependence.pdf)
+[Draft Paper](/files/DynamicProbabilityChoice_2FD.pdf)
 
 **Using Euler equation to estimate non-finite-dependent dynamic discrete choice model with unobserved heterogeneity** (with [Hiro Kasahara](https://economics.ubc.ca/faculty-and-staff/hiro-kasahara/))   
 [Slides](/files/DDC_CEA2019.pdf) [Draft Paper](/files/DDCMain.pdf)  
 Presentation: International Association for Applied Econometrics 2019 Annual Meeting; 
 China Meeting of the Econometric Society 2019 Guangzhou China;
 Vancouver School of Economics.
-
 
 
 **Losing Market Share in a Growing Industry: BYD Company and Electric Vehicles in China** (with [Victor Aguirregabiria](https://sites.google.com/view/victoraguirregabiriaswebsite/home) and Yiran Hao)  
