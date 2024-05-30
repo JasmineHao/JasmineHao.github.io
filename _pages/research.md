@@ -10,7 +10,7 @@ featured_image:
 
 ## Working Papers
 
-**Building up Trust in a Dynamic Game: A study on Collusive Price-fixing in the Chilean Pharmaceutical Retail Industry**  [Job Market Paper]  *submitted*  
+**Building up Trust in a Dynamic Game: A study on Collusive Price-fixing in the Chilean Pharmaceutical Retail Industry**  [Job Market Paper]  *Revision Requested from The RAND Journal of Economics* 
 [Slide](/files/_Presentation__Dynamic_Collusion.pdf)
 [JMP Version](/files/CollusionDynamic.pdf)  [Recent Version](/files/ChileDrug%20Nov%202023.pdf)
     Award: [Bank of Canada Graduate Student Paper Award 2020](https://economics.ubc.ca/news/2020/vse-phd-students-paper-wins-top-prize-from-bank-of-canada/#.X5L9TYj0n-g)  
