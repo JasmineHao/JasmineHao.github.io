@@ -17,15 +17,13 @@ featured_image:
 Presentation: APIOC 2023 Hong Kong; WEAI International Conference 2021; Econometric Society DSE Winter School 2020; Bank of Canada Graduate Student Paper Award Workshop 2020; 
 Vancouver School of Economics. -->
 
-**Testing the number of components in finite mixture model with normal panel regression**(with [Hiro Kasahara](https://economics.ubc.ca/faculty-and-staff/hiro-kasahara/) ) *Revision Requested from Quantitative Economics*    
+**Testing the number of components in finite mixture model with normal panel regression** (with [Hiro Kasahara](https://economics.ubc.ca/faculty-and-staff/hiro-kasahara/) ) *Revision Requested from Quantitative Economics*    
 [Slide](/files/IAAE_2019.pdf)
 [Paper](https://arxiv.org/abs/2210.02824)  
 <!-- Presentation: Canadian Economics Association 2019 Annual Meeting; Seattle-Vancouver Econometrics Conference 2020; Bank of Canada; Vancouver School of Economics. -->
 
-**Semiparametric Identification of the Discount Factor and Payoff Function in Dynamic Discrete Choice Models
-**(with [Hiro Kasahara](https://economics.ubc.ca/faculty-and-staff/hiro-kasahara/) and [Katsumi Shimotsu](https://sites.google.com/view/katsumishimotsu/home) ) *Revision Requested from Quantitative Economics*    
-[Slide](/files/IAAE_2019.pdf)
-[Paper](https://arxiv.org/abs/2210.02824)
+**Semiparametric Identification of the Discount Factor and Payoff Function in Dynamic Discrete Choice Models** (with [Hiro Kasahara](https://economics.ubc.ca/faculty-and-staff/hiro-kasahara/) and [Katsumi Shimotsu](https://sites.google.com/view/katsumishimotsu/home) ) *Submitted*    
+[Paper](https://arxiv.org/abs/2507.07286)
 
 **Conditional Choice Probability Estimation of Dynamic Discrete Choice Models with 2-period Finite Dependence** (with [Hiro Kasahara](https://economics.ubc.ca/faculty-and-staff/hiro-kasahara/) ) 
 [Slide](/files/Presentation_DynamicDiscreteChoiceFiniteDependence.pdf)
@@ -33,16 +31,17 @@ Vancouver School of Economics. -->
 
 **The Dynamics of Competition in the Chinese Electric Vehicle Market: Insights from BYD's Market Evolution** (with Yiran Hao) *Revision Requested from IJIO*
 
-**Using Euler equation to estimate non-finite-dependent dynamic discrete choice model with unobserved heterogeneity** (with [Hiro Kasahara](https://economics.ubc.ca/faculty-and-staff/hiro-kasahara/))   
-[Slides](/files/DDC_CEA2019.pdf) [Draft Paper](/files/DDCMain.pdf)  
-<!-- Presentation: International Association for Applied Econometrics 2019 Annual Meeting; 
-China Meeting of the Econometric Society 2019 Guangzhou China;
-Vancouver School of Economics. -->
+
 
 
 
 
 ## Work in Progress
+**Using Euler equation to estimate non-finite-dependent dynamic discrete choice model with unobserved heterogeneity** (with [Hiro Kasahara](https://economics.ubc.ca/faculty-and-staff/hiro-kasahara/))   
+[Slides](/files/DDC_CEA2019.pdf) [Draft Paper](/files/DDCMain.pdf)  
+<!-- Presentation: International Association for Applied Econometrics 2019 Annual Meeting; 
+China Meeting of the Econometric Society 2019 Guangzhou China;
+Vancouver School of Economics. -->
 
 **Losing Market Share in a Growing Industry: BYD Company and Electric Vehicles in China** (with [Victor Aguirregabiria](https://sites.google.com/view/victoraguirregabiriaswebsite/home) and Yiran Hao)  
 [Slides](/files/EV_Presentation.pdf) [Draft Paper](http://www.google.com/url?q=http%3A%2F%2Faguirregabiria.net%2Fwpapers%2Fbyd_ev_14042022.pdf&sa=D&sntz=1&usg=AOvVaw2QBMzYE2Kt-BvnZ9SlMko9)  
