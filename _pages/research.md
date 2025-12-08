@@ -10,27 +10,26 @@ featured_image:
 
 ## Working Papers
 
-**Building up Trust in a Dynamic Game: A study on Collusive Price-fixing in the Chilean Pharmaceutical Retail Industry**  [Job Market Paper]  *Revision Requested from The RAND Journal of Economics* 
+**Building up Trust in a Dynamic Game: A study on Collusive Price-fixing in the Chilean Pharmaceutical Retail Industry**  [Job Market Paper]  *Resubmitted to The RAND Journal of Economics* 
 [Slide](/files/_Presentation__Dynamic_Collusion.pdf)
 [JMP Version](/files/CollusionDynamic.pdf)  [Recent Version](/files/ChileDrug%20Nov%202023.pdf)
 <!-- Award: [Bank of Canada Graduate Student Paper Award 2020](https://economics.ubc.ca/news/2020/vse-phd-students-paper-wins-top-prize-from-bank-of-canada/#.X5L9TYj0n-g)  
 Presentation: APIOC 2023 Hong Kong; WEAI International Conference 2021; Econometric Society DSE Winter School 2020; Bank of Canada Graduate Student Paper Award Workshop 2020; 
 Vancouver School of Economics. -->
 
-**Testing the number of components in finite mixture model with normal panel regression** (with [Hiro Kasahara](https://economics.ubc.ca/faculty-and-staff/hiro-kasahara/) ) *Revision Requested from Quantitative Economics*    
+**Testing the number of components in finite mixture model with normal panel regression** (with [Hiro Kasahara](https://economics.ubc.ca/faculty-and-staff/hiro-kasahara/) ) *Resubmitted to Quantitative Economics*    
 [Slide](/files/IAAE_2019.pdf)
 [Paper](https://arxiv.org/abs/2210.02824)  
 <!-- Presentation: Canadian Economics Association 2019 Annual Meeting; Seattle-Vancouver Econometrics Conference 2020; Bank of Canada; Vancouver School of Economics. -->
 
 **Semiparametric Identification of the Discount Factor and Payoff Function in Dynamic Discrete Choice Models** (with [Hiro Kasahara](https://economics.ubc.ca/faculty-and-staff/hiro-kasahara/) and [Katsumi Shimotsu](https://sites.google.com/view/katsumishimotsu/home) ) *Submitted*    
-[Paper](https://arxiv.org/abs/2507.07286)
+[Paper](https://arxiv.org/abs/2507.19814)
 
 **Conditional Choice Probability Estimation of Dynamic Discrete Choice Models with 2-period Finite Dependence** (with [Hiro Kasahara](https://economics.ubc.ca/faculty-and-staff/hiro-kasahara/) ) 
 [Slide](/files/Presentation_DynamicDiscreteChoiceFiniteDependence.pdf)
 [Draft Paper](/files/DynamicProbabilityChoice_2FD.pdf)
 
 **The Dynamics of Competition in the Chinese Electric Vehicle Market: Insights from BYD's Market Evolution** (with Yiran Hao) *Revision Requested from IJIO*
-
 
 
 
