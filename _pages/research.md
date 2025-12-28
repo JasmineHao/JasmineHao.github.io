@@ -29,9 +29,7 @@ Vancouver School of Economics. -->
 [Slide](/files/Presentation_DynamicDiscreteChoiceFiniteDependence.pdf)
 [Draft Paper](/files/DynamicProbabilityChoice_2FD.pdf)
 
-**The Dynamics of Competition in the Chinese Electric Vehicle Market: Insights from BYD's Market Evolution** (with Yiran Hao) *Revision Requested from IJIO*
-
-
+**The Dynamics of Competition in the Chinese Electric Vehicle Market: Insights from BYD's Market Evolution** (with Yiran Hao) *Revision Requested from IJIO* [Draft Paper](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5369927)
 
 
 
@@ -57,7 +55,7 @@ The decision of entry is discrete, and the decision of investment is continuous.
 
 <!-- <br /> -->
 
-- **Does the EV rebate program raise awareness on the environment: evidence based on China automobile market** (with [Yiran Hao](https://www.economics.utoronto.ca/index.php/index/person/person/faculty/1895))
+
 
 <!-- {% capture details %}
 This project uses administrative vehicle registration data from one of China's major cities to identify consumers' preference over household vehicles' gas-efficient attributes over time. 
