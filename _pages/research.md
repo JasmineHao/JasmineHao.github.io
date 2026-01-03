@@ -34,6 +34,8 @@ Vancouver School of Economics. -->
 
 
 ## Work in Progress
+**Dual Network Competition and the Self-Sustained EV Market** with Hyuk-soo Kwon, Jinge Li
+
 **Using Euler equation to estimate non-finite-dependent dynamic discrete choice model with unobserved heterogeneity** (with [Hiro Kasahara](https://economics.ubc.ca/faculty-and-staff/hiro-kasahara/))   
 [Slides](/files/DDC_CEA2019.pdf) [Draft Paper](/files/DDCMain.pdf)  
 <!-- Presentation: International Association for Applied Econometrics 2019 Annual Meeting; 
