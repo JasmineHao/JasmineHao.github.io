@@ -8,7 +8,7 @@ featured_image:
 <!-- ![](/images/demo/demo-landscape.jpg) -->
 
 
-## Working Papers
+## Research Papers
 
 **Building up Trust in a Dynamic Game: A study on Collusive Price-fixing in the Chilean Pharmaceutical Retail Industry**  [Job Market Paper]  *Resubmitted to The RAND Journal of Economics* 
 [Slide](/files/_Presentation__Dynamic_Collusion.pdf)
@@ -29,7 +29,10 @@ Vancouver School of Economics. -->
 [Slide](/files/Presentation_DynamicDiscreteChoiceFiniteDependence.pdf)
 [Draft Paper](/files/DynamicProbabilityChoice_2FD.pdf)
 
-**The Dynamics of Competition in the Chinese Electric Vehicle Market: Insights from BYD's Market Evolution** (with Yiran Hao) *Revision Requested from IJIO* [Draft Paper](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5369927)
+
+## Publications
+
+**The Dynamics of Competition in the Chinese Electric Vehicle Market: Insights from BYD's Market Evolution** (with Yiran Hao) *IJIO* [Paper](https://doi.org/10.1016/j.ijindorg.2026.103256)
 
 
 
