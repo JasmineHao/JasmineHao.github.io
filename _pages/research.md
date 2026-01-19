@@ -32,8 +32,9 @@ Vancouver School of Economics. -->
 
 ## Publications
 
-**[The Dynamics of Competition in the Chinese Electric Vehicle Market: Insights from BYD's Market Evolution](https://doi.org/10.1016/j.ijindorg.2026.103256)
-** (with Yiran Hao) *International Journal of Industrial Organization* 
+**The Dynamics of Competition in the Chinese Electric Vehicle Market: Insights from BYD's Market Evolution** (with Yiran Hao)  
+*International Journal of Industrial Organization*, forthcoming (April 2026)  
+[Link](https://doi.org/10.1016/j.ijindorg.2026.103256)
 
 
 ## Work in Progress
