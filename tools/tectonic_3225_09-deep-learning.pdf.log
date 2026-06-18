@@ -1,0 +1,42 @@
+note: "version 2" Tectonic command-line interface activated
+note: Running TeX ...
+Fontconfig error: Cannot load default config file: No such file: (null)
+warning: Lect9_deep_learning.tex:45: Missing character: There is no 5 ("35) in font nullfont!
+warning: could not represent character "5" (0x35) in font "nullfont"
+warning:   you may need to load the `fontspec` package and use (e.g.) \setmainfont to
+warning:   choose a different font that covers the unrepresentable character(s)
+warning: Lect9_deep_learning.tex:239: Overfull \vbox (5.29222pt too high) detected at line 239
+
+warning: Lect9_deep_learning.tex:440: Overfull \vbox (9.22934pt too high) detected at line 440
+
+warning: Lect9_deep_learning.tex:603: Overfull \vbox (0.26262pt too high) detected at line 603
+
+warning: Lect9_deep_learning.tex:838: Overfull \vbox (5.0147pt too high) detected at line 838
+
+warning: Lect9_deep_learning.tex:1019: Overfull \vbox (11.13113pt too high) detected at line 1019
+
+warning: Lect9_deep_learning.tex:1034: Overfull \vbox (29.11319pt too high) detected at line 1034
+
+note: downloading grmn1440.tfm
+note: Rerunning TeX because "Lect9_deep_learning.toc" changed ...
+warning: Lect9_deep_learning.tex:45: Missing character: There is no 5 ("35) in font nullfont!
+warning: could not represent character "5" (0x35) in font "nullfont"
+warning:   you may need to load the `fontspec` package and use (e.g.) \setmainfont to
+warning:   choose a different font that covers the unrepresentable character(s)
+warning: Lect9_deep_learning.tex:239: Overfull \vbox (5.29222pt too high) detected at line 239
+
+warning: Lect9_deep_learning.tex:440: Overfull \vbox (9.22934pt too high) detected at line 440
+
+warning: Lect9_deep_learning.tex:603: Overfull \vbox (0.26262pt too high) detected at line 603
+
+warning: Lect9_deep_learning.tex:838: Overfull \vbox (5.0147pt too high) detected at line 838
+
+warning: Lect9_deep_learning.tex:1019: Overfull \vbox (11.13113pt too high) detected at line 1019
+
+warning: Lect9_deep_learning.tex:1034: Overfull \vbox (29.11319pt too high) detected at line 1034
+
+warning: warnings were issued by the TeX engine; use --print and/or --keep-logs for details.
+note: Running xdvipdfmx ...
+note: downloading grmn1440.pfb
+note: Writing `Lect9_deep_learning.pdf` (8.35034465789795 MiB)
+note: Skipped writing 5 intermediate files (use --keep-intermediates to keep them)

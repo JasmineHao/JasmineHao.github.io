@@ -1,0 +1,205 @@
+note: "version 2" Tectonic command-line interface activated
+note: Running TeX ...
+Fontconfig error: Cannot load default config file: No such file: (null)
+warning: 3_0_forest_for_inference.tex:46: Missing character: There is no 5 ("35) in font nullfont!
+warning: could not represent character "5" (0x35) in font "nullfont"
+warning:   you may need to load the `fontspec` package and use (e.g.) \setmainfont to
+warning:   choose a different font that covers the unrepresentable character(s)
+warning: 3_0_forest_for_inference.tex:46: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:63: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:81: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:102: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:106: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:121: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:129: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:146: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:158: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:173: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:183: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:207: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:228: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:237: Overfull \vbox (31.81131pt too high) detected at line 237
+
+warning: 3_0_forest_for_inference.tex:237: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:254: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:272: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:274: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:288: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:310: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:313: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:335: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:357: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:370: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:386: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:403: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:407: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:434: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:456: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:475: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:477: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:487: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:498: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:548: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:548: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:548: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:570: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:591: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:614: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:619: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:635: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:652: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:681: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:684: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:706: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:720: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:738: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:758: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:782: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:809: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:835: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:866: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:924: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:934: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:944: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:960: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:989: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:989: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:1105: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+note: Running BibTeX on 3_0_forest_for_inference.aux ...
+note: warnings were issued by BibTeX; use --print and/or --keep-logs for details.
+note: Rerunning TeX because bibtex was run ...
+warning: 3_0_forest_for_inference.tex:46: Missing character: There is no 5 ("35) in font nullfont!
+warning: could not represent character "5" (0x35) in font "nullfont"
+warning:   you may need to load the `fontspec` package and use (e.g.) \setmainfont to
+warning:   choose a different font that covers the unrepresentable character(s)
+warning: 3_0_forest_for_inference.tex:46: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:63: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:81: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:102: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:106: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:121: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:129: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:146: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:158: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:173: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:183: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:207: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:228: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:237: Overfull \vbox (31.81131pt too high) detected at line 237
+
+warning: 3_0_forest_for_inference.tex:237: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:254: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:272: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:274: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:288: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:310: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:313: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:335: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:357: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:370: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:386: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:403: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:407: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:434: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:456: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:475: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:477: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:487: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:498: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:548: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:548: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:548: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:570: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:591: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:614: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:619: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:635: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:652: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:681: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:684: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:706: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:720: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:738: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:758: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:782: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:809: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:835: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:866: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:924: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:934: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:944: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:960: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:989: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:989: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:1105: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+note: Rerunning TeX because "3_0_forest_for_inference.aux" changed ...
+warning: 3_0_forest_for_inference.tex:46: 
+Missing character: There is no 5 ("35) in font nullfont!
+warning: could not represent character "5" (0x35) in font "nullfont"
+warning:   you may need to load the `fontspec` package and use (e.g.) \setmainfont to
+warning:   choose a different font that covers the unrepresentable character(s)
+warning: 3_0_forest_for_inference.tex:46: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:63: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:81: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:102: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:106: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:121: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:129: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:146: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:158: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:173: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:183: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:207: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:228: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:237: Overfull \vbox (31.81131pt too high) detected at line 237
+
+warning: 3_0_forest_for_inference.tex:237: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:254: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:272: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:274: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:288: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:310: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:313: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:335: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:357: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:370: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:386: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:403: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:407: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:434: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:456: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:475: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:477: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:487: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:498: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:548: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:548: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:548: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:570: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:591: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:614: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:619: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:635: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:652: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:681: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:684: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:706: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:720: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:738: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:758: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:782: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:809: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:835: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:866: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:924: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:934: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:944: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:960: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:989: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:989: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_0_forest_for_inference.tex:1105: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: warnings were issued by the TeX engine; use --print and/or --keep-logs for details.
+note: Running xdvipdfmx ...
+warning: Object @fig:enter-label already defined.
+note: Writing `3_0_forest_for_inference.pdf` (524.3671875 KiB)
+note: Skipped writing 6 intermediate files (use --keep-intermediates to keep them)

@@ -1,0 +1,47 @@
+note: "version 2" Tectonic command-line interface activated
+note: Running TeX ...
+Fontconfig error: Cannot load default config file: No such file: (null)
+note: downloading helvet.sty
+note: downloading t1phv.fd
+note: downloading phvr8t.tfm
+warning: Lect6_moving_beyond_linearity.tex:37: Missing character: There is no 5 ("35) in font nullfont!
+warning: could not represent character "5" (0x35) in font "nullfont"
+warning:   you may need to load the `fontspec` package and use (e.g.) \setmainfont to
+warning:   choose a different font that covers the unrepresentable character(s)
+note: downloading ot1phv.fd
+note: downloading phvr7t.tfm
+note: downloading phvro8t.tfm
+note: downloading phvb8t.tfm
+warning: Lect6_moving_beyond_linearity.tex:239: Overfull \vbox (92.45335pt too high) detected at line 239
+
+warning: Lect6_moving_beyond_linearity.tex:443: Overfull \vbox (7.58572pt too high) detected at line 443
+
+warning: Lect6_moving_beyond_linearity.tex:542: Overfull \vbox (0.95526pt too high) detected at line 542
+
+note: Rerunning TeX because "Lect6_moving_beyond_linearity.nav" changed ...
+warning: Lect6_moving_beyond_linearity.tex:37: Missing character: There is no 5 ("35) in font nullfont!
+warning: could not represent character "5" (0x35) in font "nullfont"
+warning:   you may need to load the `fontspec` package and use (e.g.) \setmainfont to
+warning:   choose a different font that covers the unrepresentable character(s)
+warning: Lect6_moving_beyond_linearity.tex:239: Overfull \vbox (92.45335pt too high) detected at line 239
+
+warning: Lect6_moving_beyond_linearity.tex:443: Overfull \vbox (7.58572pt too high) detected at line 443
+
+warning: Lect6_moving_beyond_linearity.tex:542: Overfull \vbox (0.95526pt too high) detected at line 542
+
+warning: warnings were issued by the TeX engine; use --print and/or --keep-logs for details.
+note: Running xdvipdfmx ...
+note: downloading phvr8t.vf
+note: downloading phvr8r.tfm
+note: downloading 8r.enc
+note: downloading uhvr8a.pfb
+note: downloading phvro8t.vf
+note: downloading phvro8r.tfm
+note: downloading uhvro8a.pfb
+note: downloading phvr7t.vf
+note: downloading lmsy8.pfb
+note: downloading phvb8t.vf
+note: downloading phvb8r.tfm
+note: downloading uhvb8a.pfb
+note: Writing `Lect6_moving_beyond_linearity.pdf` (1.7345304489135742 MiB)
+note: Skipped writing 5 intermediate files (use --keep-intermediates to keep them)

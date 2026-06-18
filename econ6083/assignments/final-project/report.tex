@@ -1,0 +1,92 @@
+\documentclass[12pt]{article}
+
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{booktabs}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+\usepackage{setspace}
+\usepackage{natbib}
+
+\doublespacing
+
+\title{ECON6083 Final Project: \\
+\large [Title of Your Replication Study]}
+\author{[Your Name(s)] \\ {[Your Student ID(s)]}}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+% TODO: Write a brief abstract (150-200 words) summarizing the paper you are replicating,
+% your main replication results, and your extension.
+\end{abstract}
+
+\section{Introduction}
+
+% TODO: Introduce the research question and the paper you are replicating.
+% Explain why the question is important from an economic perspective.
+% Provide a brief overview of the methods used and your main findings.
+
+\section{Data and Methodology}
+
+\subsection{Data}
+% TODO: Describe the dataset you are using.
+% Provide summary statistics in a table.
+
+\begin{table}[h!]
+\centering
+\caption{Summary Statistics}
+\label{tab:summary}
+\begin{tabular}{lcccc}
+\toprule
+Variable & Mean & Std. Dev. & Min & Max \\
+\midrule
+<<VARIABLE_1>> & <<MEAN_1>> & <<SD_1>> & <<MIN_1>> & <<MAX_1>> \\
+<<VARIABLE_2>> & <<MEAN_2>> & <<SD_2>> & <<MIN_2>> & <<MAX_2>> \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Methodology}
+% TODO: Explain the empirical methodology.
+% Describe the key assumptions required for the causal interpretation of the results.
+% Use equations where appropriate.
+
+\section{Replication Results}
+
+% TODO: Present your replication results.
+% Compare them to the original paper's results.
+% Discuss any discrepancies.
+
+\begin{table}[h!]
+\centering
+\caption{Replication Results}
+\label{tab:replication}
+\begin{tabular}{lcc}
+\toprule
+ & Original Paper & Our Replication \\
+\midrule
+<<ESTIMATE_1>> & <<ORIGINAL_1>> & <<REPLICATED_1>> \\
+<<ESTIMATE_2>> & <<ORIGINAL_2>> & <<REPLICATED_2>> \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Extension}
+
+% TODO: Describe and present a novel extension to the original analysis.
+% This could involve using a different ML model, exploring different subgroups,
+% or testing the robustness of the results.
+
+\section{Conclusion}
+
+% TODO: Summarize your findings and discuss their policy implications.
+
+\bibliographystyle{apalike}
+\bibliography{references}
+
+\end{document}

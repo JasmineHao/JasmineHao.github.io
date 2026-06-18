@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECON6083 Final Project</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 24px 20px;
+            background: #fafbfc;
+        }
+        h1 { color: #1a365d; font-size: 2rem; margin-bottom: 8px; }
+        h2 { color: #2c5282; font-size: 1.4rem; margin: 36px 0 16px; padding-bottom: 8px; border-bottom: 2px solid #e2e8f0; }
+        h3 { color: #2b6cb0; font-size: 1.15rem; margin: 20px 0 10px; }
+        h4 { color: #4a5568; font-size: 1rem; margin: 14px 0 6px; }
+
+        /* Hero / top summary */
+        .hero {
+            background: linear-gradient(135deg, #1a365d 0%, #2c5282 100%);
+            color: white;
+            padding: 28px 32px;
+            border-radius: 12px;
+            margin-bottom: 28px;
+        }
+        .hero h1 { color: white; border: none; padding: 0; margin: 0 0 8px; }
+        .hero p { opacity: 0.9; font-size: 1.05rem; }
+        .hero-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 16px;
+            font-size: 0.95rem;
+        }
+        .hero-meta span { background: rgba(255,255,255,0.15); padding: 6px 14px; border-radius: 20px; }
+
+        /* Boxes */
+        .box {
+            background: white;
+            border-radius: 10px;
+            padding: 20px 24px;
+            margin: 16px 0;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+            border: 1px solid #e2e8f0;
+        }
+        .box-blue { border-left: 4px solid #3182ce; }
+        .box-amber { border-left: 4px solid #d69e2e; }
+        .box-green { border-left: 4px solid #38a169; }
+
+        /* Checklist */
+        .checklist { list-style: none; margin: 0; padding: 0; }
+        .checklist li {
+            padding: 10px 0 10px 32px;
+            position: relative;
+            border-bottom: 1px solid #edf2f7;
+        }
+        .checklist li:last-child { border-bottom: none; }
+        .checklist li::before {
+            content: "☐";
+            position: absolute;
+            left: 0;
+            color: #a0aec0;
+            font-size: 1.2rem;
+        }
+
+        /* Option cards */
+        .options-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+            gap: 16px;
+            margin-top: 16px;
+        }
+        .option-card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px 22px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            transition: transform 0.15s, box-shadow 0.15s;
+        }
+        .option-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+        .option-header {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 12px;
+            margin-bottom: 10px;
+        }
+        .option-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #1a365d;
+            line-height: 1.35;
+        }
+        .option-tag {
+            background: #ebf8ff;
+            color: #2b6cb0;
+            font-size: 0.7rem;
+            font-weight: 700;
+            padding: 3px 10px;
+            border-radius: 12px;
+            white-space: nowrap;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+        }
+        .option-paper {
+            font-size: 0.88rem;
+            color: #4a5568;
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+        .option-paper em { color: #718096; }
+        .option-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 12px 0 10px;
+        }
+        .option-actions a {
+            text-decoration: none;
+        }
+        .btn-colab img {
+            height: 22px;
+            vertical-align: middle;
+        }
+        .btn-small {
+            font-size: 0.8rem;
+            padding: 5px 12px;
+            border-radius: 6px;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .btn-outline {
+            background: white;
+            color: #2b6cb0;
+            border: 1px solid #bee3f8;
+        }
+        .btn-outline:hover { background: #ebf8ff; }
+        .option-question {
+            font-size: 0.9rem;
+            color: #4a5568;
+            margin-bottom: 8px;
+        }
+        .option-ext {
+            font-size: 0.82rem;
+            color: #718096;
+            background: #f7fafc;
+            padding: 10px 12px;
+            border-radius: 6px;
+            margin-top: 8px;
+        }
+        .option-ext strong { color: #2d3748; }
+
+        /* Tables */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 12px 0;
+            font-size: 0.92rem;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        th, td { padding: 10px 12px; text-align: left; border-bottom: 1px solid #e2e8f0; }
+        th { background: #f7fafc; font-weight: 600; color: #2d3748; }
+        tr:last-child td { border-bottom: none; }
+
+        /* Code */
+        pre {
+            background: #f7fafc;
+            padding: 14px 16px;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 10px 0;
+            font-size: 0.85rem;
+            border: 1px solid #e2e8f0;
+        }
+        code {
+            background: #edf2f7;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'SF Mono', Monaco, monospace;
+            font-size: 0.88em;
+        }
+        pre code { background: none; padding: 0; }
+
+        /* Utility */
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+        @media (max-width: 640px) {
+            .two-col { grid-template-columns: 1fr; }
+            .options-grid { grid-template-columns: 1fr; }
+        }
+        ul, ol { margin: 8px 0 8px 24px; }
+        li { margin: 4px 0; }
+        a { color: #2b6cb0; }
+        a:hover { color: #2c5282; }
+
+        .rubric-row td:first-child { font-weight: 600; }
+    </style>
+</head>
+<body>
+
+<div class="hero">
+    <h1>Final Project</h1>
+    <p>Choose <strong>one</strong> of two tracks. Submit a 12–15 page academic report in LaTeX.</p>
+    <div class="hero-meta">
+        <span>📅 Due: May 5, 2026</span>
+        <span>⚖️ Weight: 40% of grade</span>
+        <span>👥 Individual or pairs</span>
+    </div>
+</div>
+
+<!-- ── WRITING & LaTeX GUIDE ── -->
+<div class="box" style="background: linear-gradient(135deg, #ebf8ff 0%, #f0fff4 100%); border: 2px solid #90cdf4; margin-bottom: 28px;">
+    <div style="display: flex; align-items: center; gap: 16px; flex-wrap: wrap;">
+        <div style="font-size: 2.2rem;">📊</div>
+        <div style="flex: 1;">
+            <h3 style="margin: 0 0 4px; color: #2b6cb0;">Writing & LaTeX Practical Guide</h3>
+            <p style="margin: 0; font-size: 0.95rem; color: #4a5568;">Paper structure, section-by-section writing tips, LaTeX templates, and submission checklist — <strong>applies to both Track 1 & Track 2</strong>.</p>
+        </div>
+        <a class="btn-small btn-outline" href="writing-latex-guide.pdf" target="_blank" style="background: #2b6cb0; color: white; border: none; padding: 10px 18px; font-weight: 600; white-space: nowrap;">📥 Download Slides</a>
+    </div>
+</div>
+
+<!-- ── QUICK START ── -->
+<h2>🚀 Quick Start</h2>
+
+<div class="two-col">
+    <div class="box box-green">
+        <h3>Track 1: Empirical Replication</h3>
+        <p style="font-size:0.92rem;color:#4a5568;margin-bottom:10px;">Pick one of 6 landmark causal ML papers below. Replicate its core results, then propose and run a meaningful extension.</p>
+        <ol style="font-size:0.9rem;">
+            <li>Pick a paper (Option 1–6)</li>
+            <li>Open the Colab notebook — all data is <strong>pre-loaded locally</strong></li>
+            <li>Run the replication code</li>
+            <li>Design and implement your extension</li>
+            <li>Write the report in <a href="https://www.overleaf.com" target="_blank">Overleaf</a></li>
+        </ol>
+        <div style="margin-top:10px;">
+            <a class="btn-small btn-outline" href="https://www.overleaf.com" target="_blank">📝 Open Overleaf</a>
+        </div>
+    </div>
+
+    <div class="box box-blue">
+        <h3>Track 2: Literature Review</h3>
+        <p style="font-size:0.92rem;color:#4a5568;margin-bottom:10px;">Survey a specific ML-in-economics domain. Synthesize 10–15 core papers thematically.</p>
+        <ol style="font-size:0.9rem;">
+            <li>Pick a focused domain (e.g., ML in finance, causal ML in policy)</li>
+            <li>Do a <strong>snowball search</strong>: backward (bibliographies) + forward (Google Scholar “Cited by”)</li>
+            <li>Categorize by prediction vs. causal inference</li>
+            <li>Identify gaps and future directions</li>
+            <li>Write the review in <a href="https://www.overleaf.com" target="_blank">Overleaf</a></li>
+        </ol>
+    </div>
+</div>
+
+<div class="box box-amber">
+    <strong>📦 What to submit:</strong> A <code>.zip</code> containing (1) <code>code/</code> — clean, reproducible Python scripts or notebooks, and (2) <code>report.pdf</code> — 12-15 page academic paper.
+</div>
+
+<!-- ── SIX OPTIONS ── -->
+<h2>🔬 Track 1: Six Paper Options</h2>
+<p style="color:#718096;font-size:0.92rem;margin-bottom:16px;">Each option has a runnable Colab notebook with <strong>local data pre-loaded</strong> in the <code>data/</code> folder. No external downloads required.</p>
+
+<div class="options-grid">
+
+    <div class="option-card">
+        <div class="option-header">
+            <div class="option-title">Option 1 — Double Machine Learning</div>
+            <span class="option-tag">Local Data</span>
+        </div>
+        <div class="option-paper">
+            Chernozhukov, V., et al. (2018). Double/debiased machine learning for treatment and structural parameters. <em>Econometrics Journal</em>, 21(1), C1–C68.
+        </div>
+        <div class="option-question"><strong>Question:</strong> What is the causal effect of 401(k) eligibility on net financial assets?</div>
+        <div class="option-actions">
+            <a class="btn-colab" href="https://colab.research.google.com/github/JasmineHao/JasmineHao.github.io/blob/main/econ6083/final-project/notebooks/option1_dml_401k.ipynb?force_reload=true" target="_blank">
+                <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
+            </a>
+        </div>
+        <pre style="font-size:0.78rem;margin-top:6px;"><code>https://colab.research.google.com/github/JasmineHao/JasmineHao.github.io/blob/main/econ6083/final-project/notebooks/option1_dml_401k.ipynb?force_reload=true</code></pre>
+        <div class="option-ext">
+            <strong>Extension ideas:</strong> Compare multiple ML learners (XGBoost, Neural Nets); test sensitivity to K folds; estimate heterogeneous effects by income quartile; apply to Housing Provident Fund (HPF) effect on consumption.
+        </div>
+    </div>
+
+    <div class="option-card">
+        <div class="option-header">
+            <div class="option-title">Option 2 — Causal Forests</div>
+            <span class="option-tag">Local Data</span>
+        </div>
+        <div class="option-paper">
+            Wager, S., & Athey, S. (2018). Estimation and inference of heterogeneous treatment effects using random forests. <em>JASA</em>, 113(523), 1228–1242.
+        </div>
+        <div class="option-question"><strong>Question:</strong> Are the effects of job training heterogeneous? Who benefits most?</div>
+        <div class="option-actions">
+            <a class="btn-colab" href="https://colab.research.google.com/github/JasmineHao/JasmineHao.github.io/blob/main/econ6083/final-project/notebooks/option2_causal_forests.ipynb?force_reload=true" target="_blank">
+                <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
+            </a>
+        </div>
+        <pre style="font-size:0.78rem;margin-top:6px;"><code>https://colab.research.google.com/github/JasmineHao/JasmineHao.github.io/blob/main/econ6083/final-project/notebooks/option2_causal_forests.ipynb?force_reload=true</code></pre>
+        <div class="option-ext">
+            <strong>Extension ideas:</strong> Compare honest vs adaptive estimation; use SHAP for feature importance; implement personalized policy learning; test robustness to tree depth; apply to targeted poverty alleviation heterogeneity.
+        </div>
+    </div>
+
+    <div class="option-card">
+        <div class="option-header">
+            <div class="option-title">Option 3 — Difference-in-Differences</div>
+            <span class="option-tag">Local Data</span>
+        </div>
+        <div class="option-paper">
+            Callaway, B., & Sant'Anna, P. H. (2021). Difference-in-differences with multiple time periods. <em>Journal of Econometrics</em>, 225(2), 200–230.
+        </div>
+        <div class="option-question"><strong>Question:</strong> Effect of minimum wage increases with staggered adoption?</div>
+        <div class="option-actions">
+            <a class="btn-colab" href="https://colab.research.google.com/github/JasmineHao/JasmineHao.github.io/blob/main/econ6083/final-project/notebooks/option3_did.ipynb?force_reload=true" target="_blank">
+                <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
+            </a>
+        </div>
+        <pre style="font-size:0.78rem;margin-top:6px;"><code>https://colab.research.google.com/github/JasmineHao/JasmineHao.github.io/blob/main/econ6083/final-project/notebooks/option3_did.ipynb?force_reload=true</code></pre>
+        <div class="option-ext">
+            <strong>Extension ideas:</strong> Compare TWFE vs Callaway-Sant'Anna vs Sun-Abraham vs Borusyak; analyze dynamic effects with event study; test never-treated vs not-yet-treated controls; apply to carbon emission trading pilots (staggered adoption 2013–2014).
+        </div>
+    </div>
+
+    <div class="option-card">
+        <div class="option-header">
+            <div class="option-title">Option 4 — Synthetic Control</div>
+            <span class="option-tag">Local Data</span>
+        </div>
+        <div class="option-paper">
+            Abadie, A., Diamond, A., & Hainmueller, J. (2010). Synthetic control methods for comparative case studies. <em>JASA</em>, 105(490), 493–505.
+        </div>
+        <div class="option-question"><strong>Question:</strong> Did California's Proposition 99 reduce per-capita cigarette sales?</div>
+        <div class="option-actions">
+            <a class="btn-colab" href="https://colab.research.google.com/github/JasmineHao/JasmineHao.github.io/blob/main/econ6083/final-project/notebooks/option4_synthetic_control.ipynb?force_reload=true" target="_blank">
+                <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
+            </a>
+        </div>
+        <pre style="font-size:0.78rem;margin-top:6px;"><code>https://colab.research.google.com/github/JasmineHao/JasmineHao.github.io/blob/main/econ6083/final-project/notebooks/option4_synthetic_control.ipynb?force_reload=true</code></pre>
+        <div class="option-ext">
+            <strong>Extension ideas:</strong> Implement Augmented SCM (Ben-Michael et al. 2021); compare SCM with modern DiD; test donor pool sensitivity (leave-one-out); apply to carbon trading: Guangdong vs donor provinces.
+        </div>
+    </div>
+
+    <div class="option-card">
+        <div class="option-header">
+            <div class="option-title">Option 5 — Policy Learning</div>
+            <span class="option-tag">Local Data</span>
+        </div>
+        <div class="option-paper">
+            Kitagawa, T., & Tetenov, A. (2018). Who should be treated? Empirical welfare maximization methods for treatment choice. <em>Econometrica</em>, 86(2), 591–616.
+        </div>
+        <div class="option-question"><strong>Question:</strong> How to learn optimal treatment assignment rules?</div>
+        <div class="option-actions">
+            <a class="btn-colab" href="https://colab.research.google.com/github/JasmineHao/JasmineHao.github.io/blob/main/econ6083/final-project/notebooks/option5_policy_learning.ipynb?force_reload=true" target="_blank">
+                <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
+            </a>
+        </div>
+        <pre style="font-size:0.78rem;margin-top:6px;"><code>https://colab.research.google.com/github/JasmineHao/JasmineHao.github.io/blob/main/econ6083/final-project/notebooks/option5_policy_learning.ipynb?force_reload=true</code></pre>
+        <div class="option-ext">
+            <strong>Extension ideas:</strong> Add fairness constraints (demographic parity); compare policy classes (linear vs tree vs budget-constrained); use IPW for evaluation; apply to optimal targeting of poverty alleviation resources.
+        </div>
+    </div>
+
+    <div class="option-card">
+        <div class="option-header">
+            <div class="option-title">Option 6 — Text as Data & EPU</div>
+            <span class="option-tag">Local Data</span>
+        </div>
+        <div class="option-paper">
+            Baker, S. R., Bloom, N., & Davis, S. J. (2016). Measuring economic policy uncertainty. <em>QJE</em>, 131(4), 1593–1636.
+        </div>
+        <div class="option-question"><strong>Question:</strong> How to measure EPU from text? How does it affect macro outcomes?</div>
+        <div class="option-actions">
+            <a class="btn-colab" href="https://colab.research.google.com/github/JasmineHao/JasmineHao.github.io/blob/main/econ6083/final-project/notebooks/option6_epu_text_analysis.ipynb?force_reload=true" target="_blank">
+                <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
+            </a>
+            <a class="btn-small btn-outline" href="https://colab.research.google.com/github/JasmineHao/JasmineHao.github.io/blob/main/econ6083/final-project/notebooks/option6_china_epu_extension.ipynb?force_reload=true" target="_blank">🇨🇳 China Extension</a>
+        </div>
+        <pre style="font-size:0.78rem;margin-top:6px;"><code>https://colab.research.google.com/github/JasmineHao/JasmineHao.github.io/blob/main/econ6083/final-project/notebooks/option6_epu_text_analysis.ipynb
+https://colab.research.google.com/github/JasmineHao/JasmineHao.github.io/blob/main/econ6083/final-project/notebooks/option6_china_epu_extension.ipynb?force_reload=true</code></pre>
+        <div class="option-ext">
+            <strong>Extension ideas:</strong> Use BERT for sentiment analysis (vs keyword matching); build China-specific EPU index with Jieba; create separate fiscal/monetary/trade indices; compare keyword-based vs ML-based measures.
+        </div>
+    </div>
+
+</div>
+
+<!-- ── TRACK 2 ── -->
+<h2>📚 Track 2: Literature Review</h2>
+
+<div class="box">
+    <p style="margin-bottom:12px;">If you prefer a theoretical project, conduct a structured literature review instead of empirical replication.</p>
+
+    <h4>How to do a snowball search</h4>
+    <ol>
+        <li><strong>Pick a seed paper</strong> from class (e.g., Mullainathan & Spiess 2017 on ML in policy; Gu, Kelly & Xiu 2020 on asset pricing).</li>
+        <li><strong>Backward search:</strong> Read the bibliography of your seed paper to find foundational work.</li>
+        <li><strong>Forward search:</strong> Use Google Scholar “Cited by” to find recent 2025–2026 developments.</li>
+        <li><strong>Categorize:</strong> Group papers by prediction (<em>E[Y|X]</em>) vs. causal inference vs. policy.</li>
+        <li><strong>Synthesize:</strong> Don't just list papers — compare them. How do newer ML methods improve on traditional econometrics?</li>
+        <li><strong>Identify the gap:</strong> What is missing? Structural interpretation? Selection bias handling? External validity?</li>
+    </ol>
+
+    <h4 style="margin-top:16px;">Suggested Structure</h4>
+    <table>
+        <tr><th>Section</th><th>Length</th><th>Content</th></tr>
+        <tr><td>Introduction</td><td>1–2 pgs</td><td>Motivation, scope, research question</td></tr>
+        <tr><td>Conceptual Framework</td><td>2–3 pgs</td><td>Taxonomy: prediction vs. causal inference</td></tr>
+        <tr><td>Literature Review</td><td>6–8 pgs</td><td>Thematic synthesis of 10–15 core papers</td></tr>
+        <tr><td>Gap & Future Directions</td><td>2–3 pgs</td><td>Critical assessment of missing links</td></tr>
+        <tr><td>Conclusion</td><td>1 pg</td><td>Summary and takeaways</td></tr>
+    </table>
+
+    <h4 style="margin-top:16px;">Grading Rubric</h4>
+    <table>
+        <tr class="rubric-row"><td>Literature Coverage</td><td>35%</td><td>Relevance, breadth, snowball search quality</td></tr>
+        <tr class="rubric-row"><td>Analysis & Synthesis</td><td>35%</td><td>Thematic organization, critical comparison</td></tr>
+        <tr class="rubric-row"><td>Writing</td><td>20%</td><td>Clarity, organization, professionalism</td></tr>
+        <tr class="rubric-row"><td>Original Insight</td><td>10%</td><td>Quality of identified gaps</td></tr>
+    </table>
+</div>
+
+<!-- ── REPORT REQUIREMENTS ── -->
+<h2>📊 Report Requirements (Both Tracks)</h2>
+
+<div class="two-col">
+    <div class="box">
+        <h3>Format</h3>
+        <ul>
+            <li><strong>Length:</strong> 12–15 pages (excl. references & appendices)</li>
+            <li><strong>Tool:</strong> LaTeX on <a href="https://www.overleaf.com" target="_blank">Overleaf</a></li>
+            <li><strong>Citations:</strong> AER style</li>
+            <li><strong>Font:</strong> 11–12pt, 1-inch margins</li>
+        </ul>
+    </div>
+    <div class="box">
+        <h3>Track 1 Rubric</h3>
+        <table style="box-shadow:none;margin:0;">
+            <tr class="rubric-row"><td>Replication</td><td>40%</td></tr>
+            <tr class="rubric-row"><td>Extension</td><td>30%</td></tr>
+            <tr class="rubric-row"><td>Writing</td><td>20%</td></tr>
+            <tr class="rubric-row"><td>Code</td><td>10%</td></tr>
+        </table>
+    </div>
+</div>
+
+<h3>How to Write Each Section (Track 1)</h3>
+
+<div class="box">
+    <p style="margin-bottom:12px;">See the <a href="writing-latex-guide.pdf" target="_blank"><strong>Writing & LaTeX Practical Guide slides</strong></a> for detailed section-by-section guidance, examples, and templates. Below is a quick reference.</p>
+
+    <h4>Abstract (150–200 words)</h4>
+    <p style="font-size:0.9rem;color:#4a5568;">One paragraph covering: (i) original paper, (ii) method, (iii) replication finding, (iv) extension & result. No citations.</p>
+
+    <h4>1. Introduction (1–2 pages)</h4>
+    <p style="font-size:0.9rem;color:#4a5568;">Reverse pyramid: broad motivation → specific paper → your replication → your extension → roadmap. Your own work should occupy at least half the section.</p>
+
+    <h4>2. Literature (1–2 pages)</h4>
+    <p style="font-size:0.9rem;color:#4a5568;">Group thematically (method, applications, China-related). Use transition sentences. End with "Our paper contributes by..."</p>
+
+    <h4>3. Data (1–2 pages)</h4>
+    <p style="font-size:0.9rem;color:#4a5568;">State source, sample size, unit of analysis, and exclusions. Include Table 1 (summary statistics) with only variables you use.</p>
+
+    <h4>4. Empirical Strategy (2–3 pages)</h4>
+    <p style="font-size:0.9rem;color:#4a5568;">Write the estimating equation, define every symbol, state identification assumptions, and explain standard errors.</p>
+
+    <h4>5. Replication Results (3–4 pages)</h4>
+    <p style="font-size:0.9rem;color:#4a5568;">Reproduce the core result, compare to the original, and run 2–3 robustness checks. Include figures (event-study, CATE, etc.).</p>
+
+    <h4>6. Extension (2–3 pages)</h4>
+    <p style="font-size:0.9rem;color:#4a5568;">Motivate the new question, explain the method difference, present 1–2 tables/figures, and interpret magnitudes economically.</p>
+
+    <h4>7. Conclusion (0.5–1 page)</h4>
+    <p style="font-size:0.9rem;color:#4a5568;">One sentence each for replication and extension findings, one explicit limitation, and one future direction. Synthesize, don't restate.</p>
+
+    <h4>Tables & Figures Checklist</h4>
+    <ul class="checklist" style="font-size:0.9rem;">
+        <li>Every table has a caption above it; every figure has a caption below it</li>
+        <li>Axis labels are readable (no tiny fonts)</li>
+        <li>Error bars / confidence intervals are shown</li>
+        <li>Regression tables report N, R², and fixed effects</li>
+        <li>Stars defined: * p&lt;0.1, ** p&lt;0.05, *** p&lt;0.01</li>
+        <li>At least 1 table and 1 figure in the main text</li>
+    </ul>
+
+    <h4>LaTeX Starter Template</h4>
+    <pre style="font-size:0.82rem;"><code>\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx, amsmath, natbib, booktabs, hyperref}
+
+\title{Replication and Extension of [Paper Title]}
+\author{Your Name \\ ECON6083}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+\noindent Brief summary of paper, replication approach,
+key findings, and extension. (150--200 words)
+\end{abstract}
+
+\section{Introduction}
+\section{Literature}
+\section{Data}
+\section{Empirical Strategy}
+\section{Replication Results}
+\section{Extension}
+\section{Conclusion}
+
+\bibliographystyle{aer}
+\bibliography{references}
+
+\appendix
+\section{Additional Results}
+\section{Code}
+\end{document}</code></pre>
+</div>
+
+<h3>How to Write Each Section (Track 2)</h3>
+
+<div class="box">
+    <p style="margin-bottom:12px;">See the <a href="writing-latex-guide.pdf" target="_blank"><strong>Writing & LaTeX Practical Guide slides</strong></a> for detailed section-by-section guidance, examples, and templates. Below is a quick reference.</p>
+
+    <h4>1. Introduction (1–2 pages)</h4>
+    <p style="font-size:0.9rem;color:#4a5568;">Broad motivation → scope of review → research question → roadmap. Be specific about the economic subdomain.</p>
+
+    <h4>2. Conceptual Framework (2–3 pages)</h4>
+    <p style="font-size:0.9rem;color:#4a5568;">Build a 2×2 taxonomy (e.g., prediction vs. causal × cross-sectional vs. panel). Define key terms and highlight trade-offs.</p>
+
+    <h4>3. Literature Review (6–8 pages)</h4>
+    <p style="font-size:0.9rem;color:#4a5568;">Organize thematically (not chronologically): foundational methods, applications, and criticisms. Compare, don't list.</p>
+
+    <h4>4. Gap & Future Directions (2–3 pages)</h4>
+    <p style="font-size:0.9rem;color:#4a5568;">Identify methodological, empirical, and external-validity gaps. Propose 2–3 concrete research projects to fill them.</p>
+
+    <h4>5. Conclusion (1 page)</h4>
+    <p style="font-size:0.9rem;color:#4a5568;">Summarize 2–3 takeaways, restate the most important gap, and end with a forward-looking sentence.</p>
+</div>
+
+<!-- ── CHINA DATASETS ── -->
+<h2>🇨🇳 Chinese Datasets (Locally Hosted)</h2>
+
+<div class="box box-green">
+    <p style="margin-bottom:12px;">All China data is bundled locally. No registration or external download required.</p>
+    <table>
+        <tr><th>Dataset</th><th>Scope</th><th>Size</th><th>Best For</th></tr>
+        <tr>
+            <td><strong>CFPS Panel</strong><br><code>data/cfps_panel.csv</code></td>
+            <td>21,233 individuals, 7 waves (2010–2022), 52 vars</td>
+            <td>22.5 MB</td>
+            <td>Options 1, 2, 5</td>
+        </tr>
+        <tr>
+            <td><strong>City Panel + Policies</strong><br><code>data/china_city_panel_with_policies.csv</code></td>
+            <td>300 cities × 34 years (1990–2023), 40 economic vars + 5 policy indicators</td>
+            <td>3.1 MB</td>
+            <td>Options 3, 4</td>
+        </tr>
+    </table>
+
+    <h4>Policy Indicators (all pre-merged in the City Panel)</h4>
+    <table>
+        <tr><th>Policy</th><th>Indicator Columns</th><th>Treated</th><th>Batches</th><th>Method</th></tr>
+        <tr>
+            <td><strong>LCCP</strong><br>Low-Carbon City Pilots</td>
+            <td><code>lccp_treat</code>, <code>lccp_batch</code>, <code>lccp_first_year</code></td>
+            <td>49 cities</td>
+            <td>2010 / 2012 / 2017</td>
+            <td>Staggered DiD</td>
+        </tr>
+        <tr>
+            <td><strong>Sponge City</strong></td>
+            <td><code>sponge_treat</code>, <code>sponge_batch</code>, <code>sponge_first_year</code></td>
+            <td>23 cities</td>
+            <td>2015 / 2016</td>
+            <td>DiD or SCM</td>
+        </tr>
+        <tr>
+            <td><strong>CBEC</strong><br>Cross-Border E-Commerce</td>
+            <td><code>cbec_treat</code>, <code>cbec_batch</code>, <code>cbec_first_year</code></td>
+            <td>99 cities</td>
+            <td>2015 / 2016 / 2018 / 2019 / 2020</td>
+            <td>Staggered DiD</td>
+        </tr>
+        <tr>
+            <td><strong>LTCI</strong><br>Long-Term Care Insurance</td>
+            <td><code>ltci_treat</code>, <code>ltci_batch</code>, <code>ltci_first_year</code></td>
+            <td>26 cities</td>
+            <td>2016 / 2020</td>
+            <td>Staggered DiD</td>
+        </tr>
+        <tr>
+            <td><strong>Smart City</strong></td>
+            <td><code>smart_treat</code>, <code>smart_batch</code>, <code>smart_first_year</code></td>
+            <td>115 cities</td>
+            <td>2013 / 2014 / 2015</td>
+            <td>Staggered DiD</td>
+        </tr>
+    </table>
+
+    <p style="font-size:0.85rem;color:#718096;margin-top:10px;">
+        All policy indicators are already merged into <code>china_city_panel_with_policies.csv</code>. Each policy has three columns: <code>_treat</code> (ever treated = 1), <code>_batch</code> (which batch), and <code>_first_year</code> (adoption year, 0 for never-treated). Load one file and run DiD/SCM immediately — no merges needed.
+    </p>
+
+    <h4>Direct Download Links</h4>
+    <pre style="font-size:0.8rem;"><code># CFPS Panel
+https://raw.githubusercontent.com/JasmineHao/JasmineHao.github.io/main/econ6083/final-project/notebooks/data/cfps_panel.csv
+
+# City Panel + All 5 Policy Indicators
+https://raw.githubusercontent.com/JasmineHao/JasmineHao.github.io/main/econ6083/final-project/notebooks/data/china_city_panel_with_policies.csv
+
+# China EPU / CPI / PMI / LPR
+https://raw.githubusercontent.com/JasmineHao/JasmineHao.github.io/main/econ6083/final-project/notebooks/data/china_epu.csv
+https://raw.githubusercontent.com/JasmineHao/JasmineHao.github.io/main/econ6083/final-project/notebooks/data/china_cpi.csv
+https://raw.githubusercontent.com/JasmineHao/JasmineHao.github.io/main/econ6083/final-project/notebooks/data/china_pmi.csv
+https://raw.githubusercontent.com/JasmineHao/JasmineHao.github.io/main/econ6083/final-project/notebooks/data/china_lpr.csv</code></pre>
+</div>
+
+<h2>🇨🇳 Suggested Extensions with Local Data</h2>
+
+<div class="box">
+    <p style="margin-bottom:12px;">Each option below pairs the original US/EU paper with a concrete China extension using the datasets above. All regressions use the <strong>panel structure</strong> of the data.</p>
+
+    <h4>Option 1 — DML → CFPS Internet Access</h4>
+    <p style="font-size:0.92rem;color:#4a5568;"><strong>Question:</strong> What is the causal effect of internet access on household income?</p>
+    <ul style="font-size:0.9rem;">
+        <li><strong>Data:</strong> <code>cfps_panel.csv</code> — treatment <code>internet</code>, outcome <code>lnincome</code></li>
+        <li><strong>Model:</strong> Partially linear DML</li>
+        <li><strong>Extension:</strong> Compare Lasso vs. Random Forest nuisance functions; estimate CATE by education.</li>
+    </ul>
+
+    <h4>Option 2 — Causal Forests → CFPS Health Insurance Heterogeneity</h4>
+    <p style="font-size:0.92rem;color:#4a5568;"><strong>Question:</strong> Who benefits most from medical insurance?</p>
+    <ul style="font-size:0.9rem;">
+        <li><strong>Data:</strong> <code>cfps_panel.csv</code> — treatment <code>medsure_dum</code>, outcome <code>health</code></li>
+        <li><strong>Model:</strong> Causal forest for CATE estimation</li>
+        <li><strong>Extension:</strong> Plot heterogeneity by age × education; use SHAP for feature importance.</li>
+    </ul>
+
+    <h4>Option 3 — DiD → Low-Carbon City Pilots (LCCP)</h4>
+    <p style="font-size:0.92rem;color:#4a5568;"><strong>Question:</strong> Did low-carbon city pilots reduce SO₂ emissions?</p>
+    <ul style="font-size:0.9rem;">
+        <li><strong>Data:</strong> <code>china_city_panel_with_policies.csv</code> — policy <code>lccp_treat</code></li>
+        <li><strong>Model:</strong> Staggered DiD with city and year fixed effects</li>
+        <li><strong>Extension:</strong> Event-study plot; Callaway-Sant'Anna group-time ATT; compare with Sponge City / CBEC / Smart City effects.</li>
+    </ul>
+
+    <h4>Option 3b — DiD → Sponge City Pilots</h4>
+    <p style="font-size:0.92rem;color:#4a5568;"><strong>Question:</strong> Did sponge city investment increase fiscal expenditure?</p>
+    <ul style="font-size:0.9rem;">
+        <li><strong>Data:</strong> <code>china_city_panel_with_policies.csv</code> — policy <code>sponge_treat</code></li>
+        <li><strong>Model:</strong> Staggered DiD</li>
+        <li><strong>Extension:</strong> Compare TWFE vs. Borusyak et al. imputation estimator; placebo leads.</li>
+    </ul>
+
+    <h4>Option 3c — DiD → CBEC Pilot Zones</h4>
+    <p style="font-size:0.92rem;color:#4a5568;"><strong>Question:</strong> Did CBEC zones boost exports and FDI?</p>
+    <ul style="font-size:0.9rem;">
+        <li><strong>Data:</strong> <code>china_city_panel_with_policies.csv</code> — policy <code>cbec_treat</code></li>
+        <li><strong>Model:</strong> Staggered DiD</li>
+        <li><strong>Extension:</strong> Heterogeneous effects by region (East vs. West); dynamic effects with event study.</li>
+    </ul>
+
+    <h4>Option 3d — DiD → Smart City Pilots</h4>
+    <p style="font-size:0.92rem;color:#4a5568;"><strong>Question:</strong> Did smart city construction improve environmental outcomes?</p>
+    <ul style="font-size:0.9rem;">
+        <li><strong>Data:</strong> <code>china_city_panel_with_policies.csv</code> — policy <code>smart_treat</code></li>
+        <li><strong>Model:</strong> Staggered DiD</li>
+        <li><strong>Extension:</strong> Test green innovation channel (use <code>sci_exp</code> as mediator); spatial spillovers.</li>
+    </ul>
+
+    <h4>Option 3e — DiD → LTCI Pilots</h4>
+    <p style="font-size:0.92rem;color:#4a5568;"><strong>Question:</strong> Did long-term care insurance affect fiscal health spending?</p>
+    <ul style="font-size:0.9rem;">
+        <li><strong>Data:</strong> <code>china_city_panel_with_policies.csv</code> — policy <code>ltci_treat</code></li>
+        <li><strong>Model:</strong> Staggered DiD</li>
+        <li><strong>Extension:</strong> Compare 2016 vs. 2020 batch effects; test for pre-trends with placebo leads.</li>
+    </ul>
+
+    <h4>Option 4 — SCM → Any Single-Treated City</h4>
+    <p style="font-size:0.92rem;color:#4a5568;"><strong>Question:</strong> What is the effect of a specific policy on a single city?</p>
+    <ul style="font-size:0.9rem;">
+        <li><strong>Data:</strong> <code>china_city_panel_with_policies.csv</code></li>
+        <li><strong>Model:</strong> Synthetic control method</li>
+        <li><strong>Extension:</strong> Placebo test on donors; leave-one-out sensitivity; compare SCM estimate with DiD.</li>
+    </ul>
+
+    <h4>Option 5 — Policy Learning → CFPS Digital Inclusion</h4>
+    <p style="font-size:0.92rem;color:#4a5568;"><strong>Question:</strong> Who should be targeted for digital-inclusion subsidies?</p>
+    <ul style="font-size:0.9rem;">
+        <li><strong>Data:</strong> <code>cfps_panel.csv</code> — treatment <code>internet</code>, outcome <code>lnincome</code></li>
+        <li><strong>Model:</strong> Empirical welfare maximization</li>
+        <li><strong>Extension:</strong> Budget-constrained tree (subsidize 30%); compare naive (poorest) vs. learned rule.</li>
+    </ul>
+
+    <h4>Option 6 — Text/EPU → China EPU + Macro</h4>
+    <p style="font-size:0.92rem;color:#4a5568;"><strong>Question:</strong> How does policy uncertainty affect industrial production?</p>
+    <ul style="font-size:0.9rem;">
+        <li><strong>Data:</strong> <code>china_epu.csv</code> + <code>china_pmi.csv</code></li>
+        <li><strong>Model:</strong> Time-series regression of PMI on EPU</li>
+        <li><strong>Extension:</strong> Lagged EPU(t−1) → PMI(t); BERT-based sentiment vs. keyword measure; fiscal/monetary sub-indices.</li>
+    </ul>
+</div>
+
+<!-- ── DEADLINE ── -->
+<div class="box box-amber" style="margin-top:28px;">
+    <strong>📅 Deadline: May 5, 2026</strong> — Start early. Replication and debugging always take longer than expected. Come to office hours if you get stuck.
+</div>
+
+<!-- ── RESOURCES ── -->
+<h2>🛠️ Resources</h2>
+
+<div class="two-col">
+    <div>
+        <h4>Required Python packages</h4>
+        <pre><code>pip install numpy pandas matplotlib scikit-learn scipy statsmodels</code></pre>
+
+        <h4>Optional packages</h4>
+        <pre><code>pip install econml              # DML, Causal Forests
+pip install synthdid            # Synthetic Control
+pip install linearmodels        # Panel data
+pip install transformers        # BERT for text
+pip install spacy nltk jieba    # Text processing</code></pre>
+    </div>
+    <div>
+        <h4>Helpful links</h4>
+        <ul style="font-size:0.92rem;">
+            <li><a href="https://www.overleaf.com" target="_blank">📝 Overleaf — LaTeX editor</a></li>
+            <li><a href="../overleaf-guide/" target="_blank">📝 Overleaf Quick Guide</a></li>
+            <li><a href="../assignments/final-project/report.tex" target="_blank">LaTeX Template</a></li>
+        </ul>
+
+        <h4>Report checklist</h4>
+        <ul class="checklist" style="font-size:0.9rem;">
+            <li>Title page with name & student ID</li>
+            <li>Abstract (150–200 words)</li>
+            <li>At least 1 table and 1 figure</li>
+            <li>References in AER format</li>
+            <li>Clean, commented code</li>
+            <li>PDF compiles without errors</li>
+        </ul>
+    </div>
+</div>
+
+</body>
+</html>

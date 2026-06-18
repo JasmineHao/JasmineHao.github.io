@@ -1,0 +1,128 @@
+note: "version 2" Tectonic command-line interface activated
+note: Running TeX ...
+Fontconfig error: Cannot load default config file: No such file: (null)
+warning: 1_4_Lasso_Application.tex:49: Missing character: There is no 5 ("35) in font nullfont!
+warning: could not represent character "5" (0x35) in font "nullfont"
+warning:   you may need to load the `fontspec` package and use (e.g.) \setmainfont to
+warning:   choose a different font that covers the unrepresentable character(s)
+warning: 1_4_Lasso_Application.tex:49: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 1_4_Lasso_Application.tex:58: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 1_4_Lasso_Application.tex:145: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 1_4_Lasso_Application.tex:155: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 1_4_Lasso_Application.tex:165: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 1_4_Lasso_Application.tex:177: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 1_4_Lasso_Application.tex:185: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 1_4_Lasso_Application.tex:194: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 1_4_Lasso_Application.tex:215: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 1_4_Lasso_Application.tex:221: Overfull \vbox (12.4326pt too high) detected at line 221
+
+warning: 1_4_Lasso_Application.tex:221: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 1_4_Lasso_Application.tex:264: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 1_4_Lasso_Application.tex:264: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 1_4_Lasso_Application.tex:264: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 1_4_Lasso_Application.tex:314: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 1_4_Lasso_Application.tex:314: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 1_4_Lasso_Application.tex:314: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 1_4_Lasso_Application.tex:330: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 1_4_Lasso_Application.tex:351: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 1_4_Lasso_Application.tex:363: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 1_4_Lasso_Application.tex:413: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 1_4_Lasso_Application.tex:413: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 1_4_Lasso_Application.tex:413: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 1_4_Lasso_Application.tex:420: Overfull \vbox (5.26224pt too high) detected at line 420
+
+warning: 1_4_Lasso_Application.tex:420: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 1_4_Lasso_Application.tex:433: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 1_4_Lasso_Application.tex:448: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 1_4_Lasso_Application.tex:457: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 1_4_Lasso_Application.tex:479: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 1_4_Lasso_Application.tex:479: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 1_4_Lasso_Application.tex:498: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 1_4_Lasso_Application.tex:498: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 1_4_Lasso_Application.tex:517: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+note: Running BibTeX on 1_4_Lasso_Application.aux ...
+note: Rerunning TeX because bibtex was run ...
+warning: 1_4_Lasso_Application.tex:49: Missing character: There is no 5 ("35) in font nullfont!
+warning: could not represent character "5" (0x35) in font "nullfont"
+warning:   you may need to load the `fontspec` package and use (e.g.) \setmainfont to
+warning:   choose a different font that covers the unrepresentable character(s)
+warning: 1_4_Lasso_Application.tex:49: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 1_4_Lasso_Application.tex:58: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 1_4_Lasso_Application.tex:145: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 1_4_Lasso_Application.tex:155: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 1_4_Lasso_Application.tex:165: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 1_4_Lasso_Application.tex:177: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 1_4_Lasso_Application.tex:185: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 1_4_Lasso_Application.tex:194: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 1_4_Lasso_Application.tex:215: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 1_4_Lasso_Application.tex:221: Overfull \vbox (12.4326pt too high) detected at line 221
+
+warning: 1_4_Lasso_Application.tex:221: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 1_4_Lasso_Application.tex:264: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 1_4_Lasso_Application.tex:264: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 1_4_Lasso_Application.tex:264: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 1_4_Lasso_Application.tex:314: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 1_4_Lasso_Application.tex:314: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 1_4_Lasso_Application.tex:314: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 1_4_Lasso_Application.tex:330: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 1_4_Lasso_Application.tex:351: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 1_4_Lasso_Application.tex:363: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 1_4_Lasso_Application.tex:413: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 1_4_Lasso_Application.tex:413: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 1_4_Lasso_Application.tex:413: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 1_4_Lasso_Application.tex:420: Overfull \vbox (5.26224pt too high) detected at line 420
+
+warning: 1_4_Lasso_Application.tex:420: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 1_4_Lasso_Application.tex:433: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 1_4_Lasso_Application.tex:448: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 1_4_Lasso_Application.tex:457: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 1_4_Lasso_Application.tex:479: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 1_4_Lasso_Application.tex:479: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 1_4_Lasso_Application.tex:498: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 1_4_Lasso_Application.tex:498: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 1_4_Lasso_Application.tex:517: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+note: Rerunning TeX because "1_4_Lasso_Application.aux" changed ...
+warning: 1_4_Lasso_Application.tex:49: 
+Missing character: There is no 5 ("35) in font nullfont!
+warning: could not represent character "5" (0x35) in font "nullfont"
+warning:   you may need to load the `fontspec` package and use (e.g.) \setmainfont to
+warning:   choose a different font that covers the unrepresentable character(s)
+warning: 1_4_Lasso_Application.tex:49: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 1_4_Lasso_Application.tex:58: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 1_4_Lasso_Application.tex:145: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 1_4_Lasso_Application.tex:155: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 1_4_Lasso_Application.tex:165: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 1_4_Lasso_Application.tex:177: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 1_4_Lasso_Application.tex:185: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 1_4_Lasso_Application.tex:194: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 1_4_Lasso_Application.tex:215: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 1_4_Lasso_Application.tex:221: Overfull \vbox (12.4326pt too high) detected at line 221
+
+warning: 1_4_Lasso_Application.tex:221: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 1_4_Lasso_Application.tex:264: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 1_4_Lasso_Application.tex:264: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 1_4_Lasso_Application.tex:264: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 1_4_Lasso_Application.tex:314: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 1_4_Lasso_Application.tex:314: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 1_4_Lasso_Application.tex:314: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 1_4_Lasso_Application.tex:330: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 1_4_Lasso_Application.tex:351: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 1_4_Lasso_Application.tex:363: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 1_4_Lasso_Application.tex:413: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 1_4_Lasso_Application.tex:413: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 1_4_Lasso_Application.tex:413: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 1_4_Lasso_Application.tex:420: Overfull \vbox (5.26224pt too high) detected at line 420
+
+warning: 1_4_Lasso_Application.tex:420: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 1_4_Lasso_Application.tex:433: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 1_4_Lasso_Application.tex:448: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 1_4_Lasso_Application.tex:457: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 1_4_Lasso_Application.tex:479: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 1_4_Lasso_Application.tex:479: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 1_4_Lasso_Application.tex:498: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 1_4_Lasso_Application.tex:498: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 1_4_Lasso_Application.tex:517: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: warnings were issued by the TeX engine; use --print and/or --keep-logs for details.
+note: Running xdvipdfmx ...
+note: Writing `1_4_Lasso_Application.pdf` (1.1770133972167969 MiB)
+note: Skipped writing 6 intermediate files (use --keep-intermediates to keep them)

@@ -1,0 +1,123 @@
+note: "version 2" Tectonic command-line interface activated
+note: Running TeX ...
+Fontconfig error: Cannot load default config file: No such file: (null)
+warning: 5_2_Clustering.tex:47: Missing character: There is no 5 ("35) in font nullfont!
+warning: could not represent character "5" (0x35) in font "nullfont"
+warning:   you may need to load the `fontspec` package and use (e.g.) \setmainfont to
+warning:   choose a different font that covers the unrepresentable character(s)
+warning: 5_2_Clustering.tex:47: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 5_2_Clustering.tex:64: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 5_2_Clustering.tex:78: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 5_2_Clustering.tex:97: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 5_2_Clustering.tex:105: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 5_2_Clustering.tex:115: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 5_2_Clustering.tex:128: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 5_2_Clustering.tex:168: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 5_2_Clustering.tex:190: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 5_2_Clustering.tex:234: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 5_2_Clustering.tex:251: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 5_2_Clustering.tex:271: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 5_2_Clustering.tex:300: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 5_2_Clustering.tex:321: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 5_2_Clustering.tex:335: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 5_2_Clustering.tex:340: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 5_2_Clustering.tex:359: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 5_2_Clustering.tex:385: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 5_2_Clustering.tex:423: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 5_2_Clustering.tex:423: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 5_2_Clustering.tex:423: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 5_2_Clustering.tex:439: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 5_2_Clustering.tex:452: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 5_2_Clustering.tex:468: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 5_2_Clustering.tex:470: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 5_2_Clustering.tex:528: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 5_2_Clustering.tex:528: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 5_2_Clustering.tex:528: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 5_2_Clustering.tex:530: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 5_2_Clustering.tex:566: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 5_2_Clustering.tex:566: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 5_2_Clustering.tex:582: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 5_2_Clustering.tex:589: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+note: Running BibTeX on 5_2_Clustering.aux ...
+note: warnings were issued by BibTeX; use --print and/or --keep-logs for details.
+note: Rerunning TeX because bibtex was run ...
+warning: 5_2_Clustering.tex:47: Missing character: There is no 5 ("35) in font nullfont!
+warning: could not represent character "5" (0x35) in font "nullfont"
+warning:   you may need to load the `fontspec` package and use (e.g.) \setmainfont to
+warning:   choose a different font that covers the unrepresentable character(s)
+warning: 5_2_Clustering.tex:47: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 5_2_Clustering.tex:64: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 5_2_Clustering.tex:78: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 5_2_Clustering.tex:97: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 5_2_Clustering.tex:105: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 5_2_Clustering.tex:115: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 5_2_Clustering.tex:128: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 5_2_Clustering.tex:168: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 5_2_Clustering.tex:190: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 5_2_Clustering.tex:234: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 5_2_Clustering.tex:251: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 5_2_Clustering.tex:271: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 5_2_Clustering.tex:300: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 5_2_Clustering.tex:321: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 5_2_Clustering.tex:335: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 5_2_Clustering.tex:340: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 5_2_Clustering.tex:359: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 5_2_Clustering.tex:385: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 5_2_Clustering.tex:423: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 5_2_Clustering.tex:423: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 5_2_Clustering.tex:423: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 5_2_Clustering.tex:439: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 5_2_Clustering.tex:452: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 5_2_Clustering.tex:468: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 5_2_Clustering.tex:470: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 5_2_Clustering.tex:528: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 5_2_Clustering.tex:528: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 5_2_Clustering.tex:528: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 5_2_Clustering.tex:530: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 5_2_Clustering.tex:566: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 5_2_Clustering.tex:566: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 5_2_Clustering.tex:582: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 5_2_Clustering.tex:589: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+note: Rerunning TeX because "5_2_Clustering.aux" changed ...
+warning: 5_2_Clustering.tex:47: 
+Missing character: There is no 5 ("35) in font nullfont!
+warning: could not represent character "5" (0x35) in font "nullfont"
+warning:   you may need to load the `fontspec` package and use (e.g.) \setmainfont to
+warning:   choose a different font that covers the unrepresentable character(s)
+warning: 5_2_Clustering.tex:47: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 5_2_Clustering.tex:64: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 5_2_Clustering.tex:78: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 5_2_Clustering.tex:97: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 5_2_Clustering.tex:105: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 5_2_Clustering.tex:115: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 5_2_Clustering.tex:128: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 5_2_Clustering.tex:168: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 5_2_Clustering.tex:190: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 5_2_Clustering.tex:234: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 5_2_Clustering.tex:251: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 5_2_Clustering.tex:271: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 5_2_Clustering.tex:300: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 5_2_Clustering.tex:321: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 5_2_Clustering.tex:335: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 5_2_Clustering.tex:340: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 5_2_Clustering.tex:359: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 5_2_Clustering.tex:385: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 5_2_Clustering.tex:423: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 5_2_Clustering.tex:423: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 5_2_Clustering.tex:423: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 5_2_Clustering.tex:439: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 5_2_Clustering.tex:452: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 5_2_Clustering.tex:468: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 5_2_Clustering.tex:470: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 5_2_Clustering.tex:528: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 5_2_Clustering.tex:528: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 5_2_Clustering.tex:528: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 5_2_Clustering.tex:530: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 5_2_Clustering.tex:566: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 5_2_Clustering.tex:566: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 5_2_Clustering.tex:582: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 5_2_Clustering.tex:589: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: warnings were issued by the TeX engine; use --print and/or --keep-logs for details.
+note: Running xdvipdfmx ...
+note: Writing `5_2_Clustering.pdf` (2.060504913330078 MiB)
+note: Skipped writing 6 intermediate files (use --keep-intermediates to keep them)

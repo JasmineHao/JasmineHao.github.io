@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overleaf &amp; LaTeX Guide | ECON6083</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        a { color: #2874a6; }
+        h1 { color: #1a5276; border-bottom: 3px solid #1a5276; padding-bottom: 10px; margin: 30px 0 20px; }
+        h2 { color: #2874a6; margin: 35px 0 15px; }
+        h3 { color: #3498db; margin: 20px 0 10px; }
+        .breadcrumb { font-size: 0.9em; color: #666; margin-bottom: 10px; }
+        .breadcrumb a { color: #2874a6; text-decoration: none; }
+        .breadcrumb a:hover { text-decoration: underline; }
+        .highlight-box {
+            background: #ebf5fb;
+            border-left: 4px solid #3498db;
+            padding: 15px 20px;
+            margin: 20px 0;
+            border-radius: 0 6px 6px 0;
+        }
+        .warning-box {
+            background: #fdf2e9;
+            border-left: 4px solid #e67e22;
+            padding: 15px 20px;
+            margin: 20px 0;
+            border-radius: 0 6px 6px 0;
+        }
+        .success-box {
+            background: #eafaf1;
+            border-left: 4px solid #27ae60;
+            padding: 15px 20px;
+            margin: 20px 0;
+            border-radius: 0 6px 6px 0;
+        }
+        code {
+            background: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.92em;
+        }
+        pre {
+            background: #1e1e1e;
+            color: #d4d4d4;
+            padding: 18px 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 15px 0;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+            line-height: 1.7;
+        }
+        pre code { background: none; padding: 0; color: inherit; font-size: inherit; }
+        .kw { color: #569cd6; }   /* LaTeX commands */
+        .arg { color: #ce9178; }  /* arguments */
+        .comment { color: #6a9955; }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { padding: 10px 12px; border: 1px solid #ddd; text-align: left; }
+        th { background: #f4f6f7; font-weight: 600; }
+        tr:nth-child(even) { background: #fafafa; }
+        ul, ol { margin: 12px 0 12px 28px; }
+        li { margin: 5px 0; }
+
+        /* Step boxes */
+        .step-section { margin: 25px 0; }
+        .step {
+            display: flex;
+            align-items: flex-start;
+            gap: 18px;
+            margin: 20px 0;
+            padding: 18px;
+            background: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+        }
+        .step-number {
+            flex-shrink: 0;
+            width: 42px;
+            height: 42px;
+            background: #1a5276;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.1em;
+        }
+        .step-content { flex: 1; }
+        .step-content h4 { color: #1a5276; margin: 0 0 8px 0; font-size: 1.05em; }
+
+        /* Screenshot placeholder */
+
+        .screenshot-real {
+            margin: 16px 0;
+        }
+        .screenshot-real img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .screenshot {
+            background: #f0f0f0;
+            border: 2px dashed #aaa;
+            border-radius: 8px;
+            padding: 30px 20px;
+            text-align: center;
+            color: #666;
+            font-style: italic;
+            margin: 15px 0;
+            font-size: 0.92em;
+        }
+        .screenshot::before {
+            content: "📸 ";
+            font-style: normal;
+        }
+
+        /* TOC */
+        .toc {
+            background: #f8f9fa;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 20px 25px;
+            margin: 25px 0;
+        }
+        .toc h3 { color: #1a5276; margin: 0 0 12px 0; font-size: 1em; text-transform: uppercase; letter-spacing: 0.05em; }
+        .toc ol { margin: 0 0 0 20px; }
+        .toc li { margin: 5px 0; }
+        .toc a { color: #2874a6; text-decoration: none; }
+        .toc a:hover { text-decoration: underline; }
+
+        /* Quick reference card */
+        .ref-card {
+            background: #f8f9fa;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px 25px;
+            margin: 20px 0;
+        }
+        .ref-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-top: 10px;
+        }
+        .ref-item { font-size: 0.9em; }
+        .ref-item code { font-size: 0.88em; }
+
+        /* Tag */
+        .tag {
+            display: inline-block;
+            background: #1a5276;
+            color: white;
+            padding: 2px 10px;
+            border-radius: 12px;
+            font-size: 0.78em;
+            margin-left: 6px;
+            vertical-align: middle;
+        }
+        .tag.green { background: #27ae60; }
+        .tag.orange { background: #e67e22; }
+
+        /* Back link footer */
+        .footer-nav {
+            margin: 50px 0 20px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            font-size: 0.92em;
+            color: #555;
+        }
+
+        @media (max-width: 600px) {
+            .ref-grid { grid-template-columns: 1fr; }
+            .step { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="breadcrumb">
+    <a href="../">ECON6083</a> › Overleaf &amp; LaTeX Guide
+</div>
+
+<h1>📝 Overleaf &amp; LaTeX Guide</h1>
+
+<div class="highlight-box">
+    <strong>Who is this for?</strong> Students writing the ECON6083 Final Project report in LaTeX for the first time.
+    This guide walks you through everything step by step — from creating an account to writing equations and tables.
+    No prior LaTeX experience needed.
+</div>
+
+<!-- Table of Contents -->
+<div class="toc">
+    <h3>📋 Contents</h3>
+    <ol>
+        <li><a href="#part1">Getting Started with Overleaf</a></li>
+        <li><a href="#part2">Using the Course Template</a></li>
+        <li><a href="#part3">Basic LaTeX Syntax</a></li>
+        <li><a href="#part4">Economics-Specific LaTeX</a></li>
+        <li><a href="#part5">Common Errors &amp; Fixes</a></li>
+        <li><a href="#quickref">Quick Reference Card</a></li>
+    </ol>
+</div>
+
+<!-- ================================================================ -->
+<h2 id="part1">Part 1 — Getting Started with Overleaf</h2>
+
+<p>Overleaf is a free, browser-based LaTeX editor. You write LaTeX code on the left and see the compiled PDF on the right — no software installation required.</p>
+
+<div class="step-section">
+    <div class="step">
+        <div class="step-number">1</div>
+        <div class="step-content">
+            <h4>Create a free account</h4>
+            <p>Go to <a href="https://www.overleaf.com" target="_blank">overleaf.com</a> and click <strong>Register</strong>. You can sign up with your university email (Google / ORCID also work). The free plan is sufficient for this course.</p>
+            <div class="screenshot-real"><img src="img/01-homepage.png" alt="Overleaf homepage" style="width:100%;border-radius:8px;border:1px solid #E2E8F0;box-shadow:0 2px 8px rgba(0,0,0,0.08);"></div><p style="font-size:0.82rem;color:#718096;text-align:center;margin-top:6px;">▲ Overleaf homepage — click Sign up (top right) to create a free account</p>
+        </div>
+    </div>
+
+    <div class="step">
+        <div class="step-number">2</div>
+        <div class="step-content">
+            <h4>Create a new blank project</h4>
+            <p>After logging in, click <strong>New Project → Blank Project</strong>. Give it a name like <em>ECON6083 Final Project</em>.</p>
+            <div class="screenshot-real"><img src="https://docs.overleaf.com/~gitbook/image?url=https%3A%2F%2F3502988919-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FVetOkhFZmAC8QCQK0Pi7%252Fuploads%252FZCjkhIrV4CSTByHgsbiC%252Fimage.png%3Falt%3Dmedia%26token%3Dfa4f1cd1-b598-4ea3-b073-979e2a71ecfd&width=768&dpr=3&quality=100&sign=3c6e14aa&sv=2" alt="New Project dropdown menu" style="width:100%;border-radius:8px;border:1px solid #E2E8F0;box-shadow:0 2px 8px rgba(0,0,0,0.08);"></div><p style="font-size:0.82rem;color:#718096;text-align:center;margin-top:6px;">▲ Click New Project → Blank Project to start from scratch</p><div class="screenshot-real"><img src="https://docs.overleaf.com/~gitbook/image?url=https%3A%2F%2F3502988919-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FVetOkhFZmAC8QCQK0Pi7%252Fuploads%252FwDBgD5dOjIbgIOJAT8T9%252Fimage.png%3Falt%3Dmedia%26token%3D5040b399-d470-4f45-8aed-ff51bbce67d1&width=768&dpr=3&quality=100&sign=f9be1812&sv=2" alt="New project name dialog" style="width:100%;border-radius:8px;border:1px solid #E2E8F0;box-shadow:0 2px 8px rgba(0,0,0,0.08);"></div><p style="font-size:0.82rem;color:#718096;text-align:center;margin-top:6px;">▲ Enter a project name, then click Create</p>
+        </div>
+    </div>
+
+    <div class="step">
+        <div class="step-number">3</div>
+        <div class="step-content">
+            <h4>The Overleaf interface</h4>
+            <p>The interface has three panels:</p>
+            <ul>
+                <li><strong>Left panel</strong> — File browser (your .tex files, images, .bib files)</li>
+                <li><strong>Middle panel</strong> — Code editor (where you type LaTeX)</li>
+                <li><strong>Right panel</strong> — PDF preview (updates when you compile)</li>
+            </ul>
+            <p>The green <strong>Compile</strong> button (or <kbd>Ctrl+Enter</kbd> / <kbd>Cmd+Enter</kbd>) re-generates the PDF from your code.</p>
+            <div class="screenshot-real"><img src="https://docs.overleaf.com/~gitbook/image?url=https%3A%2F%2F3502988919-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FVetOkhFZmAC8QCQK0Pi7%252Fuploads%252FwreFZV4UUALGXTsHo9Xq%252FBlankProject-NewDesign-Light.png%3Falt%3Dmedia%26token%3D378dc6b1-b5db-4748-932d-5d0ae46094a4&width=768&dpr=3&quality=100&sign=374c5675&sv=2" alt="Overleaf blank project editor" style="width:100%;border-radius:8px;border:1px solid #E2E8F0;box-shadow:0 2px 8px rgba(0,0,0,0.08);"></div><p style="font-size:0.82rem;color:#718096;text-align:center;margin-top:6px;">▲ The Overleaf editor: file tree (left) · LaTeX source (centre) · PDF preview (right). Click Recompile to update the PDF.</p>
+        </div>
+    </div>
+</div>
+
+<!-- ================================================================ -->
+<h2 id="part2">Part 2 — Using the Course Template</h2>
+
+<p>We provide a ready-made LaTeX template for the final project report. <strong>Use this template</strong> — it already has the correct formatting, sections, and bibliography style.</p>
+
+<div class="step-section">
+    <div class="step">
+        <div class="step-number">1</div>
+        <div class="step-content">
+            <h4>Download the template</h4>
+            <p>Download the template file: <a href="../assignments/final-project/report.tex" target="_blank"><strong>report.tex</strong></a></p>
+            <div class="highlight-box" style="margin:10px 0;">
+                The template already contains: document class settings, useful packages (<code>amsmath</code>, <code>graphicx</code>, <code>natbib</code>, <code>booktabs</code>), title/author placeholders, and section scaffolding.
+            </div>
+        </div>
+    </div>
+
+    <div class="step">
+        <div class="step-number">2</div>
+        <div class="step-content">
+            <h4>Upload to Overleaf</h4>
+            <p>In Overleaf, click <strong>New Project → Upload Project</strong> and upload the <code>report.tex</code> file (or zip it first if you have multiple files).</p>
+            <p>Alternatively, paste the template contents directly into a blank project's <code>main.tex</code>.</p>
+            <div class="screenshot-real"><img src="img/02-register.png" alt="Overleaf login page" style="width:100%;border-radius:8px;border:1px solid #E2E8F0;box-shadow:0 2px 8px rgba(0,0,0,0.08);"></div><p style="font-size:0.82rem;color:#718096;text-align:center;margin-top:6px;">▲ Log in or register, then use New Project → Upload Project to upload report.tex</p>
+        </div>
+    </div>
+
+    <div class="step">
+        <div class="step-number">3</div>
+        <div class="step-content">
+            <h4>Compile and check</h4>
+            <p>Press <strong>Compile</strong>. You should see a formatted PDF on the right. If there are errors, check the <strong>Logs</strong> panel (bottom of the editor) — it shows exactly which line caused the problem.</p>
+            <div class="screenshot-real"><img src="https://docs.overleaf.com/~gitbook/image?url=https%3A%2F%2F3502988919-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FVetOkhFZmAC8QCQK0Pi7%252Fuploads%252FsYUZK5XLWT93qVGii9Rv%252FExampleProject-NewDesign-Light.png%3Falt%3Dmedia%26token%3Dc676ca48-a8ac-4a34-852f-69b336712383&width=768&dpr=3&quality=100&sign=66074b16&sv=2" alt="Overleaf example project compiled" style="width:100%;border-radius:8px;border:1px solid #E2E8F0;box-shadow:0 2px 8px rgba(0,0,0,0.08);"></div><p style="font-size:0.82rem;color:#718096;text-align:center;margin-top:6px;">▲ After uploading and compiling, the PDF preview shows your formatted report</p>
+            <div class="success-box" style="margin:10px 0;">
+                ✅ If you see a PDF — you're ready to start writing!
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ================================================================ -->
+<h2 id="part3">Part 3 — Basic LaTeX Syntax</h2>
+
+<h3>3.1 Document Structure</h3>
+<p>Every LaTeX document follows this skeleton:</p>
+<pre><code><span class="comment">% Preamble — settings and packages</span>
+<span class="kw">\documentclass</span><span class="arg">[12pt]{article}</span>
+
+<span class="kw">\usepackage</span><span class="arg">{amsmath}</span>      <span class="comment">% math</span>
+<span class="kw">\usepackage</span><span class="arg">{graphicx}</span>    <span class="comment">% figures</span>
+<span class="kw">\usepackage</span><span class="arg">{natbib}</span>       <span class="comment">% citations</span>
+<span class="kw">\usepackage</span><span class="arg">{booktabs}</span>     <span class="comment">% nice tables</span>
+
+<span class="kw">\title</span><span class="arg">{My ECON6083 Final Project}</span>
+<span class="kw">\author</span><span class="arg">{Your Name}</span>
+<span class="kw">\date</span><span class="arg">{\today}</span>
+
+<span class="kw">\begin</span><span class="arg">{document}</span>
+
+<span class="kw">\maketitle</span>
+<span class="kw">\tableofcontents</span>
+<span class="kw">\newpage</span>
+
+<span class="comment">% Your content goes here</span>
+
+<span class="kw">\end</span><span class="arg">{document}</span></code></pre>
+
+<h3>3.2 Text Formatting</h3>
+<table>
+    <tr><th>What you want</th><th>LaTeX command</th><th>Output</th></tr>
+    <tr><td>Bold text</td><td><code>\textbf{important}</code></td><td><strong>important</strong></td></tr>
+    <tr><td>Italic text</td><td><code>\textit{variable}</code></td><td><em>variable</em></td></tr>
+    <tr><td>Section heading</td><td><code>\section{Introduction}</code></td><td>1. Introduction</td></tr>
+    <tr><td>Subsection</td><td><code>\subsection{Data}</code></td><td>1.1 Data</td></tr>
+    <tr><td>New paragraph</td><td>Leave a blank line</td><td>Indented paragraph</td></tr>
+    <tr><td>Line break</td><td><code>\\</code></td><td>New line</td></tr>
+    <tr><td>Footnote</td><td><code>\footnote{text here}</code></td><td>Footnote at page bottom</td></tr>
+</table>
+
+<h3>3.3 Math Mode</h3>
+<p>LaTeX is famous for beautiful math. There are two modes:</p>
+<pre><code><span class="comment">% Inline math — inside a sentence</span>
+The estimate is $\hat{\beta} = 2.3$ with standard error $0.4$.
+
+<span class="comment">% Display math — on its own line, numbered</span>
+<span class="kw">\begin</span><span class="arg">{equation}</span>
+    Y_i = \alpha + \beta D_i + \gamma X_i + \varepsilon_i
+<span class="kw">\end</span><span class="arg">{equation}</span>
+
+<span class="comment">% Display math — unnumbered</span>
+\[
+    \hat{\tau}^{DML} = \frac{1}{n}\sum_{i=1}^{n} \tilde{Y}_i \tilde{D}_i
+\]</code></pre>
+
+<h3>3.4 Common Math Commands</h3>
+<table>
+    <tr><th>Symbol / Structure</th><th>LaTeX</th></tr>
+    <tr><td>Fraction</td><td><code>\frac{numerator}{denominator}</code></td></tr>
+    <tr><td>Subscript</td><td><code>Y_{it}</code> → Y<sub>it</sub></td></tr>
+    <tr><td>Superscript</td><td><code>X^{2}</code> → X²</td></tr>
+    <tr><td>Summation</td><td><code>\sum_{i=1}^{n}</code></td></tr>
+    <tr><td>Greek letters</td><td><code>\alpha \beta \gamma \delta \epsilon \theta \lambda \mu \sigma \tau</code></td></tr>
+    <tr><td>Hat (estimate)</td><td><code>\hat{\beta}</code></td></tr>
+    <tr><td>Bar (average)</td><td><code>\bar{Y}</code></td></tr>
+    <tr><td>Tilde (residual)</td><td><code>\tilde{Y}</code></td></tr>
+    <tr><td>Expected value</td><td><code>\mathbb{E}[Y]</code></td></tr>
+    <tr><td>Infinity</td><td><code>\infty</code></td></tr>
+    <tr><td>Approximately</td><td><code>\approx</code></td></tr>
+    <tr><td>Geq / Leq</td><td><code>\geq \leq</code></td></tr>
+    <tr><td>Indicator function</td><td><code>\mathbf{1}(\cdot)</code> or <code>\mathbb{1}</code></td></tr>
+</table>
+
+<h3>3.5 Tables</h3>
+<p>For regression result tables, use the <code>booktabs</code> package (already in the template):</p>
+<pre><code><span class="kw">\begin</span><span class="arg">{table}</span>[htbp]
+    <span class="kw">\centering</span>
+    <span class="kw">\caption</span><span class="arg">{DML Estimates: Effect of 401(k) on Net Financial Assets}</span>
+    <span class="kw">\begin</span><span class="arg">{tabular}</span><span class="arg">{lccc}</span>
+        <span class="kw">\toprule</span>
+        <span class="arg">Method &amp; Estimate &amp; Std. Error &amp; 95\% CI \\</span>
+        <span class="kw">\midrule</span>
+        <span class="arg">OLS         &amp; 9,416  &amp; (523)   &amp; [8,391, 10,441] \\</span>
+        <span class="arg">Lasso DML   &amp; 8,981  &amp; (898)   &amp; [7,221, 10,741] \\</span>
+        <span class="arg">RF DML      &amp; 9,204  &amp; (1,012) &amp; [7,221, 11,187] \\</span>
+        <span class="kw">\bottomrule</span>
+    <span class="kw">\end</span><span class="arg">{tabular}</span>
+    <span class="kw">\label</span><span class="arg">{tab:dml}</span>
+<span class="kw">\end</span><span class="arg">{table}</span></code></pre>
+
+<div class="highlight-box">
+    💡 <strong>Tip:</strong> Use <code>&amp;</code> to separate columns and <code>\\</code> to end a row. <code>\toprule</code>, <code>\midrule</code>, <code>\bottomrule</code> give you professional-looking horizontal lines (from <code>booktabs</code>).
+</div>
+
+<h3>3.6 Figures</h3>
+<pre><code><span class="kw">\begin</span><span class="arg">{figure}</span>[htbp]
+    <span class="kw">\centering</span>
+    <span class="kw">\includegraphics</span><span class="arg">[width=0.75\textwidth]{event_study.png}</span>
+    <span class="kw">\caption</span><span class="arg">{Event Study: Dynamic Treatment Effects (CS2021)}</span>
+    <span class="kw">\label</span><span class="arg">{fig:event_study}</span>
+<span class="kw">\end</span><span class="arg">{figure}</span></code></pre>
+
+<div class="highlight-box">
+    💡 <strong>Tip:</strong> Upload your image file (PNG/PDF/JPG) to Overleaf using the <strong>Upload</strong> button in the file panel. Then reference it by filename.
+</div>
+
+<h3>3.7 Citations &amp; Bibliography</h3>
+<pre><code><span class="comment">% In your text:</span>
+As shown by <span class="kw">\citet</span><span class="arg">{athey2021policy}</span>, policy learning...
+Results are consistent with the literature <span class="kw">\citep</span><span class="arg">{callaway2021diff}</span>.
+
+<span class="comment">% At the end of your document (before \end{document}):</span>
+<span class="kw">\bibliographystyle</span><span class="arg">{aer}</span>          <span class="comment">% AER style</span>
+<span class="kw">\bibliography</span><span class="arg">{references}</span>     <span class="comment">% reads references.bib</span></code></pre>
+
+<p>Your <code>references.bib</code> file contains entries like:</p>
+<pre><code>@article{athey2021policy,
+  author  = {Athey, Susan and Wager, Stefan},
+  title   = {Policy Learning with Observational Data},
+  journal = {Econometrica},
+  year    = {2021},
+  volume  = {89},
+  pages   = {133--161}
+}</code></pre>
+
+<div class="highlight-box">
+    💡 <strong>Tip:</strong> Google Scholar → click "Cite" → BibTeX to get the .bib entry for any paper instantly.
+</div>
+
+<!-- ================================================================ -->
+<h2 id="part4">Part 4 — Economics-Specific LaTeX</h2>
+
+<h3>4.1 Regression Equations</h3>
+<pre><code><span class="comment">% Basic OLS</span>
+\[
+    Y_{it} = \alpha_i + \lambda_t + \beta D_{it} + \varepsilon_{it}
+\]
+
+<span class="comment">% DML Partially Linear Regression</span>
+\[
+    Y_i = \theta D_i + g(X_i) + \varepsilon_i, \quad D_i = m(X_i) + \eta_i
+\]
+
+<span class="comment">% ATT(g,t) from Callaway-Sant'Anna</span>
+\[
+    ATT(g,t) = \mathbb{E}\bigl[Y_t(1) - Y_t(0) \mid G_g = 1\bigr]
+\]
+
+<span class="comment">% Doubly robust score</span>
+\[
+    \hat{\Gamma}_i = \hat{\tau}(X_i)
+    + \frac{W_i\bigl(Y_i - \hat{\mu}_1(X_i)\bigr)}{\hat{e}(X_i)}
+    - \frac{(1-W_i)\bigl(Y_i - \hat{\mu}_0(X_i)\bigr)}{1 - \hat{e}(X_i)}
+\]</code></pre>
+
+<h3>4.2 Multi-line Aligned Equations</h3>
+<pre><code><span class="kw">\begin</span><span class="arg">{align}</span>
+    \hat{\beta}^{TWFE}
+        &amp;= \sum_{k,j} s_{kj} \cdot \hat{\beta}_{kj}^{2\times 2} \\
+        &amp;= \underbrace{0.3(4)}_{\text{Early vs Never}}
+         + \underbrace{0.3(2)}_{\text{Late vs Never}}
+         + \underbrace{0.2(-2)}_{\text{Forbidden!}}
+         = 2.2
+<span class="kw">\end</span><span class="arg">{align}</span></code></pre>
+
+<h3>4.3 Professional Regression Table</h3>
+<pre><code><span class="kw">\begin</span><span class="arg">{table}</span>[htbp]
+<span class="kw">\centering</span>
+<span class="kw">\caption</span><span class="arg">{Effect of Green Finance Zones on Patent Applications}</span>
+<span class="kw">\begin</span><span class="arg">{tabular}</span><span class="arg">{lcccc}</span>
+    <span class="kw">\toprule</span>
+     &amp; (1) TWFE &amp; (2) CS2021 &amp; (3) DML-DiD &amp; (4) SCM \\
+    <span class="kw">\midrule</span>
+    ATT          &amp; 0.12**  &amp; 0.21***  &amp; 0.19***  &amp; 0.22**  \\
+                 &amp; (0.06)  &amp; (0.05)   &amp; (0.04)   &amp; (0.09)  \\
+    <span class="kw">\addlinespace</span>
+    Observations &amp; 3,200   &amp; 3,200    &amp; 3,200    &amp; 320     \\
+    Covariates   &amp; Linear  &amp; DR       &amp; ML       &amp; None    \\
+    <span class="kw">\bottomrule</span>
+<span class="kw">\end</span><span class="arg">{tabular}</span>
+<span class="kw">\begin</span><span class="arg">{tablenotes}</span>
+    \small \textit{Note:} Standard errors in parentheses.
+    *** p&lt;0.01, ** p&lt;0.05, * p&lt;0.1.
+<span class="kw">\end</span><span class="arg">{tablenotes}</span>
+<span class="kw">\label</span><span class="arg">{tab:main}</span>
+<span class="kw">\end</span><span class="arg">{table}</span></code></pre>
+
+<!-- ================================================================ -->
+<h2 id="part5">Part 5 — Common Errors &amp; Fixes</h2>
+
+<div class="warning-box">
+    <strong>❌ Error: "Undefined control sequence"</strong><br>
+    <strong>Cause:</strong> Typo in a LaTeX command, or a package is not loaded.<br>
+    <strong>Fix:</strong> Check spelling. E.g. <code>\textbf</code> not <code>\textbold</code>. Add the required <code>\usepackage{...}</code> in the preamble.
+</div>
+
+<div class="warning-box">
+    <strong>❌ Error: "Missing $ inserted"</strong><br>
+    <strong>Cause:</strong> You used a math symbol (like <code>_</code>, <code>^</code>, <code>\alpha</code>) outside of math mode.<br>
+    <strong>Fix:</strong> Wrap math in <code>$...$</code> or <code>\[...\]</code>. E.g. write <code>$Y_{it}$</code> not <code>Y_{it}</code>.
+</div>
+
+<div class="warning-box">
+    <strong>❌ Citations showing as [?] or bold question marks</strong><br>
+    <strong>Cause:</strong> Bibliography hasn't been compiled yet.<br>
+    <strong>Fix:</strong> You need to compile <strong>twice</strong> after adding new citations: Compile → Compile again. (Overleaf usually handles this automatically.)
+</div>
+
+<div class="warning-box">
+    <strong>❌ Figure not found / image missing</strong><br>
+    <strong>Cause:</strong> The image file isn't in the Overleaf project, or the filename is wrong (case-sensitive!).<br>
+    <strong>Fix:</strong> Upload the image file to Overleaf. Make sure the filename in <code>\includegraphics{...}</code> matches exactly.
+</div>
+
+<div class="warning-box">
+    <strong>❌ Table/figure appearing in the wrong place</strong><br>
+    <strong>Cause:</strong> LaTeX places "floats" where it sees fit by default.<br>
+    <strong>Fix:</strong> Use <code>[h]</code> (here), <code>[t]</code> (top), <code>[b]</code> (bottom), or <code>[H]</code> (force here, requires <code>\usepackage{float}</code>).
+</div>
+
+<div class="success-box">
+    <strong>✅ General debugging tip:</strong> Click <strong>Logs</strong> at the bottom of the Overleaf editor. The error message shows the exact line number. Fix the first error first — later errors often disappear once the first is fixed.
+</div>
+
+<h3>5.1 Compiling bibliography step by step</h3>
+<div class="step-section">
+    <div class="step">
+        <div class="step-number">1</div>
+        <div class="step-content">
+            <h4>Create a <code>references.bib</code> file</h4>
+            <p>In Overleaf, click <strong>New File</strong> and name it <code>references.bib</code>. Paste your BibTeX entries here.</p>
+        </div>
+    </div>
+    <div class="step">
+        <div class="step-number">2</div>
+        <div class="step-content">
+            <h4>Add <code>\bibliography{references}</code> to your .tex file</h4>
+            <p>Just before <code>\end{document}</code>, add:</p>
+            <pre style="margin:8px 0;"><code><span class="kw">\bibliographystyle</span><span class="arg">{aer}</span>
+<span class="kw">\bibliography</span><span class="arg">{references}</span></code></pre>
+        </div>
+    </div>
+    <div class="step">
+        <div class="step-number">3</div>
+        <div class="step-content">
+            <h4>Compile twice</h4>
+            <p>Press Compile, wait for it to finish, then press Compile again. The second pass resolves citation cross-references.</p>
+        </div>
+    </div>
+</div>
+
+<!-- ================================================================ -->
+<h2 id="quickref">Quick Reference Card</h2>
+
+<div class="ref-card">
+    <h3>🗂 Most-Used LaTeX Commands at a Glance</h3>
+    <div class="ref-grid">
+        <div class="ref-item">
+            <strong>Text</strong><br>
+            <code>\textbf{bold}</code><br>
+            <code>\textit{italic}</code><br>
+            <code>\footnote{note}</code><br>
+            <code>\noindent</code><br>
+        </div>
+        <div class="ref-item">
+            <strong>Structure</strong><br>
+            <code>\section{Title}</code><br>
+            <code>\subsection{Sub}</code><br>
+            <code>\newpage</code><br>
+            <code>\tableofcontents</code>
+        </div>
+        <div class="ref-item">
+            <strong>Math</strong><br>
+            <code>$inline math$</code><br>
+            <code>\[ display math \]</code><br>
+            <code>\frac{a}{b}</code><br>
+            <code>\hat{\beta}, \bar{Y}</code>
+        </div>
+        <div class="ref-item">
+            <strong>Tables</strong><br>
+            <code>\begin{tabular}{lcc}</code><br>
+            <code>\toprule \midrule \bottomrule</code><br>
+            <code>&amp;</code> column separator<br>
+            <code>\\</code> row end
+        </div>
+        <div class="ref-item">
+            <strong>Figures</strong><br>
+            <code>\includegraphics[width=.8\textwidth]{fig.png}</code><br>
+            <code>\caption{...}</code><br>
+            <code>\label{fig:name}</code>
+        </div>
+        <div class="ref-item">
+            <strong>Citations</strong><br>
+            <code>\cite{key}</code><br>
+            <code>\citet{key}</code> (Author, year)<br>
+            <code>\citep{key}</code> (Author, year)<br>
+            <code>\bibliography{refs}</code>
+        </div>
+        <div class="ref-item">
+            <strong>Packages to know</strong><br>
+            <code>\usepackage{amsmath}</code><br>
+            <code>\usepackage{graphicx}</code><br>
+            <code>\usepackage{booktabs}</code><br>
+            <code>\usepackage{natbib}</code>
+        </div>
+        <div class="ref-item">
+            <strong>Greek letters</strong><br>
+            <code>\alpha \beta \gamma \delta</code><br>
+            <code>\epsilon \theta \lambda \mu</code><br>
+            <code>\sigma \tau \pi \rho</code><br>
+            <code>\Gamma \Delta \Lambda \Sigma</code>
+        </div>
+    </div>
+</div>
+
+<div class="highlight-box">
+    <strong>📚 More resources:</strong>
+    <ul style="margin-top:8px;">
+        <li><a href="https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes" target="_blank">Learn LaTeX in 30 Minutes</a> — Overleaf's own beginner guide</li>
+        <li><a href="https://www.overleaf.com/learn/latex/Mathematical_expressions" target="_blank">Overleaf Math Guide</a> — comprehensive math syntax reference</li>
+        <li><a href="https://detexify.kirelabs.org/classify.html" target="_blank">Detexify</a> — draw a symbol, get the LaTeX command</li>
+        <li><a href="https://scholar.google.com" target="_blank">Google Scholar</a> → "Cite" → BibTeX for reference entries</li>
+    </ul>
+</div>
+
+<div class="footer-nav">
+    <a href="../">← Back to ECON6083 Course Page</a> &nbsp;|&nbsp;
+    <a href="../final-project/">Final Project Guide</a> &nbsp;|&nbsp;
+    <a href="../assignments/final-project/report.tex">Download LaTeX Template</a>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,1965 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ECON6083 — Machine Learning in Economics</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    /* ── Reset & Base ─────────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: #F7F9FC;
+      color: #2D3748;
+      font-size: 15px;
+      line-height: 1.65;
+    }
+
+    /* ── Top accent bar ───────────────────────────────────────────── */
+    .accent-bar {
+      height: 5px;
+      background: linear-gradient(90deg, #4A90D9 0%, #3AAFA9 50%, #E05C5C 100%);
+    }
+
+    /* ── Header ───────────────────────────────────────────────────── */
+    header {
+      background: #fff;
+      border-bottom: 1px solid #E2E8F0;
+      padding: 28px 0 24px;
+    }
+    .header-inner {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .course-tag {
+      display: inline-block;
+      background: #EBF4FF;
+      color: #4A90D9;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 3px 10px;
+      border-radius: 20px;
+      margin-bottom: 10px;
+    }
+    header h1 {
+      font-size: 26px;
+      font-weight: 700;
+      color: #1A202C;
+      letter-spacing: -0.5px;
+      line-height: 1.2;
+    }
+    header h1 span {
+      color: #4A90D9;
+    }
+    .header-meta {
+      margin-top: 10px;
+      font-size: 13px;
+      color: #718096;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+    }
+    .header-meta span::before {
+      content: '▸ ';
+      color: #4A90D9;
+    }
+
+    /* ── Nav tabs ─────────────────────────────────────────────────── */
+    nav {
+      background: #fff;
+      border-bottom: 1px solid #E2E8F0;
+      position: relative;
+      z-index: 10;
+    }
+    .nav-inner {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      gap: 0;
+    }
+    .nav-tab {
+      padding: 14px 20px;
+      font-size: 13px;
+      font-weight: 500;
+      color: #718096;
+      cursor: pointer;
+      border-bottom: 3px solid transparent;
+      transition: all 0.15s;
+      user-select: none;
+    }
+    .nav-tab:hover { color: #4A90D9; }
+    .nav-tab.active { color: #4A90D9; border-bottom-color: #4A90D9; }
+
+    /* ── Main content ─────────────────────────────────────────────── */
+    main {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 36px 24px 80px;
+    }
+    .tab-panel { display: none; }
+    .tab-panel.active { display: block; }
+
+    /* ── Section title ────────────────────────────────────────────── */
+    .section-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: #1A202C;
+      margin-bottom: 6px;
+    }
+    .section-sub {
+      font-size: 13px;
+      color: #718096;
+      margin-bottom: 28px;
+    }
+
+    /* ── Lecture cards grid ───────────────────────────────────────── */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 18px;
+    }
+
+    /* ── Lecture row: slide left, exercise right ─────────────────── */
+    .lecture-row-flex {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+    @media (max-width: 700px) {
+      .lecture-row-flex { grid-template-columns: 1fr; }
+    }
+    .lecture-row-flex .card { margin: 0; }
+    .lecture-divider {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 28px 0 16px;
+    }
+    .lecture-divider .lec-badge {
+      background: #4A90D9;
+      color: #fff;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 4px 14px;
+      border-radius: 20px;
+      white-space: nowrap;
+    }
+    .lecture-divider .lec-badge.locked {
+      background: #E2E8F0;
+      color: #A0AEC0;
+    }
+    .lecture-divider .lec-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: #1A202C;
+    }
+    .lecture-divider .lec-title.locked { color: #A0AEC0; }
+    .lecture-divider .lec-line {
+      flex: 1;
+      height: 1px;
+      background: #E2E8F0;
+    }
+    .lecture-divider .lec-date {
+      font-size: 12px;
+      color: #A0AEC0;
+      font-weight: 500;
+    }
+    .card {
+      background: #fff;
+      border: 1px solid #E2E8F0;
+      border-radius: 10px;
+      padding: 20px 22px;
+      transition: box-shadow 0.15s, transform 0.15s;
+      position: relative;
+      overflow: hidden;
+    }
+    .card:hover {
+      box-shadow: 0 4px 20px rgba(74,144,217,0.12);
+      transform: translateY(-2px);
+    }
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+    }
+    .card.blue::before   { background: #4A90D9; }
+    .card.teal::before   { background: #3AAFA9; }
+    .card.coral::before  { background: #E05C5C; }
+    .card.purple::before { background: #805AD5; }
+
+    .card-week {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #A0AEC0;
+      margin-bottom: 6px;
+    }
+    .card-num {
+      font-size: 11px;
+      font-weight: 600;
+      color: #4A90D9;
+      margin-bottom: 4px;
+    }
+    .card h3 {
+      font-size: 14px;
+      font-weight: 600;
+      color: #1A202C;
+      line-height: 1.4;
+      margin-bottom: 10px;
+    }
+    .card-desc {
+      font-size: 12px;
+      color: #718096;
+      line-height: 1.5;
+      margin-bottom: 14px;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 6px 14px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 500;
+      text-decoration: none;
+      transition: background 0.15s;
+      cursor: pointer;
+    }
+    .btn-primary {
+      background: #EBF4FF;
+      color: #4A90D9;
+      border: 1px solid #BEE3F8;
+    }
+    .btn-primary:hover { background: #BEE3F8; }
+    .btn-teal {
+      background: #E6FFFA;
+      color: #3AAFA9;
+      border: 1px solid #B2F5EA;
+    }
+    .btn-teal:hover { background: #B2F5EA; }
+    .btn-coral {
+      background: #FFF5F5;
+      color: #E05C5C;
+      border: 1px solid #FED7D7;
+    }
+    .btn-coral:hover { background: #FED7D7; }
+    .btn-locked {
+      background: #F7FAFC;
+      color: #A0AEC0;
+      border: 1px solid #E2E8F0;
+      cursor: default;
+    }
+    .btn-colab {
+      background: #fff;
+      border: 1px solid #E2E8F0;
+      padding: 5px 10px;
+      display: inline-flex;
+      align-items: center;
+    }
+    .btn-colab:hover { background: #F7F9FC; border-color: #CBD5E0; }
+    .card-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+
+    /* ── Week blocks (for exercises/assignments tab) ───────────────── */
+    .week-block {
+      margin-bottom: 36px;
+    }
+    .week-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 16px;
+    }
+    .week-badge {
+      background: #4A90D9;
+      color: #fff;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 20px;
+      white-space: nowrap;
+    }
+    .week-badge.locked {
+      background: #E2E8F0;
+      color: #A0AEC0;
+    }
+    .week-date {
+      font-size: 12px;
+      color: #A0AEC0;
+      font-weight: 500;
+    }
+    .week-divider {
+      flex: 1;
+      height: 1px;
+      background: #E2E8F0;
+    }
+    .week-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 14px;
+    }
+
+    /* ── Locked overlay ───────────────────────────────────────────── */
+    .locked-overlay {
+      position: relative;
+    }
+    .locked-overlay .lock-badge {
+      position: absolute;
+      top: 14px; right: 14px;
+      background: #E2E8F0;
+      color: #A0AEC0;
+      font-size: 10px;
+      font-weight: 600;
+      padding: 2px 8px;
+      border-radius: 10px;
+      letter-spacing: 0.5px;
+    }
+
+    /* ── Final project card ───────────────────────────────────────── */
+    .final-card {
+      background: linear-gradient(135deg, #EBF4FF 0%, #E6FFFA 100%);
+      border: 1px solid #BEE3F8;
+      border-radius: 10px;
+      padding: 24px 26px;
+      margin-top: 36px;
+    }
+    .final-card h3 {
+      font-size: 16px;
+      font-weight: 700;
+      color: #1A202C;
+      margin-bottom: 6px;
+    }
+    .final-card p {
+      font-size: 13px;
+      color: #4A5568;
+      margin-bottom: 16px;
+      line-height: 1.6;
+    }
+    .final-meta {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 16px;
+    }
+    .final-meta-item {
+      font-size: 12px;
+      color: #718096;
+    }
+    .final-meta-item strong {
+      color: #2D3748;
+      font-weight: 600;
+    }
+
+    /* ── Info banner ──────────────────────────────────────────────── */
+    .info-banner {
+      background: #EBF4FF;
+      border: 1px solid #BEE3F8;
+      border-radius: 8px;
+      padding: 12px 18px;
+      font-size: 13px;
+      color: #2B6CB0;
+      margin-bottom: 28px;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+    .info-banner::before { content: 'ℹ'; font-size: 15px; flex-shrink: 0; }
+
+    /* ── Footer ───────────────────────────────────────────────────── */
+    footer {
+      text-align: center;
+      padding: 28px;
+      font-size: 12px;
+      color: #A0AEC0;
+      border-top: 1px solid #E2E8F0;
+    }
+  </style>
+</head>
+<body>
+
+<div class="accent-bar"></div>
+
+<header>
+  <div class="header-inner">
+    <a href="https://jasminehao.com" style="font-size:12px; color:#718096; text-decoration:none; display:inline-flex; align-items:center; gap:4px; margin-bottom:12px; opacity:0.8;">← jasminehao.com</a>
+    <div class="course-tag">ECON6083 · M5 2026</div>
+    <h1>Machine Learning <span>in Economics</span></h1>
+    <div class="header-meta">
+      <span>Prof. Jasmine Hao</span>
+      <span>Mar 18 – May 4, 2026</span>
+      <span>10 Lectures · 3 hrs each</span>
+      <span>5 Weeks</span>
+    </div>
+  </div>
+</header>
+
+<nav>
+  <div class="nav-inner">
+    <div class="nav-tab active" onclick="showTab('slides')">Lectures</div>
+    <div class="nav-tab" onclick="showTab('schedule')">Schedule</div>
+    <div class="nav-tab" onclick="showTab('project')">Final Project</div>
+  </div>
+</nav>
+
+<main>
+
+  <!-- ══════════════════════════════════════════════════════════════
+       TAB 1: LECTURE SLIDES
+  ══════════════════════════════════════════════════════════════════ -->
+  <div id="tab-slides" class="tab-panel active">
+    <div class="section-title">Lectures</div>
+    <div class="section-sub">Slides and in-class exercises are released the day before each lecture. Locked items will unlock automatically.</div>
+    <div class="info-banner">
+      Slides are provided as PDF files. Click to download or view in your browser.
+    </div>
+    <div id="slides-content"></div>
+  </div>
+
+
+  <!-- ══════════════════════════════════════════════════════════════
+       TAB 2: SCHEDULE
+  ══════════════════════════════════════════════════════════════════ -->
+  <div id="tab-schedule" class="tab-panel">
+    <div class="section-title">Course Schedule</div>
+    <div class="section-sub">Choose your section to view the exact dates and locations. All sections cover the same material.</div>
+    
+    <style>
+      .schedule-container { margin-top: 24px; }
+      .pattern-tabs {
+        display: flex;
+        gap: 8px;
+        margin-bottom: 24px;
+        border-bottom: 2px solid #E2E8F0;
+        padding-bottom: 12px;
+      }
+      .pattern-tab {
+        padding: 10px 20px;
+        font-size: 13px;
+        font-weight: 600;
+        color: #718096;
+        background: #F7FAFC;
+        border: 1px solid #E2E8F0;
+        border-radius: 8px 8px 0 0;
+        cursor: pointer;
+        transition: all 0.15s;
+      }
+      .pattern-tab:hover { background: #EBF4FF; color: #4A90D9; }
+      .pattern-tab.active { 
+        background: #4A90D9; 
+        color: #fff; 
+        border-color: #4A90D9;
+      }
+      .pattern-content { display: none; }
+      .pattern-content.active { display: block; }
+      
+      .schedule-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 13px;
+        background: #fff;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      }
+      .schedule-table th {
+        background: #4A90D9;
+        color: #fff;
+        font-weight: 600;
+        text-align: left;
+        padding: 14px 16px;
+      }
+      .schedule-table td {
+        padding: 12px 16px;
+        border-bottom: 1px solid #E2E8F0;
+      }
+      .schedule-table tr:hover { background: #F7FAFC; }
+      .schedule-table .week-row { background: #F7FAFC; font-weight: 600; }
+      .schedule-table .lecture-row { background: #fff; }
+      .schedule-table .exam-row { background: #E6FFFA; }
+      
+      .lecture-badge {
+        display: inline-block;
+        background: #EBF4FF;
+        color: #4A90D9;
+        font-size: 11px;
+        font-weight: 700;
+        padding: 2px 8px;
+        border-radius: 4px;
+        margin-right: 8px;
+      }
+      .due-badge {
+        display: inline-block;
+        background: #FEEBC8;
+        color: #C05621;
+        font-size: 11px;
+        font-weight: 700;
+        padding: 2px 8px;
+        border-radius: 4px;
+        margin-left: 8px;
+      }
+      
+      .schedule-summary {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 16px;
+        margin: 24px 0;
+      }
+      .summary-card {
+        background: #fff;
+        border: 1px solid #E2E8F0;
+        border-radius: 10px;
+        padding: 18px;
+        text-align: center;
+      }
+      .summary-card .number {
+        font-size: 32px;
+        font-weight: 700;
+        color: #4A90D9;
+        margin-bottom: 4px;
+      }
+      .summary-card .label {
+        font-size: 12px;
+        color: #718096;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+      
+      .location-note {
+        background: #FFFAF0;
+        border: 1px solid #FBD38D;
+        border-radius: 8px;
+        padding: 16px;
+        margin-top: 24px;
+        font-size: 13px;
+        color: #744210;
+      }
+      .location-note strong {
+        display: block;
+        margin-bottom: 8px;
+        color: #975A16;
+      }
+    </style>
+
+    <div class="schedule-summary">
+      <div class="summary-card">
+        <div class="number">10</div>
+        <div class="label">Lectures</div>
+      </div>
+      <div class="summary-card">
+        <div class="number">5</div>
+        <div class="label">Weeks</div>
+      </div>
+      <div class="summary-card">
+        <div class="number">40%</div>
+        <div class="label">Final Project</div>
+      </div>
+    </div>
+
+    <div class="pattern-tabs">
+      <div class="pattern-tab active" onclick="showPattern('pattern1')">Class A (Tue & Fri AM)</div>
+      <div class="pattern-tab" onclick="showPattern('pattern2')">Class B (Tue & Fri PM)</div>
+    </div>
+
+    <!-- Pattern 1: Class A - Tue & Fri AM -->
+    <div id="pattern1" class="pattern-content active">
+      <div class="class-info-header" style="background: #EBF4FF; border-left: 4px solid #4A90D9; padding: 16px 20px; margin-bottom: 20px; border-radius: 0 8px 8px 0;">
+        <div style="font-size: 16px; font-weight: 700; color: #2B6CB0; margin-bottom: 8px;">Class A</div>
+        <div style="font-size: 13px; color: #4A5568; line-height: 1.6;">
+          <strong>Schedule:</strong> Tuesday & Friday | <strong>Time:</strong> 9:30 AM - 12:30 PM<br>
+          <strong>Venue:</strong> Cyberport 4 - Classroom J<br>
+          <em>Exceptions: Mar 24 & Mar 27 → Cyberport Classroom EFG</em>
+        </div>
+      </div>
+      
+      <div style="background: #FFF5F5; border: 1px solid #FED7D7; border-radius: 8px; padding: 14px 18px; margin-bottom: 20px; font-size: 13px; color: #C53030;">
+        <strong>⚠️ Important Note for March 24:</strong> Class A and Class B will be in <strong>different classrooms</strong> on March 24. 
+        <br>• Class A (AM): Cyberport Classroom <strong>EFG</strong>
+        <br>• Class B (PM): Cyberport Classroom <strong>H</strong>
+      </div>
+      <table class="schedule-table">
+        <thead>
+          <tr>
+            <th style="width:14%">Date</th>
+            <th style="width:10%">Day</th>
+            <th style="width:42%">Topic</th>
+            <th style="width:34%">Location</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="lecture-row">
+            <td><strong>Mar 20</strong><br><span style="font-size:11px;color:#718096;">2026</span></td>
+            <td>Fri</td>
+            <td><span class="lecture-badge">L1</span>Introduction & Supervised Learning</td>
+            <td>Cyberport 4 - Classroom J</td>
+          </tr>
+          <tr class="lecture-row">
+            <td><strong>Mar 24</strong><br><span style="font-size:11px;color:#718096;">2026</span></td>
+            <td>Tue</td>
+            <td><span class="lecture-badge">L2</span>Regularization & High-Dim Regression</td>
+            <td><em>Cyberport Classroom EFG</em></td>
+          </tr>
+          <tr class="lecture-row">
+            <td><strong>Mar 27</strong><br><span style="font-size:11px;color:#718096;">2026</span></td>
+            <td>Fri</td>
+            <td><span class="lecture-badge">L3</span>Trees, Random Forests & Boosting</td>
+            <td><em>Cyberport Classroom EFG</em></td>
+          </tr>
+          <tr class="lecture-row">
+            <td><strong>Mar 31</strong><br><span style="font-size:11px;color:#718096;">2026</span></td>
+            <td>Tue</td>
+            <td><span class="lecture-badge">L4</span>Cross-Validation & Model Selection</td>
+            <td>Cyberport 4 - Classroom J</td>
+          </tr>
+          <tr class="lecture-row">
+            <td><strong>Apr 10</strong><br><span style="font-size:11px;color:#718096;">2026</span></td>
+            <td>Fri</td>
+            <td><span class="lecture-badge">L5</span>Double/Debiased Machine Learning</td>
+            <td>Cyberport 4 - Classroom J</td>
+          </tr>
+          <tr class="lecture-row">
+            <td><strong>Apr 14</strong><br><span style="font-size:11px;color:#718096;">2026</span></td>
+            <td>Tue</td>
+            <td><span class="lecture-badge">L6</span>Heterogeneous Treatment Effects</td>
+            <td>Cyberport 4 - Classroom J</td>
+          </tr>
+          <tr class="lecture-row">
+            <td><strong>Apr 17</strong><br><span style="font-size:11px;color:#718096;">2026</span></td>
+            <td>Fri</td>
+            <td><span class="lecture-badge">L7</span>DAGs & Structural Causal Models</td>
+            <td>Cyberport 4 - Classroom J</td>
+          </tr>
+          <tr class="lecture-row">
+            <td><strong>Apr 21</strong><br><span style="font-size:11px;color:#718096;">2026</span></td>
+            <td>Tue</td>
+            <td><span class="lecture-badge">L8</span>Instrumental Variables & DML-IV</td>
+            <td>Cyberport 4 - Classroom J</td>
+          </tr>
+          <tr class="lecture-row">
+            <td><strong>Apr 24</strong><br><span style="font-size:11px;color:#718096;">2026</span></td>
+            <td>Fri</td>
+            <td><span class="lecture-badge">L9</span>Difference-in-Differences & RDD</td>
+            <td>Cyberport 4 - Classroom J</td>
+          </tr>
+          <tr class="lecture-row">
+            <td><strong>Apr 28</strong><br><span style="font-size:11px;color:#718096;">2026</span></td>
+            <td>Tue</td>
+            <td><span class="lecture-badge">L10</span>Optimal Policy Learning & Text as Data</td>
+            <td>Cyberport 4 - Classroom J</td>
+          </tr>
+          <tr class="exam-row">
+            <td><strong>Apr 30 – May 4</strong></td>
+            <td>—</td>
+            <td colspan="2">Study Period & Final Project Completion</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Pattern 2: Class B - Tue & Fri PM -->
+    <div id="pattern2" class="pattern-content">
+      <div class="class-info-header" style="background: #E6FFFA; border-left: 4px solid #3AAFA9; padding: 16px 20px; margin-bottom: 20px; border-radius: 0 8px 8px 0;">
+        <div style="font-size: 16px; font-weight: 700; color: #276749; margin-bottom: 8px;">Class B</div>
+        <div style="font-size: 13px; color: #4A5568; line-height: 1.6;">
+          <strong>Schedule:</strong> Tuesday & Friday | <strong>Time:</strong> 2:00 PM - 5:00 PM<br>
+          <strong>Venue:</strong> Cyberport 4 - Classroom J<br>
+          <em>Exceptions: Mar 24 → Cyberport Classroom H; Mar 27 → Cyberport Classroom EFG</em>
+        </div>
+      </div>
+      
+      <div style="background: #FFF5F5; border: 1px solid #FED7D7; border-radius: 8px; padding: 14px 18px; margin-bottom: 20px; font-size: 13px; color: #C53030;">
+        <strong>⚠️ Important Note for March 24:</strong> Class A and Class B will be in <strong>different classrooms</strong> on March 24. 
+        <br>• Class A (AM): Cyberport Classroom <strong>EFG</strong>
+        <br>• Class B (PM): Cyberport Classroom <strong>H</strong>
+      </div>
+      <table class="schedule-table">
+        <thead>
+          <tr>
+            <th style="width:14%">Date</th>
+            <th style="width:10%">Day</th>
+            <th style="width:42%">Topic</th>
+            <th style="width:34%">Location</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="lecture-row">
+            <td><strong>Mar 20</strong><br><span style="font-size:11px;color:#718096;">2026</span></td>
+            <td>Fri</td>
+            <td><span class="lecture-badge">L1</span>Introduction & Supervised Learning</td>
+            <td>Cyberport 4 - Classroom J</td>
+          </tr>
+          <tr class="lecture-row">
+            <td><strong>Mar 24</strong><br><span style="font-size:11px;color:#718096;">2026</span></td>
+            <td>Tue</td>
+            <td><span class="lecture-badge">L2</span>Regularization & High-Dim Regression</td>
+            <td><em>Cyberport Classroom H</em></td>
+          </tr>
+          <tr class="lecture-row">
+            <td><strong>Mar 27</strong><br><span style="font-size:11px;color:#718096;">2026</span></td>
+            <td>Fri</td>
+            <td><span class="lecture-badge">L3</span>Trees, Random Forests & Boosting</td>
+            <td><em>Cyberport Classroom EFG</em></td>
+          </tr>
+          <tr class="lecture-row">
+            <td><strong>Mar 31</strong><br><span style="font-size:11px;color:#718096;">2026</span></td>
+            <td>Tue</td>
+            <td><span class="lecture-badge">L4</span>Cross-Validation & Model Selection</td>
+            <td>Cyberport 4 - Classroom J</td>
+          </tr>
+          <tr class="lecture-row">
+            <td><strong>Apr 10</strong><br><span style="font-size:11px;color:#718096;">2026</span></td>
+            <td>Fri</td>
+            <td><span class="lecture-badge">L5</span>Double/Debiased Machine Learning</td>
+            <td>Cyberport 4 - Classroom J</td>
+          </tr>
+          <tr class="lecture-row">
+            <td><strong>Apr 14</strong><br><span style="font-size:11px;color:#718096;">2026</span></td>
+            <td>Tue</td>
+            <td><span class="lecture-badge">L6</span>Heterogeneous Treatment Effects</td>
+            <td>Cyberport 4 - Classroom J</td>
+          </tr>
+          <tr class="lecture-row">
+            <td><strong>Apr 17</strong><br><span style="font-size:11px;color:#718096;">2026</span></td>
+            <td>Fri</td>
+            <td><span class="lecture-badge">L7</span>DAGs & Structural Causal Models</td>
+            <td>Cyberport 4 - Classroom J</td>
+          </tr>
+          <tr class="lecture-row">
+            <td><strong>Apr 21</strong><br><span style="font-size:11px;color:#718096;">2026</span></td>
+            <td>Tue</td>
+            <td><span class="lecture-badge">L8</span>Instrumental Variables & DML-IV</td>
+            <td>Cyberport 4 - Classroom J</td>
+          </tr>
+          <tr class="lecture-row">
+            <td><strong>Apr 24</strong><br><span style="font-size:11px;color:#718096;">2026</span></td>
+            <td>Fri</td>
+            <td><span class="lecture-badge">L9</span>Difference-in-Differences & RDD</td>
+            <td>Cyberport 4 - Classroom J</td>
+          </tr>
+          <tr class="lecture-row">
+            <td><strong>Apr 28</strong><br><span style="font-size:11px;color:#718096;">2026</span></td>
+            <td>Tue</td>
+            <td><span class="lecture-badge">L10</span>Optimal Policy Learning & Text as Data</td>
+            <td>Cyberport 4 - Classroom J</td>
+          </tr>
+          <tr class="exam-row">
+            <td><strong>Apr 30 – May 4</strong></td>
+            <td>—</td>
+            <td colspan="2">Study Period & Final Project Completion</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Pattern 3: Wednesday & Saturday -->
+    <div id="pattern3" class="pattern-content">
+      <table class="schedule-table">
+        <thead>
+          <tr>
+            <th style="width:14%">Date</th>
+            <th style="width:12%">Week</th>
+            <th style="width:42%">Topic</th>
+            <th style="width:32%">Location</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="lecture-row">
+            <td><strong>Mar 20 (Thu)</strong><br><span style="font-size:11px;color:#718096;">9:00 AM - 12:00 PM</span></td>
+            <td>Week 1</td>
+            <td><span class="lecture-badge">L1</span>Introduction & Supervised Learning</td>
+            <td>TBD</td>
+          </tr>
+          <tr class="lecture-row">
+            <td><strong>Mar 24 (Mon)</strong><br><span style="font-size:11px;color:#718096;">9:00 AM - 12:00 PM</span></td>
+            <td>Week 1</td>
+            <td><span class="lecture-badge">L2</span>Regularization & High-Dim Regression</td>
+            <td>TBD</td>
+          </tr>
+          <tr class="lecture-row">
+            <td><strong>Mar 31 (Mon)</strong><br><span style="font-size:11px;color:#718096;">9:00 AM - 12:00 PM</span></td>
+            <td>Week 2</td>
+            <td><span class="lecture-badge">L3</span>Trees, Random Forests & Boosting</td>
+            <td>TBD</td>
+          </tr>
+          <tr class="lecture-row">
+            <td><strong>Apr 3 (Thu)</strong><br><span style="font-size:11px;color:#718096;">9:00 AM - 12:00 PM</span></td>
+            <td>Week 2</td>
+            <td><span class="lecture-badge">L4</span>Cross-Validation & Model Selection</td>
+            <td>TBD</td>
+          </tr>
+          <tr class="lecture-row">
+            <td><strong>Apr 7 (Mon)</strong><br><span style="font-size:11px;color:#718096;">9:00 AM - 12:00 PM</span></td>
+            <td>Week 3</td>
+            <td><span class="lecture-badge">L5</span>Double/Debiased Machine Learning</td>
+            <td>TBD</td>
+          </tr>
+          <tr class="lecture-row">
+            <td><strong>Apr 10 (Thu)</strong><br><span style="font-size:11px;color:#718096;">9:00 AM - 12:00 PM</span></td>
+            <td>Week 3</td>
+            <td><span class="lecture-badge">L6</span>Heterogeneous Treatment Effects</td>
+            <td>TBD</td>
+          </tr>
+          <tr class="lecture-row">
+            <td><strong>Apr 14 (Mon)</strong><br><span style="font-size:11px;color:#718096;">9:00 AM - 12:00 PM</span></td>
+            <td>Week 4</td>
+            <td><span class="lecture-badge">L7</span>DAGs & Structural Causal Models</td>
+            <td>TBD</td>
+          </tr>
+          <tr class="lecture-row">
+            <td><strong>Apr 17 (Thu)</strong><br><span style="font-size:11px;color:#718096;">9:00 AM - 12:00 PM</span></td>
+            <td>Week 4</td>
+            <td><span class="lecture-badge">L8</span>Instrumental Variables & DML-IV</td>
+            <td>TBD</td>
+          </tr>
+          <tr class="lecture-row">
+            <td><strong>Apr 21 (Tue)</strong><br><span style="font-size:11px;color:#718096;">9:00 AM - 12:00 PM</span></td>
+            <td>Week 5</td>
+            <td><span class="lecture-badge">L9</span>Difference-in-Differences & RDD</td>
+            <td>TBD</td>
+          </tr>
+          <tr class="lecture-row">
+            <td><strong>Apr 24 (Fri)</strong><br><span style="font-size:11px;color:#718096;">9:00 AM - 12:00 PM</span></td>
+            <td>Week 5</td>
+            <td><span class="lecture-badge">L10</span>Optimal Policy Learning & Text as Data</td>
+            <td>TBD</td>
+          </tr>
+          <tr class="exam-row">
+            <td><strong>Apr 30 – May 4</strong></td>
+            <td>Exam Week</td>
+            <td colspan="2">Study Period & Final Project Completion</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="location-note">
+      <strong>📍 Location Information</strong>
+      Classroom locations will be announced via email and posted here before the first lecture. Please check your university email for updates.
+    </div>
+
+    <script>
+    function showPattern(id) {
+      document.querySelectorAll('.pattern-content').forEach(p => p.classList.remove('active'));
+      document.querySelectorAll('.pattern-tab').forEach(t => t.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+      const patterns = ['pattern1', 'pattern2', 'pattern3'];
+      document.querySelectorAll('.pattern-tab')[patterns.indexOf(id)].classList.add('active');
+    }
+    </script>
+  </div>
+
+
+
+
+
+  <!-- ══════════════════════════════════════════════════════════════
+       TAB 3: FINAL PROJECT
+  ══════════════════════════════════════════════════════════════════ -->
+  <div id="tab-project" class="tab-panel">
+    <div class="section-title">Final Project</div>
+    <div class="section-sub">Replicate and extend a landmark paper in causal machine learning. Choose one of six options below.</div>
+    
+    <div class="info-banner">
+      The final project is assigned from <strong>Week 1</strong> and due one week after the last lecture. Work individually or in groups of two.
+    </div>
+
+    <style>
+      .project-options { display: grid; gap: 20px; }
+      .project-card {
+        background: #fff;
+        border: 1px solid #E2E8F0;
+        border-radius: 12px;
+        padding: 24px;
+        transition: box-shadow 0.2s, transform 0.2s;
+      }
+      .project-card:hover {
+        box-shadow: 0 4px 20px rgba(74,144,217,0.12);
+        transform: translateY(-2px);
+      }
+      .project-header {
+        display: flex;
+        align-items: flex-start;
+        gap: 16px;
+        margin-bottom: 16px;
+      }
+      .project-num {
+        background: #4A90D9;
+        color: #fff;
+        font-size: 14px;
+        font-weight: 700;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+      }
+      .project-title {
+        font-size: 16px;
+        font-weight: 700;
+        color: #1A202C;
+        margin-bottom: 4px;
+      }
+      .project-paper {
+        font-size: 12px;
+        color: #718096;
+        font-style: italic;
+        line-height: 1.5;
+      }
+      .project-body {
+        margin-left: 48px;
+      }
+      .project-question {
+        font-size: 14px;
+        color: #2D3748;
+        font-weight: 600;
+        margin-bottom: 8px;
+      }
+      .project-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        margin: 12px 0;
+        font-size: 12px;
+        color: #4A5568;
+      }
+      .project-meta span {
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+      }
+      .project-meta strong {
+        color: #2D3748;
+        font-weight: 600;
+      }
+      .project-ext {
+        background: #F7FAFC;
+        border-left: 3px solid #3AAFA9;
+        padding: 12px 16px;
+        margin-top: 16px;
+        border-radius: 0 8px 8px 0;
+      }
+      .project-ext-title {
+        font-size: 11px;
+        font-weight: 700;
+        color: #3AAFA9;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        margin-bottom: 6px;
+      }
+      .project-ext ul {
+        margin: 0;
+        padding-left: 18px;
+        font-size: 12px;
+        color: #4A5568;
+        line-height: 1.6;
+      }
+      .project-actions {
+        margin-top: 20px;
+        display: flex;
+        gap: 12px;
+      }
+      .project-data-section {
+        background: #F0FFF4;
+        border: 1px solid #C6F6D5;
+        border-radius: 8px;
+        padding: 16px;
+        margin: 16px 0;
+      }
+      .project-data-title {
+        font-size: 12px;
+        font-weight: 700;
+        color: #276749;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+      .project-data-section pre {
+        background: #1A202C;
+        color: #E2E8F0;
+        padding: 12px;
+        border-radius: 6px;
+        overflow-x: auto;
+        font-size: 11px;
+        margin: 0 0 10px 0;
+      }
+      .project-data-section code {
+        font-family: 'SF Mono', Monaco, monospace;
+        color: #68D391;
+      }
+      .project-data-note {
+        font-size: 11px;
+        color: #4A5568;
+        font-style: italic;
+      }
+      .project-checklist {
+        background: #FFFAF0;
+        border: 1px solid #FEEBC8;
+        border-radius: 8px;
+        padding: 16px;
+        margin: 16px 0;
+      }
+      .project-checklist-item {
+        font-size: 12px;
+        color: #4A5568;
+        padding: 4px 0;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .project-checklist-item input[type="checkbox"] {
+        width: 16px;
+        height: 16px;
+        accent-color: #4A90D9;
+      }
+      .project-starter {
+        background: #F7FAFC;
+        border: 1px solid #E2E8F0;
+        border-radius: 8px;
+        padding: 16px;
+        margin-top: 16px;
+      }
+      .project-starter-title {
+        font-size: 12px;
+        font-weight: 700;
+        color: #4A90D9;
+        margin-bottom: 12px;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+      .project-starter pre {
+        background: #1A202C;
+        color: #E2E8F0;
+        padding: 16px;
+        border-radius: 6px;
+        overflow-x: auto;
+        font-size: 11px;
+        margin: 0;
+        line-height: 1.6;
+      }
+      .project-starter code {
+        font-family: 'SF Mono', Monaco, monospace;
+        color: #68D391;
+      }
+      .btn-secondary {
+        background: #EDF2F7;
+        color: #4A5568;
+        border: 1px solid #CBD5E0;
+        padding: 8px 16px;
+        border-radius: 6px;
+        font-size: 12px;
+        font-weight: 600;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        cursor: pointer;
+        transition: all 0.2s;
+      }
+      .btn-secondary:hover {
+        background: #E2E8F0;
+        color: #2D3748;
+      }
+    </style>
+
+    <div class="project-options">
+      
+      <!-- ===== OPTION 1: DML for 401(k) ===== -->
+      <div class="project-card">
+        <div class="project-header">
+          <div class="project-num">1</div>
+          <div>
+            <div class="project-title">DML for 401(k) Eligibility and Wealth</div>
+            <div class="project-paper">Chernozhukov et al. (2018), "Double/debiased machine learning for treatment and structural parameters," <em>The Econometrics Journal</em></div>
+          </div>
+        </div>
+        <div class="project-body">
+          <div class="project-question">How does 401(k) eligibility affect household net financial wealth? Can ML improve causal estimation?</div>
+          
+          <div class="project-data-section">
+            <div class="project-data-title">📊 Data Download</div>
+            <pre><code># Install econml
+!pip install econml
+
+# Download 401(k) dataset
+from econml.data import fetch_401k
+X, Y, T = fetch_401k(return_X_y=True, as_frame=True)</code></pre>
+            <div class="project-data-note"><strong>Note:</strong> The 401(k) dataset contains 9,275 observations with 401(k) eligibility as treatment and net financial assets as outcome.</div>
+          </div>
+          
+          <div class="project-checklist">
+            <div class="project-data-title">✅ Replication Checklist</div>
+            <div class="project-checklist-item"><input type="checkbox" disabled> Implement naive OLS comparison</div>
+            <div class="project-checklist-item"><input type="checkbox" disabled> Build DML with Lasso/RF for nuisance functions</div>
+            <div class="project-checklist-item"><input type="checkbox" disabled> Estimate ATE using partialling out</div>
+            <div class="project-checklist-item"><input type="checkbox" disabled> Visualize coefficient stability across ML methods</div>
+          </div>
+
+          <div class="project-meta">
+            <span><strong>Data:</strong> 401(k) dataset (econml.data)</span>
+            <span><strong>Methods:</strong> Double Machine Learning (DML), Neyman orthogonality, Partialling out</span>
+            <span><strong>Course:</strong> Lecture 7</span>
+          </div>
+          
+          <div class="project-ext">
+            <div class="project-ext-title">🔬 Extension Ideas</div>
+            <ul>
+              <li>Compare multiple ML learners (Lasso, RF, XGBoost, Neural Networks)</li>
+              <li>Implement DML with different numbers of folds (K=2, 5, 10)</li>
+              <li>Analyze heterogeneous effects by income quartiles using Causal Forests</li>
+            </ul>
+          </div>
+
+          <div class="project-actions">
+            <a class="btn btn-primary" href="#" onclick="alert('Starter code: Copy the TODO template below to your notebook')">📄 Starter Code</a>
+            <a class="btn btn-secondary" href="https://arxiv.org/abs/1608.00060" target="_blank">📚 Paper</a>
+          </div>
+
+          <div class="project-starter">
+            <div class="project-starter-title">📝 TODO: Fill in the blanks</div>
+            <pre><code>def dml_ate(X, D, Y, model_y, model_d, n_splits=5):
+    """
+    TODO: Implement Double Machine Learning using partialling out
+    
+    Hint:
+    1. Use KFold to split data
+    2. Fit model_y on X[train] → Y[train] 
+    3. Fit model_d on X[train] → D[train]
+    4. Get residuals on X[test]
+    5. OLS: ate = mean(Y_resid * D_resid) / mean(D_resid²)
+    """
+    kf = KFold(n_splits=___, shuffle=True, random_state=42)
+    Y_resid, D_resid = np.zeros_like(Y), np.zeros_like(D)
+    
+    for train_idx, test_idx in kf.split(___):
+        # Fit nuisance models
+        model_y.fit(___, ___)
+        model_d.fit(___, ___)
+        
+        # Compute residuals
+        Y_resid[test_idx] = Y[test_idx] - ___.predict(___)
+        D_resid[test_idx] = D[test_idx] - ___.predict(___)
+    
+    # Final ATE estimate
+    ate = np.mean(___ * ___) / np.mean(___ ** 2)
+    return ate</code></pre>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== OPTION 2: Causal Forests for NSW ===== -->
+      <div class="project-card">
+        <div class="project-header">
+          <div class="project-num">2</div>
+          <div>
+            <div class="project-title">Causal Forests for Job Training Effects</div>
+            <div class="project-paper">Athey & Imbens (2016), "Recursive partitioning for heterogeneous causal effects," <em>PNAS</em></div>
+          </div>
+        </div>
+        <div class="project-body">
+          <div class="project-question">Are the effects of the NSW job training program heterogeneous? Who benefits the most?</div>
+          
+          <div class="project-data-section">
+            <div class="project-data-title">📊 Data Download</div>
+            <pre><code># Download LaLonde dataset
+!pip install econml
+from econml.datasets import fetch_lalonde
+
+X, Y, T = fetch_lalonde(as_frame=True, return_X_y=True)
+
+# Optional: Download full Dehejia-Wahba dataset
+import pandas as pd
+nsw = pd.read_csv("https://raw.githubusercontent.com/.../nsw.csv")</code></pre>
+            <div class="project-data-note"><strong>Note:</strong> Contains 722 observations with randomized (NSW) and observational (CPS/PSID) samples.</div>
+          </div>
+          
+          <div class="project-checklist">
+            <div class="project-data-title">✅ Replication Checklist</div>
+            <div class="project-checklist-item"><input type="checkbox" disabled> Implement Causal Tree with honest estimation</div>
+            <div class="project-checklist-item"><input type="checkbox" disabled> Extend to Causal Forest with many trees</div>
+            <div class="project-checklist-item"><input type="checkbox" disabled> Estimate CATE for each individual</div>
+            <div class="project-checklist-item"><input type="checkbox" disabled> Visualize heterogeneous effects by education/age</div>
+          </div>
+
+          <div class="project-meta">
+            <span><strong>Data:</strong> LaLonde dataset (econml.datasets)</span>
+            <span><strong>Methods:</strong> Causal Trees, Causal Forests, CATE estimation</span>
+            <span><strong>Course:</strong> Lecture 6</span>
+          </div>
+          
+          <div class="project-ext">
+            <div class="project-ext-title">🔬 Extension Ideas</div>
+            <ul>
+              <li>Compare honest vs. adaptive estimation in Causal Trees</li>
+              <li>Use SHAP values to interpret feature importance in Causal Forests</li>
+              <li>Design optimal targeting policy based on estimated CATEs</li>
+            </ul>
+          </div>
+
+          <div class="project-actions">
+            <a class="btn btn-primary" href="#" onclick="alert('Starter code: See template below')">📄 Starter Code</a>
+            <a class="btn btn-secondary" href="https://www.pnas.org/doi/10.1073/pnas.1510489113" target="_blank">📚 Paper</a>
+          </div>
+
+          <div class="project-starter">
+            <div class="project-starter-title">📝 TODO: Build a Causal Forest</div>
+            <pre><code>from sklearn.tree import DecisionTreeRegressor
+from econml.grf import CausalForest
+
+# TODO 1: Train a single Causal Tree
+# Hint: Find splits that maximize variance in treatment effects
+def find_best_split(X, Y, T, min_samples_leaf=10):
+    """
+    TODO: Implement splitting criterion for Causal Trees
+    """
+    best_gain = -np.inf
+    best_feature, best_threshold = None, None
+    
+    for feature in range(X.shape[1]):
+        thresholds = np.percentile(X[:, feature], [25, 50, 75])
+        for thresh in thresholds:
+            # TODO: Compute treatment effect variance gain
+            left = X[:, feature] <= thresh
+            right = ~left
+            
+            if sum(left) < ___ or sum(right) < ___:
+                continue
+                
+            # Compute treatment effects in each leaf
+            tau_left = np.mean(___[left]) - np.mean(___[left])
+            tau_right = np.mean(___[right]) - np.mean(___[right])
+            
+            # TODO: Calculate splitting criterion
+            gain = ___
+            
+            if gain > best_gain:
+                best_gain = gain
+                best_feature = feature
+                best_threshold = thresh
+    
+    return best_feature, best_threshold
+
+# TODO 2: Use CausalForest from econml
+cf = CausalForest(n_estimators=___, 
+                  criterion=___,
+                  min_samples_leaf=___)
+cf.fit(___, ___, ___)
+cate_estimates = cf.effect(___)</code></pre>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== OPTION 3: Modern DiD for Minimum Wage ===== -->
+      <div class="project-card">
+        <div class="project-header">
+          <div class="project-num">3</div>
+          <div>
+            <div class="project-title">Modern DiD for Minimum Wage Effects</div>
+            <div class="project-paper">Cengiz et al. (2019), "The effect of minimum wages on low-wage jobs," <em>QJE</em></div>
+          </div>
+        </div>
+        <div class="project-body">
+          <div class="project-question">What is the effect of minimum wage increases on employment? Does it differ by industry?</div>
+          
+          <div class="project-data-section">
+            <div class="project-data-title">📊 Data Download</div>
+            <pre><code># Card-Krueger (1994) replication data
+import pandas as pd
+
+# Download from Harvard Dataverse
+# Or use: https://raw.githubusercontent.com/...
+df = pd.read_stata("card_krueger.dta")
+
+# QJE 2019 replication data (large dataset)
+# Download from: https://dataverse.harvard.edu/dataset.xhtml?...</code></pre>
+            <div class="project-data-note"><strong>Note:</strong> Card-Krueger uses NJ/PA fast-food restaurants (410 obs). QJE 2019 uses 138 state-level minimum wage increases.</div>
+          </div>
+          
+          <div class="project-checklist">
+            <div class="project-data-title">✅ Replication Checklist</div>
+            <div class="project-checklist-item"><input type="checkbox" disabled> Implement traditional 2×2 DiD estimator</div>
+            <div class="project-checklist-item"><input type="checkbox" disabled> Estimate Callaway-Sant'Anna group-time ATT</div>
+            <div class="project-checklist-item"><input type="checkbox" disabled> Create event study plot with dynamic effects</div>
+            <div class="project-checklist-item"><input type="checkbox" disabled> Compare TWFE vs. modern estimators</div>
+          </div>
+
+          <div class="project-meta">
+            <span><strong>Data:</strong> Card-Krueger (1994) or Cengiz et al. (2019) replication</span>
+            <span><strong>Methods:</strong> Staggered DiD, Callaway-Sant'Anna, Event studies</span>
+            <span><strong>Course:</strong> Lecture 9</span>
+          </div>
+          
+          <div class="project-ext">
+            <div class="project-ext-title">🔬 Extension Ideas</div>
+            <ul>
+              <li>Compare TWFE vs. Callaway-Sant'Anna vs. Sun-Abraham estimators</li>
+              <li>Analyze dynamic treatment effects using event study plots</li>
+              <li>Test sensitivity to heterogeneous treatment effects across regions</li>
+            </ul>
+          </div>
+
+          <div class="project-actions">
+            <a class="btn btn-primary" href="#" onclick="alert('Starter code: See template below')">📄 Starter Code</a>
+            <a class="btn btn-secondary" href="https://academic.oup.com/qje/article/134/3/1405/5484905" target="_blank">📚 Paper</a>
+          </div>
+
+          <div class="project-starter">
+            <div class="project-starter-title">📝 TODO: Implement Callaway-Sant'Anna DiD</div>
+            <pre><code>!pip install did
+from did import did_reg
+
+def callaway_santanna_did(df, unit, time, treat_time, outcome):
+    """
+    TODO: Implement CS (2021) staggered DiD estimator
+    
+    Key steps:
+    1. Define cohorts based on treatment timing
+    2. For each (cohort, time) pair, compute ATT(g,t)
+    3. Aggregate to overall ATT
+    
+    Hint: Use never-treated units as control
+    """
+    # Get treatment cohorts
+    cohorts = df[df[treat_time] < np.inf][treat_time].unique()
+    
+    att_gt = {}
+    for g in cohorts:  # cohort (treatment group)
+        for t in df[time].unique():  # time period
+            if t >= g:  # post-treatment
+                # TODO: Define treatment and control groups
+                treated = (df[treat_time] == ___) & (df[time] == ___)
+                never_treated = (df[treat_time] == ___) & (df[time] == ___)
+                
+                # TODO: Compute pre-treatment differences
+                # Find pre-period (g-1 or earlier)
+                pre_period = ___
+                
+                # Compute DiD for this (g,t) pair
+                treated_post = df.loc[treated, outcome].mean()
+                treated_pre = df.loc[(df[treat_time]==g) & (df[time]==pre_period), outcome].mean()
+                control_post = df.loc[never_treated & (df[time]==t), outcome].mean()
+                control_pre = df.loc[never_treated & (df[time]==pre_period), outcome].mean()
+                
+                att_gt[(g,t)] = (treated_post - treated_pre) - (___ - ___)
+    
+    # Aggregate ATT(g,t) to overall ATT
+    att = np.mean(list(att_gt.values()))
+    return att, att_gt
+
+# Or use the did package:
+# !pip install did
+# import did
+# result = did.did_reg(df, yname="employment", idname="restaurant_id", 
+#                      tname="time", gname="treatment_time")</code></pre>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== OPTION 4: Synthetic Control for Proposition 99 ===== -->
+      <div class="project-card">
+        <div class="project-header">
+          <div class="project-num">4</div>
+          <div>
+            <div class="project-title">Synthetic Control for California Tobacco Control</div>
+            <div class="project-paper">Abadie et al. (2010), "Synthetic control methods for comparative case studies," <em>JASA</em></div>
+          </div>
+        </div>
+        <div class="project-body">
+          <div class="project-question">Did California's Proposition 99 (tobacco tax) reduce cigarette consumption?</div>
+          
+          <div class="project-data-section">
+            <div class="project-data-title">📊 Data Download</div>
+            <pre><code># Install pysynthdid (Python implementation)
+!pip install pysynthdid
+
+# Or download manually
+import pandas as pd
+
+# California Proposition 99 data
+# Source: Abadie et al. (2010) JASA
+df = pd.read_csv("proposition99.csv")
+
+# Structure: state, year, cigsale, beer, age15to24, retprice, income
+# Treatment: California (state==5) from 1989 onwards</code></pre>
+            <div class="project-data-note"><strong>Note:</strong> Data contains cigarette sales (packs per capita) for 39 states 1970-2000. California treated in 1989.</div>
+          </div>
+          
+          <div class="project-checklist">
+            <div class="project-data-title">✅ Replication Checklist</div>
+            <div class="project-checklist-item"><input type="checkbox" disabled> Construct synthetic control weights (optimize pre-treatment fit)</div>
+            <div class="project-checklist-item"><input type="checkbox" disabled> Visualize actual vs. synthetic California trajectory</div>
+            <div class="project-checklist-item"><input type="checkbox" disabled> Implement placebo tests (in-time and in-space)</div>
+            <div class="project-checklist-item"><input type="checkbox" disabled> Compute inference via permutation tests</div>
+          </div>
+
+          <div class="project-meta">
+            <span><strong>Data:</strong> California Proposition 99 (pysynthdid package)</span>
+            <span><strong>Methods:</strong> SCM, Placebo Tests, Augmented SCM</span>
+            <span><strong>Course:</strong> Lecture 9</span>
+          </div>
+          
+          <div class="project-ext">
+            <div class="project-ext-title">🔬 Extension Ideas</div>
+            <ul>
+              <li>Implement Augmented Synthetic Control Method (ASCM) to address bias</li>
+              <li>Compare SCM results with modern DiD estimators on same data</li>
+              <li>Test sensitivity to donor pool composition</li>
+            </ul>
+          </div>
+
+          <div class="project-actions">
+            <a class="btn btn-primary" href="#" onclick="alert('Starter code: See template below')">📄 Starter Code</a>
+            <a class="btn btn-secondary" href="https://www.tandfonline.com/doi/abs/10.1198/jasa.2009.ap08746" target="_blank">📚 Paper</a>
+          </div>
+
+          <div class="project-starter">
+            <div class="project-starter-title">📝 TODO: Build Synthetic Control</div>
+            <pre><code>from scipy.optimize import minimize
+
+def synthetic_control(Y_pre_treat, Y_pre_donors):
+    """
+    TODO: Find optimal weights to construct synthetic California
+    
+    Inputs:
+    - Y_pre_treat: Pre-treatment outcomes for treated unit (CA)
+    - Y_pre_donors: Pre-treatment outcomes for donor pool (other states)
+    
+    Output:
+    - w: Donor weights (sum to 1, non-negative)
+    """
+    n_donors = Y_pre_donors.shape[1]
+    
+    # Objective: minimize ||Y_pre_treat - Y_pre_donors @ w||^2
+    def objective(w):
+        return np.sum((___ - ___ @ w) ** 2)
+    
+    # Constraints: weights sum to 1, non-negative
+    constraints = {'type': 'eq', 'fun': lambda w: np.sum(w) - ___}
+    bounds = [(0, 1) for _ in range(n_donors)]
+    
+    # Initialize with equal weights
+    w0 = np.ones(n_donors) / ___
+    
+    # Optimize
+    result = minimize(objective, w0, method='SLSQP', 
+                     bounds=bounds, constraints=constraints)
+    
+    return result.x
+
+# Apply to Proposition 99
+# Step 1: Prepare data
+ca_data = df[df['state'] == 5]  # California
+donor_data = df[df['state'] != 5]  # Donor pool
+
+# Step 2: Get pre-treatment period (1970-1988)
+pre_period = df['year'] < 1989
+Y_pre_ca = ca_data.loc[pre_period, 'cigsale'].values
+Y_pre_donors = donor_data.loc[pre_period].pivot(
+    index='year', columns='state', values='cigsale').values
+
+# Step 3: Estimate synthetic control weights
+weights = synthetic_control(Y_pre_ca, Y_pre_donors)
+
+# Step 4: Create synthetic California trajectory
+post_period = df['year'] >= 1989
+Y_post_donors = donor_data.loc[post_period].pivot(
+    index='year', columns='state', values='cigsale').values
+synthetic_ca = Y_post_donors @ ___
+
+# Step 5: Plot actual vs synthetic
+# TODO: Create visualization</code></pre>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== OPTION 5: Policy Learning for Treatment Assignment ===== -->
+      <div class="project-card">
+        <div class="project-header">
+          <div class="project-num">5</div>
+          <div>
+            <div class="project-title">Policy Learning for Optimal Treatment Assignment</div>
+            <div class="project-paper">Kitagawa & Tetenov (2018), "Who should be treated?" <em>Econometrica</em></div>
+          </div>
+        </div>
+        <div class="project-body">
+          <div class="project-question">How can we learn optimal treatment assignment rules to maximize social welfare?</div>
+          
+          <div class="project-data-section">
+            <div class="project-data-title">📊 Data Download</div>
+            <pre><code># Use LaLonde or JTPA dataset from econml
+from econml.datasets import fetch_lalonde, fetch_jtpadata
+
+X, Y, T = fetch_lalonde(as_frame=True, return_X_y=True)
+# OR
+X, Y, T = fetch_jtpadata(as_frame=True, return_X_y=True)
+
+# For budget-constrained policy learning, you'll need:
+# - Features X
+# - Treatment indicator T  
+# - Outcome Y (benefit from treatment)
+# - Cost C (optional, for cost-benefit analysis)</code></pre>
+            <div class="project-data-note"><strong>Note:</strong> JTPA data contains 6,502 participants from the Job Training Partnership Act program.</div>
+          </div>
+          
+          <div class="project-checklist">
+            <div class="project-data-title">✅ Replication Checklist</div>
+            <div class="project-checklist-item"><input type="checkbox" disabled> Implement Empirical Welfare Maximization (EWM)</div>
+            <div class="project-checklist-item"><input type="checkbox" disabled> Build Policy Tree with depth constraints</div>
+            <div class="project-checklist-item"><input type="checkbox" disabled> Add budget constraint to policy learning</div>
+            <div class="project-checklist-item"><input type="checkbox" disabled> Evaluate with cross-fitted doubly robust scores</div>
+          </div>
+
+          <div class="project-meta">
+            <span><strong>Data:</strong> LaLonde/JTPA dataset (econml.datasets)</span>
+            <span><strong>Methods:</strong> EWM, Policy Trees, Doubly Robust Policy Learning</span>
+            <span><strong>Course:</strong> Lecture 10</span>
+          </div>
+          
+          <div class="project-ext">
+            <div class="project-ext-title">🔬 Extension Ideas</div>
+            <ul>
+              <li>Compare different policy classes (linear vs. tree-based vs. budget-constrained)</li>
+              <li>Implement fairness constraints in policy learning (demographic parity)</li>
+              <li>Use Deep Learning (neural networks) as policy class instead of trees</li>
+            </ul>
+          </div>
+
+          <div class="project-actions">
+            <a class="btn btn-primary" href="#" onclick="alert('Starter code: See template below')">📄 Starter Code</a>
+            <a class="btn btn-secondary" href="https://www.econometricsociety.org/doi/10.3982/ECTA14093" target="_blank">📚 Paper</a>
+          </div>
+
+          <div class="project-starter">
+            <div class="project-starter-title">📝 TODO: Implement Policy Tree</div>
+            <pre><code>from sklearn.tree import DecisionTreeClassifier
+
+def policy_tree_ewm(X, T, Y, max_depth=3):
+    """
+    TODO: Build a policy tree using Empirical Welfare Maximization
+    
+    Goal: Find decision tree that maximizes welfare:
+    W(π) = E[π(X) · (Y(1) - Y(0))]
+    
+    Where π(X) ∈ {0,1} is the treatment assignment policy
+    """
+    # Step 1: Estimate CATE for each unit using IPW or AIPW
+    # Hint: Use doubly robust scores as outcomes
+    
+    # Simple IPW for demonstration:
+    propensity = LogisticRegression().fit(X, T).predict_proba(X)[:, 1]
+    ipw_scores = Y * T / ___ - Y * (1 - T) / (___)
+    
+    # Step 2: Train decision tree to predict positive treatment effects
+    # Labels: treat if CATE > 0, don't treat otherwise
+    pseudo_outcomes = (ipw_scores > 0).astype(int)
+    
+    tree = DecisionTreeClassifier(max_depth=___)
+    tree.fit(___, ___)
+    
+    return tree
+
+# Budget-constrained version
+def budget_constrained_policy(X, T, Y, budget_fraction=0.3):
+    """
+    TODO: Select which units to treat given budget constraint
+    
+    Strategy: 
+    1. Estimate CATE for each unit
+    2. Sort by CATE (descending)
+    3. Treat top (budget_fraction) fraction
+    """
+    # Estimate CATE (use AIPW for better precision)
+    cate_estimates = estimate_aipw_cate(X, T, Y)
+    
+    # Sort by estimated benefit
+    n_treat = int(len(X) * ___)
+    treat_indices = np.argsort(___)[-n_treat:]
+    
+    policy = np.zeros(len(X))
+    policy[treat_indices] = 1
+    
+    return policy
+
+# Evaluate welfare
+def evaluate_welfare(policy, T, Y, X):
+    """
+    TODO: Compute welfare W(π) = E[π(X) · Y(1) + (1-π(X)) · Y(0)]
+    Use IPW or AIPW for unbiased estimation
+    """
+    # Hint: Use inverse propensity weighting
+    propensity = ___
+    
+    # IPW estimator for welfare
+    treated = (policy == 1)
+    welfare = np.mean(policy * T * Y / propensity + 
+                     (1 - policy) * (1 - T) * Y / (1 - propensity))
+    
+    return welfare</code></pre>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== OPTION 6: Text as Data ===== -->
+      <div class="project-card">
+        <div class="project-header">
+          <div class="project-num">6</div>
+          <div>
+            <div class="project-title">Text as Data — Economic Policy Uncertainty</div>
+            <div class="project-paper">Baker et al. (2016), "Measuring economic policy uncertainty," <em>QJE</em></div>
+          </div>
+        </div>
+        <div class="project-body">
+          <div class="project-question">How can we measure economic policy uncertainty from text? How does it affect outcomes?</div>
+          
+          <div class="project-data-section">
+            <div class="project-data-title">📊 Data Download</div>
+            <pre><code># Option 1: Use pre-built EPU index
+!pip install pandas-datareader
+import pandas_datareader as pdr
+
+# Download from policyuncertainty.com
+epu = pd.read_excel("https://www.policyuncertainty.com/media/All_Country_Data.xlsx")
+
+# Option 2: Scrape newspaper archives (advanced)
+# Requires newspaper3k or similar
+!pip install newspaper3k
+
+# Option 3: Use pre-processed text corpora
+# e.g., NYT headlines from Kaggle</code></pre>
+            <div class="project-data-note"><strong>Note:</strong> EPU index is available for US, China, and 20+ countries. Original paper uses 10 major US newspapers.</div>
+          </div>
+          
+          <div class="project-checklist">
+            <div class="project-data-title">✅ Replication Checklist</div>
+            <div class="project-checklist-item"><input type="checkbox" disabled> Replicate keyword-based EPU index (keyword counting)</div>
+            <div class="project-checklist-item"><input type="checkbox" disabled> Build ML-based sentiment classifier (BERT)</div>
+            <div class="project-checklist-item"><input type="checkbox" disabled> Compare keyword vs. ML approaches</div>
+            <div class="project-checklist-item"><input type="checkbox" disabled> Estimate impact of EPU on economic outcomes (VAR)</div>
+          </div>
+
+          <div class="project-meta">
+            <span><strong>Data:</strong> Newspaper archives (NYT), policyuncertainty.com</span>
+            <span><strong>Methods:</strong> Text analysis, Sentiment analysis (BERT), VAR models</span>
+            <span><strong>Course:</strong> Lecture 10</span>
+          </div>
+          
+          <div class="project-ext">
+            <div class="project-ext-title">🔬 Extension Ideas</div>
+            <ul>
+              <li>Compare keyword-based vs. modern ML-based (BERT) EPU measures</li>
+              <li>Build China-specific EPU index using Chinese newspapers + Jieba</li>
+              <li>Construct separate indices for fiscal, monetary, and trade policy uncertainty</li>
+            </ul>
+          </div>
+
+          <div class="project-actions">
+            <a class="btn btn-primary" href="#" onclick="alert('Starter code: See template below')">📄 Starter Code</a>
+            <a class="btn btn-secondary" href="https://academic.oup.com/qje/article/131/4/1593/2468873" target="_blank">📚 Paper</a>
+          </div>
+
+          <div class="project-starter">
+            <div class="project-starter-title">📝 TODO: Build EPU Index</div>
+            <pre><code>import re
+from collections import Counter
+
+# Keyword-based EPU (Baker et al. 2016 method)
+epu_keywords = ['uncertainty', 'economic', 'policy', 'budget', 
+                'tax', 'regulation', 'federal reserve', 'congress']
+
+def count_epu_keywords(text):
+    """
+    TODO: Count EPU-related keywords in text
+    
+    Baker et al. (2016) approach:
+    EPU = (Articles containing E,E,P terms) / Total Articles
+    """
+    text_lower = text.lower()
+    
+    # Check for policy-related terms
+    has_uncertainty = any(word in text_lower for word in ['uncertain', 'uncertainty'])
+    has_economic = any(word in text_lower for word in ['economic', 'economy', 'financial'])
+    has_policy = any(word in text_lower for word in ['policy', 'regulation', 'tax', 'budget'])
+    
+    # TODO: Article counts toward EPU if contains terms from all 3 categories
+    is_epu_article = ___ and ___ and ___
+    
+    return is_epu_article
+
+# BERT-based sentiment (modern approach)
+from transformers import pipeline
+
+def bert_sentiment_epu(texts):
+    """
+    TODO: Use BERT to classify policy uncertainty sentiment
+    """
+    classifier = pipeline("sentiment-analysis", 
+                         model="distilbert-base-uncased-finetuned-sst-2-english")
+    
+    results = classifier(texts)
+    
+    # TODO: Convert to uncertainty measure
+    # Negative sentiment on policy articles = higher uncertainty
+    uncertainty_scores = [1 if r['label'] == 'NEGATIVE' else 0 
+                         for r in results]
+    
+    return uncertainty_scores
+
+# VAR model for economic impact
+from statsmodels.tsa.api import VAR
+
+def estimate_epu_impact(epu_index, gdp_growth, unemployment):
+    """
+    TODO: Estimate impact of EPU on macroeconomic outcomes
+    
+    Model: Y_t = A_0 + A_1 Y_{t-1} + ... + A_p Y_{t-p} + ε_t
+    Where Y = [EPU, GDP, Unemployment]'
+    """
+    data = pd.DataFrame({
+        'epu': epu_index,
+        'gdp': gdp_growth,
+        'unemp': unemployment
+    })
+    
+    # Fit VAR
+    model = VAR(data)
+    results = model.fit(maxlags=___)
+    
+    # TODO: Granger causality test
+    # Does EPU predict GDP/unemployment?
+    
+    # TODO: Impulse response function
+    # What happens to GDP after EPU shock?
+    irf = results.irf(___)
+    irf.plot()
+    
+    return results</code></pre>
+          </div>
+        </div>
+      </div>
+
+    </div>
+      <p>Submit a <code>.zip</code> file containing: (1) <code>code/</code> — clean, reproducible Python scripts, (2) <code>report.pdf</code> — 12-15 page academic paper (LaTeX template provided).</p>
+      <div class="final-meta">
+        <div class="final-meta-item"><strong>Due:</strong> One week after last lecture</div>
+        <div class="final-meta-item"><strong>Weight:</strong> 40% of course grade</div>
+        <div class="final-meta-item"><strong>Team:</strong> Individual or pairs</div>
+      </div>
+      <div class="card-actions" style="margin-top:16px;">
+        <a class="btn btn-primary" href="final-project/" target="_blank">View Full Project Guide →</a>
+        <a class="btn btn-teal" href="assignments/final-project/report.tex" target="_blank">Download LaTeX Template</a>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  ECON6083 · Machine Learning in Economics · Prof. Jasmine Hao · M5 2026
+</footer>
+
+<script>
+// ── Tab switching ──────────────────────────────────────────────────────────
+function showTab(name) {
+  // Scroll to top of page so tabs are visible
+  window.scrollTo({top: 0, behavior: 'smooth'});
+  document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('tab-' + name).classList.add('active');
+  const tabs = ['slides','schedule','project'];
+  document.querySelectorAll('.nav-tab')[tabs.indexOf(name)].classList.add('active');
+}
+
+
+
+// ── Lecture slides release schedule ───────────────────────────────────────
+// Actual lecture dates: Mar 20, 24, 27, 31, Apr 10, 14, 17, 21, 24, 28 (2026)
+// Slides released the day before each lecture
+const LECTURES = [
+  { num:'L01', week:'Mar 20 (Fri)', color:'blue',
+    title:'Course Introduction & Supervised Learning',
+    desc:'The ML\u2013economics convergence, prediction vs. causal inference, bias\u2013variance tradeoff, the curse of dimensionality.',
+    releaseDate: new Date('2026-03-19'),
+    url:'slides/Lecture01-Introduction-and-Supervised-Learning-Slides.pdf',
+    exercise: { title:'Python Basics & Your First OLS',
+      desc:'NumPy arrays, defining functions, OLS with statsmodels, prediction with scikit-learn.',
+      url:'notebooks/Lecture01-Supervised-Learning-Exercise.ipynb',
+      colabUrl:'https://colab.research.google.com/github/JasmineHao/JasmineHao.github.io/blob/main/econ6083/notebooks/Lecture01-Supervised-Learning-Exercise.ipynb' }
+  },
+  { num:'L02', week:'Mar 24 (Tue)', color:'blue',
+    title:'Regularization & High-Dimensional Regression',
+    desc:'Ridge, Lasso, Elastic Net; sparsity, variable selection, the Lasso path, economic applications.',
+    releaseDate: new Date('2026-03-23'),
+    url:'slides/Lecture02-Regularization-and-High-Dimensional-Regression-Slides.pdf',
+    exercise: { title:'Lasso vs. Ridge',
+      desc:'Compare Ridge and Lasso on a hedonic pricing dataset; tune \u03BB via cross-validation.',
+      url:'notebooks/Lecture02-Regularization-Exercise.ipynb',
+      colabUrl:'https://colab.research.google.com/github/JasmineHao/JasmineHao.github.io/blob/main/econ6083/notebooks/Lecture02-Regularization-Exercise.ipynb' }
+  },
+  { num:'L03', week:'Mar 27 (Fri)', color:'teal',
+    title:'Trees, Random Forests & Boosting',
+    desc:'Decision trees, bagging, random forests, gradient boosting; feature importance in economic data.',
+    releaseDate: new Date('2026-03-26'),
+    url:'slides/Lecture03-Trees-Random-Forests-and-Boosting-Slides.pdf',
+    exercise: { title:'Trees & Random Forests',
+      desc:'Build decision trees, compare bagging vs. boosting, visualize feature importance.',
+      url:'notebooks/Lecture03-Trees-Exercise.ipynb',
+      colabUrl:'https://colab.research.google.com/github/JasmineHao/JasmineHao.github.io/blob/main/econ6083/notebooks/Lecture03-Trees-Exercise.ipynb' }
+  },
+  { num:'L04', week:'Mar 31 (Tue)', color:'teal',
+    title:'Cross-Validation & Model Selection',
+    desc:'K-fold CV, train/validation/test splits, hyperparameter tuning, model comparison criteria.',
+    releaseDate: new Date('2026-03-30'),
+    url:'slides/Lecture04-Cross-Validation-and-Model-Selection-Slides.pdf',
+    exercise: { title:'Cross-Validation & Model Selection',
+      desc:'Implement K-fold CV, compare models via test error, tune hyperparameters.',
+      url:'notebooks/Lecture04-Cross-Validation-Exercise.ipynb',
+      colabUrl:'https://colab.research.google.com/github/JasmineHao/JasmineHao.github.io/blob/main/econ6083/notebooks/Lecture04-Cross-Validation-Exercise.ipynb' }
+  },
+  { num:'L05', week:'Apr 10 (Fri)', color:'coral',
+    title:'Double/Debiased Machine Learning',
+    desc:'The Neyman orthogonality condition, cross-fitting, DML for partially linear and interactive models.',
+    releaseDate: new Date('2026-04-09'),
+    url:'slides/Lecture05-Double-Debiased-Machine-Learning-Slides.pdf',
+    exercise: { title:'Double ML',
+      desc:'Implement DML from scratch using cross-fitting; estimate the effect of 401(k) eligibility on savings.',
+      url:'notebooks/Lecture05-DML-Exercise.ipynb',
+      colabUrl:'https://colab.research.google.com/github/JasmineHao/JasmineHao.github.io/blob/main/econ6083/notebooks/Lecture05-DML-Exercise.ipynb' }
+  },
+  { num:'L06', week:'Apr 14 (Tue)', color:'coral',
+    title:'Heterogeneous Treatment Effects',
+    desc:'CATE estimation, causal trees and forests, the GenericML framework, policy-relevant heterogeneity.',
+    releaseDate: new Date('2026-04-13'),
+    url:'slides/Lecture06-Heterogeneous-Treatment-Effects-Slides.pdf',
+    exercise: { title:'Heterogeneous Treatment Effects',
+      desc:'Estimate CATEs with Causal Forests; visualize treatment effect heterogeneity.',
+      url:'notebooks/Lecture06-HTE-Exercise.ipynb',
+      colabUrl:'https://colab.research.google.com/github/JasmineHao/JasmineHao.github.io/blob/main/econ6083/notebooks/Lecture06-HTE-Exercise.ipynb' }
+  },
+  { num:'L07', week:'Apr 17 (Fri)', color:'purple',
+    title:'DAGs, Bad Controls & Double Machine Learning',
+    desc:'Directed acyclic graphs, four elemental structures, bad controls (M-bias, collider bias), DML with 401(k) case study.',
+    releaseDate: new Date('2026-04-16'),
+    url:'slides/Lecture07-DAGs-and-Structural-Causal-Models-Slides.pdf',
+    exercise: { title:'Simulating DAG Structures',
+      desc:'Monte Carlo simulations of Chain, Collider, and Descendant bias \u2014 verify DAG theory with code.',
+      url:'notebooks/Lecture07-DAGs-Exercise.ipynb',
+      colabUrl:'https://colab.research.google.com/github/JasmineHao/JasmineHao.github.io/blob/main/econ6083/notebooks/Lecture07-DAGs-Exercise.ipynb' }
+  },
+  { num:'L08', week:'Apr 21 (Tue)', color:'purple',
+    title:'Instrumental Variables & DML-IV',
+    desc:'IV identification, LATE, weak instruments, DML-IV for high-dimensional settings.',
+    releaseDate: new Date('2026-04-20'),
+    url:'slides/Lecture08-Instrumental-Variables-and-DML-IV-Slides.pdf',
+    exercise: { title:'DML-IV',
+      desc:'Apply DML-IV to estimate causal effects with instrumental variables in high-dimensional settings.',
+      url:'notebooks/Lecture08-DML-IV-Exercise.ipynb',
+      colabUrl:'https://colab.research.google.com/github/JasmineHao/JasmineHao.github.io/blob/main/econ6083/notebooks/Lecture08-DML-IV-Exercise.ipynb' }
+  },
+  { num:'L09', week:'Apr 24 (Fri)', color:'blue',
+    title:'Difference-in-Differences & RDD',
+    desc:'Modern DiD with staggered adoption, Callaway\u2013Sant\u2019Anna estimator, sharp and fuzzy RDD.',
+    releaseDate: new Date('2026-04-23'),
+    url:'slides/Lecture09-Difference-in-Differences-and-RDD-Slides.pdf',
+    exercise: { title:'DiD & RDD',
+      desc:'Replicate the Card & Krueger (1994) minimum wage DiD and implement a sharp RDD.',
+      url:'notebooks/Lecture09-DiD-RDD-Exercise.ipynb',
+      colabUrl:'https://colab.research.google.com/github/JasmineHao/JasmineHao.github.io/blob/main/econ6083/notebooks/Lecture09-DiD-RDD-Exercise.ipynb' }
+  },
+  { num:'L10', week:'Apr 28 (Tue)', color:'blue',
+    title:'Optimal Policy Learning & Text as Data',
+    desc:'Empirical welfare maximization, policy trees, text embeddings, sentiment analysis in economics.',
+    releaseDate: new Date('2026-04-27'),
+    url:'slides/Lecture10-Optimal-Policy-Learning-and-Text-as-Data-Slides.pdf',
+    exercise: { title:'Policy Learning & Text as Data',
+      desc:'Implement empirical welfare maximization and explore text embeddings for economic analysis.',
+      url:'notebooks/Lecture10-Policy-Learning-Exercise.ipynb',
+      colabUrl:'https://colab.research.google.com/github/JasmineHao/JasmineHao.github.io/blob/main/econ6083/notebooks/Lecture10-Policy-Learning-Exercise.ipynb' }
+  }
+];
+
+function buildSlidesContent() {
+  const now = new Date();
+  const container = document.getElementById('slides-content');
+  let html = '';
+  LECTURES.forEach(lec => {
+    const released = now >= lec.releaseDate;
+    const relStr = lec.releaseDate.toLocaleDateString('en-GB', {day:'numeric', month:'short', year:'numeric'});
+
+    // Lecture divider header
+    html += `<div class="lecture-divider">
+      <div class="lec-badge ${released ? '' : 'locked'}">${lec.num}</div>
+      <div class="lec-title ${released ? '' : 'locked'}">${lec.title}</div>
+      <div class="lec-line"></div>
+      <div class="lec-date">${lec.week}</div>
+    </div>`;
+
+    // Side-by-side: slide (left) + exercise (right)
+    html += `<div class="lecture-row-flex">`;
+
+    if (released) {
+      // Slide card
+      html += `<div class="card ${lec.color}">
+        <div class="card-week">Lecture Slides</div>
+        <div class="card-num">${lec.num}</div>
+        <h3>${lec.title}</h3>
+        <div class="card-desc">${lec.desc}</div>
+        <div class="card-actions">
+          <a class="btn btn-primary" href="${lec.url}" target="_blank" download>\u25B6 Download PDF</a>
+        </div>
+      </div>`;
+
+      // Exercise card
+      if (lec.exercise) {
+        html += `<div class="card teal">
+          <div class="card-week">In-Class Exercise</div>
+          <h3>${lec.exercise.title}</h3>
+          <div class="card-desc">${lec.exercise.desc}</div>
+          <div class="card-actions">
+            <a class="btn btn-colab" href="${lec.exercise.colabUrl}" target="_blank"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open in Colab" style="height:20px;vertical-align:middle;"></a>
+          </div>
+        </div>`;
+      }
+    } else {
+      // Locked slide
+      html += `<div class="card" style="opacity:0.6;">
+        <div class="card-week">Lecture Slides</div>
+        <div class="card-num" style="color:#A0AEC0;">${lec.num}</div>
+        <h3 style="color:#A0AEC0;">${lec.title}</h3>
+        <div class="card-desc" style="color:#CBD5E0;">Available from ${relStr}</div>
+        <div class="card-actions"><span class="btn btn-locked">\uD83D\uDD12 Locked</span></div>
+      </div>`;
+
+      // Locked exercise
+      if (lec.exercise) {
+        html += `<div class="card locked-overlay" style="opacity:0.6;">
+          <span class="lock-badge">\uD83D\uDD12 Locked</span>
+          <div class="card-week">In-Class Exercise</div>
+          <h3 style="color:#A0AEC0;">${lec.exercise.title}</h3>
+          <div class="card-desc" style="color:#CBD5E0;">Available from ${relStr}</div>
+          <div class="card-actions"><span class="btn btn-locked">\uD83D\uDD12 Locked</span></div>
+        </div>`;
+      }
+    }
+
+    html += `</div>`;
+  });
+  container.innerHTML = html;
+}
+
+buildSlidesContent();
+</script>
+
+</body>
+</html>

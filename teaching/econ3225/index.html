@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+<title>ECON 3225 — Big Data and Machine Learning | Jasmine Hao</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" crossorigin href="/assets/index-BNX6aAKW.css">
+<link rel="stylesheet" href="/assets/custom.css">
+<script>
+  (function() {
+    const theme = localStorage.getItem('theme') || 'light';
+    if (theme === 'dark') document.documentElement.classList.add('dark');
+  })();
+</script>
+<style>
+  :root {
+    --bg: #fafaf9;
+    --surface: #f5f5f4;
+    --card: #ffffff;
+    --main: #1c1917;
+    --muted: #57534e;
+    --stroke: #e7e5e4;
+    --primary: #2563eb;
+    --primary-fg: #ffffff;
+    --accent: #f5f5f4;
+    --accent-fg: #1c1917;
+    --ring: #2563eb;
+  }
+  html.dark {
+    --bg: #0c0a09;
+    --surface: #12100f;
+    --card: #1c1917;
+    --main: #f5f5f4;
+    --muted: #a8a29e;
+    --stroke: #292524;
+    --primary: #60a5fa;
+    --primary-fg: #020617;
+    --accent: #292524;
+    --accent-fg: #f5f5f4;
+    --ring: #60a5fa;
+  }
+  body { background-color: var(--bg); color: var(--main); }
+  .bg-surface { background-color: var(--surface); }
+  .text-main { color: var(--main); }
+  .text-muted { color: var(--muted); }
+  .text-primary { color: var(--primary); }
+  .bg-primary { background-color: var(--primary); }
+  .border-stroke { border-color: var(--stroke); }
+  .card {
+    background-color: var(--card);
+    border: 1px solid var(--stroke);
+    border-radius: 1rem;
+    transition: transform .25s ease, box-shadow .25s ease, background-color .25s ease, border-color .25s ease;
+  }
+  .card:hover { transform: translateY(-3px); box-shadow: 0 10px 25px -8px rgba(0,0,0,.08); }
+  html.dark .card:hover { box-shadow: 0 12px 30px -8px rgba(0,0,0,.35); }
+  .hero-bg {
+    background: radial-gradient(1200px 600px at 10% -10%, rgba(37,99,235,.08), transparent),
+                radial-gradient(900px 500px at 90% 10%, rgba(225,29,72,.06), transparent),
+                var(--bg);
+  }
+  html.dark .hero-bg {
+    background: radial-gradient(1200px 600px at 10% -10%, rgba(96,165,250,.10), transparent),
+                radial-gradient(900px 500px at 90% 10%, rgba(244,63,94,.08), transparent),
+                var(--bg);
+  }
+  .sidebar {
+    background-color: var(--card);
+    border-right: 1px solid var(--stroke);
+  }
+  .nav-link { color: var(--muted); }
+  .nav-link:hover, .nav-link.active { background-color: var(--accent); color: var(--main); }
+  .nav-link.active { font-weight: 500; }
+  .theme-toggle {
+    position: fixed; bottom: 1.5rem; right: 1.5rem; z-index: 9999;
+    width: 3.25rem; height: 3.25rem; border-radius: 9999px;
+    border: 1px solid var(--stroke); background: var(--card);
+    cursor: pointer; display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 6px 20px -6px rgba(0,0,0,.12);
+    transition: transform .2s ease, background-color .25s ease, border-color .25s ease;
+  }
+  .theme-toggle:hover { transform: scale(1.08); }
+  .theme-toggle svg { width: 1.35rem; height: 1.35rem; color: var(--main); transition: transform .4s cubic-bezier(.34,1.56,.64,1), opacity .25s ease; }
+  .theme-toggle .sun { position: absolute; }
+  .theme-toggle .moon { position: absolute; opacity: 0; transform: rotate(-90deg) scale(.6); }
+  html.dark .theme-toggle .sun { opacity: 0; transform: rotate(90deg) scale(.6); }
+  html.dark .theme-toggle .moon { opacity: 1; transform: rotate(0) scale(1); }
+  .mobile-header { background-color: rgba(250,250,249,.85); backdrop-filter: blur(10px); border-bottom: 1px solid var(--stroke); }
+  html.dark .mobile-header { background-color: rgba(12,10,9,.85); }
+</style>
+</head>
+<body class="min-h-screen antialiased">
+
+<!-- Mobile Header -->
+<div class="lg:hidden fixed top-0 left-0 right-0 z-50 mobile-header px-5 py-3.5 flex items-center justify-between">
+  <a href="/" class="text-lg font-semibold text-main hover:text-primary transition">Jasmine Hao</a>
+  <button id="menuBtn" class="p-2 rounded-lg hover:bg-black/5 dark:hover:bg-white/5 transition" aria-label="Toggle menu">
+    <svg id="iconMenu" class="w-6 h-6 text-main" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+    <svg id="iconClose" class="w-6 h-6 text-main hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+  </button>
+</div>
+
+<!-- Mobile Drawer -->
+<div id="drawer" class="lg:hidden fixed top-0 right-0 h-screen w-64 sidebar z-40 transform translate-x-full transition-transform duration-300 ease-out flex flex-col px-6 py-20">
+  <nav class="space-y-1"><a href="/" class="nav-link block px-3 py-2 rounded-lg text-[15px] transition">About</a>
+<a href="/research/" class="nav-link block px-3 py-2 rounded-lg text-[15px] transition">Research</a>
+<a href="/teaching/" class="nav-link active block px-3 py-2 rounded-lg text-[15px] transition">Teaching</a>
+<a href="/cv/" class="nav-link block px-3 py-2 rounded-lg text-[15px] transition">C.V.</a>
+<a href="/other/" class="nav-link block px-3 py-2 rounded-lg text-[15px] transition">Other</a>
+</nav>
+  <div class="mt-auto pt-8 border-t border-stroke text-sm text-muted space-y-1">
+    <p class="font-medium text-main">Contact</p>
+    <a href="mailto:haoyu@hku.hk" class="block hover:text-primary transition">haoyu@hku.hk</a>
+    <p class="text-xs">(+852)-3917-7759</p>
+  </div>
+</div>
+<div id="overlay" class="lg:hidden fixed inset-0 bg-black/40 z-30 opacity-0 pointer-events-none transition-opacity duration-300"></div>
+
+<!-- Desktop Sidebar -->
+<aside class="hidden lg:flex fixed left-0 top-0 h-screen w-64 sidebar flex-col overflow-y-auto px-6 py-10">
+  <div class="mb-14">
+    <a href="/" class="inline-block">
+      <h1 class="text-2xl font-serif font-semibold text-main hover:text-primary transition">Yu (Jasmine) Hao</h1>
+      <p class="text-sm text-muted mt-1">郝宇</p>
+    </a>
+    <p class="text-xs text-muted mt-6 leading-relaxed">Assistant Professor<br>Faculty of Business and Economics<br>The University of Hong Kong</p>
+  </div>
+  <nav class="space-y-2"><a href="/" class="nav-link block px-3 py-2 rounded-lg text-[15px] transition">About</a>
+<a href="/research/" class="nav-link block px-3 py-2 rounded-lg text-[15px] transition">Research</a>
+<a href="/teaching/" class="nav-link active block px-3 py-2 rounded-lg text-[15px] transition">Teaching</a>
+<a href="/cv/" class="nav-link block px-3 py-2 rounded-lg text-[15px] transition">C.V.</a>
+<a href="/other/" class="nav-link block px-3 py-2 rounded-lg text-[15px] transition">Other</a>
+</nav>
+  <div class="mt-auto pt-8 border-t border-stroke text-sm text-muted space-y-1">
+    <p class="font-medium text-main">Contact</p>
+    <a href="mailto:haoyu@hku.hk" class="block hover:text-primary transition">haoyu@hku.hk</a>
+    <p class="text-xs">(+852)-3917-7759</p>
+  </div>
+</aside>
+
+<!-- Main -->
+<main class="lg:ml-64 min-h-screen pt-16 lg:pt-0">
+
+<section class="relative overflow-hidden">
+  <div class="hero-bg absolute inset-0 -z-10"></div>
+  <div class="max-w-3xl mx-auto px-6 py-14 md:py-20">
+    <p class="text-sm font-medium tracking-widest uppercase text-muted mb-3">Teaching</p>
+    <h1 class="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold text-main leading-tight">ECON 3225 — Big Data and Machine Learning</h1>
+    <div class="h-1 w-16 bg-primary mt-6 rounded-full"></div>
+  </div>
+</section>
+
+<section class="py-12 md:py-16">
+  <div class="max-w-3xl mx-auto px-6 space-y-10">
+
+    <div class="card p-5">
+      <h2 class="text-base font-semibold text-main mb-3">Course Information</h2>
+      <ul class="space-y-1.5 text-sm text-muted">
+        <li><strong class="text-main">Course Code:</strong> ECON 3225</li>
+        <li><strong class="text-main">Title:</strong> Big Data and Machine Learning</li>
+        <li><strong class="text-main">Instructor:</strong> Yu (Jasmine) Hao</li>
+        <li><strong class="text-main">Institution:</strong> University of Hong Kong (HKU)</li>
+        <li><strong class="text-main">Term:</strong> 2022 – 2023</li>
+      </ul>
+    </div>
+
+    <div>
+      <h2 class="font-serif text-lg md:text-xl font-semibold text-main mb-3 border-l-2 border-primary pl-3">Lecture Slides</h2>
+      <p class="text-sm text-muted mb-4">Click any link to download the PDF slide deck.</p>
+      <div class="grid gap-2">
+        <a href="/files/econ3225/slides/06-moving-beyond-linearity.pdf" class="card p-3 flex items-center justify-between group hover:bg-surface transition">
+          <span class="text-sm font-medium text-main">06 — Moving Beyond Linearity</span>
+          <span class="text-xs text-primary group-hover:underline">Download PDF →</span>
+        </a>
+        <a href="/files/econ3225/slides/07-tree-based-methods.pdf" class="card p-3 flex items-center justify-between group hover:bg-surface transition">
+          <span class="text-sm font-medium text-main">07 — Tree-Based Methods</span>
+          <span class="text-xs text-primary group-hover:underline">Download PDF →</span>
+        </a>
+        <a href="/files/econ3225/slides/08-support-vector-machine.pdf" class="card p-3 flex items-center justify-between group hover:bg-surface transition">
+          <span class="text-sm font-medium text-main">08 — Support Vector Machine</span>
+          <span class="text-xs text-primary group-hover:underline">Download PDF →</span>
+        </a>
+        <a href="/files/econ3225/slides/09-deep-learning.pdf" class="card p-3 flex items-center justify-between group hover:bg-surface transition">
+          <span class="text-sm font-medium text-main">09 — Deep Learning</span>
+          <span class="text-xs text-primary group-hover:underline">Download PDF →</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="pt-2">
+      <a href="/teaching/" class="inline-flex items-center gap-1 text-sm text-primary hover:underline">← Back to Teaching</a>
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+<!-- Theme Toggle -->
+<button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">
+  <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+  <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+</button>
+
+<script>
+(function(){
+  const html = document.documentElement;
+  const btn = document.getElementById('themeToggle');
+  btn.addEventListener('click', function(){
+    const isDark = html.classList.contains('dark');
+    if (isDark) { html.classList.remove('dark'); localStorage.setItem('theme','light'); }
+    else { html.classList.add('dark'); localStorage.setItem('theme','dark'); }
+  });
+
+  const menuBtn = document.getElementById('menuBtn');
+  const drawer = document.getElementById('drawer');
+  const overlay = document.getElementById('overlay');
+  const iconMenu = document.getElementById('iconMenu');
+  const iconClose = document.getElementById('iconClose');
+  let open = false;
+  function setMenu(state){
+    open = state;
+    drawer.classList.toggle('translate-x-0', open);
+    drawer.classList.toggle('translate-x-full', !open);
+    overlay.classList.toggle('opacity-0', !open);
+    overlay.classList.toggle('pointer-events-none', !open);
+    iconMenu.classList.toggle('hidden', open);
+    iconClose.classList.toggle('hidden', !open);
+  }
+  menuBtn.addEventListener('click', ()=>setMenu(!open));
+  overlay.addEventListener('click', ()=>setMenu(false));
+})();
+</script>
+
+</body>
+</html>

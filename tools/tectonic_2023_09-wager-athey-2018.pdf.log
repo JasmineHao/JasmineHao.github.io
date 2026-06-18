@@ -1,0 +1,188 @@
+note: "version 2" Tectonic command-line interface activated
+note: Running TeX ...
+Fontconfig error: Cannot load default config file: No such file: (null)
+warning: 3_1_wagner_athey_2018.tex:46: Missing character: There is no 5 ("35) in font nullfont!
+warning: could not represent character "5" (0x35) in font "nullfont"
+warning:   you may need to load the `fontspec` package and use (e.g.) \setmainfont to
+warning:   choose a different font that covers the unrepresentable character(s)
+warning: 3_1_wagner_athey_2018.tex:46: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:63: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:77: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:98: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:109: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:113: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:138: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:138: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:171: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:171: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:171: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:186: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:196: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:220: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:258: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:258: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:276: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:278: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:291: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:313: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:316: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:338: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:362: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:381: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:397: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:414: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:418: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:445: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:467: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:486: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:504: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:526: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:550: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:572: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:593: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:616: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:621: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:637: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:654: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:683: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:686: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:708: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:725: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:745: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:766: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:791: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:813: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:830: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:853: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:886: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:915: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:915: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:940: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:964: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:970: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+note: Running BibTeX on 3_1_wagner_athey_2018.aux ...
+note: Rerunning TeX because bibtex was run ...
+warning: 3_1_wagner_athey_2018.tex:46: Missing character: There is no 5 ("35) in font nullfont!
+warning: could not represent character "5" (0x35) in font "nullfont"
+warning:   you may need to load the `fontspec` package and use (e.g.) \setmainfont to
+warning:   choose a different font that covers the unrepresentable character(s)
+warning: 3_1_wagner_athey_2018.tex:46: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:63: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:77: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:98: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:109: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:113: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:138: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:138: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:171: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:171: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:171: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:186: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:196: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:220: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:258: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:258: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:276: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:278: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:291: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:313: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:316: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:338: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:362: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:381: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:397: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:414: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:418: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:445: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:467: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:486: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:504: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:526: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:550: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:572: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:593: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:616: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:621: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:637: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:654: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:683: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:686: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:708: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:725: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:745: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:766: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:791: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:813: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:830: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:853: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:886: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:915: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:915: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:940: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:964: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:970: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+note: Rerunning TeX because "3_1_wagner_athey_2018.aux" changed ...
+warning: 3_1_wagner_athey_2018.tex:46: 
+Missing character: There is no 5 ("35) in font nullfont!
+warning: could not represent character "5" (0x35) in font "nullfont"
+warning:   you may need to load the `fontspec` package and use (e.g.) \setmainfont to
+warning:   choose a different font that covers the unrepresentable character(s)
+warning: 3_1_wagner_athey_2018.tex:46: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:63: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:77: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:98: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:109: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:113: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:138: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:138: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:171: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:171: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:171: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:186: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:196: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:220: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:258: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:258: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:276: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:278: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:291: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:313: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:316: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:338: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:362: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:381: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:397: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:414: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:418: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:445: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:467: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:486: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:504: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:526: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:550: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:572: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:593: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:616: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:621: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:637: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:654: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:683: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:686: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:708: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:725: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:745: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:766: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:791: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:813: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:830: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:853: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:886: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:915: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:915: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:940: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:964: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_1_wagner_athey_2018.tex:970: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: warnings were issued by the TeX engine; use --print and/or --keep-logs for details.
+note: Running xdvipdfmx ...
+note: Writing `3_1_wagner_athey_2018.pdf` (312.94921875 KiB)
+note: Skipped writing 6 intermediate files (use --keep-intermediates to keep them)

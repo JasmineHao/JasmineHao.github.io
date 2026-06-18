@@ -1,0 +1,379 @@
+============================================================
+# ECON6083: Machine Learning in Economics
+## Lecture 8 Exercise: Instrumental Variables, JIVE, and DML-IV
+
+**Coverage:** Lecture 8
+**Goal:** Fill in the blanks marked with `# TODO: ____`. Complex scaffolding code is commented out with `# TODO:` — your instructor will uncomment and run these cells during class.
+
+------------------------------------------------------------
+[CODE CELL]
+import numpy as np
+import pandas as pd
+from sklearn.linear_model import LinearRegression, Ridge, LassoCV, RidgeCV
+from sklearn.ensemble import RandomForestRegressor
+from sklearn.model_selection import train_test_split, KFold, cross_val_score
+from sklearn.preprocessing import PolynomialFeatures
+from sklearn.decomposition import PCA
+import warnings
+warnings.filterwarnings("ignore")
+
+np.random.seed(42)
+TRUE_EFFECT = 1.0
+results_summary = []
+
+
+============================================================
+---
+
+## Part 1: Classical JIVE (Jackknife IV)
+
+When many instruments are weak, 2SLS overfits the first stage because it uses the same observations to estimate the first-stage coefficients and to predict $\hat{D}$. JIVE uses leave-one-out predictions to avoid this overfitting.
+
+**True treatment effect**: $\theta_0 = 1.0$
+
+------------------------------------------------------------
+[CODE CELL]
+n = 250
+p_instr = 35
+
+ability = np.random.randn(n)
+Z = np.random.randn(n, p_instr)
+
+true_effects = np.concatenate([[0.35, 0.3], np.random.uniform(0.04, 0.08, p_instr - 2)])
+D = Z @ true_effects + 0.6 * ability + np.random.randn(n)
+y = TRUE_EFFECT * D + 0.5 * ability + np.random.randn(n)
+
+# 2SLS (in-sample first stage)
+fs_ols = LinearRegression().fit(Z, D)
+D_hat_ols = fs_ols.predict(Z)
+theta_2sls = LinearRegression().fit(D_hat_ols.reshape(-1, 1), y).coef_[0]
+r2_2sls = 1 - np.var(D - D_hat_ols) / np.var(D)
+
+bias_2sls = abs(theta_2sls - TRUE_EFFECT)
+print(f"2SLS:  estimate={theta_2sls:.3f}, bias={bias_2sls:.3f}, R²={r2_2sls:.3f}")
+
+
+============================================================
+### Q1.1 Implement JIVE
+
+Implement JIVE using the projection matrix formula.
+
+$$P = Z(Z'Z)^{-1}Z'$$
+
+The **leave-one-out** prediction for each observation $i$ is:
+
+$$\tilde{D}_i = \frac{(PD)_i - h_{ii} D_i}{1 - h_{ii}}$$
+
+where $h = \text{diag}(P)$ is the leverage vector.
+
+The **JIVE estimator** is:
+
+$$\hat{\theta}_{\text{JIVE}} = \frac{Y' \tilde{D}}{D' \tilde{D}}$$
+
+**Task**: Fill in the blanks below.
+
+------------------------------------------------------------
+[CODE CELL]
+# TODO: Compute projection matrix P and leverage h
+P = ________________________________________________
+h = ________________________________________________
+
+# TODO: Compute leave-one-out predictions D_tilde
+D_tilde = ___________________________________________
+
+# TODO: Compute JIVE estimator
+theta_jive = _________________________________________
+
+# TODO: Compute honest leave-one-out R²
+D_hat_jive = _________________________________________
+r2_jive = ____________________________________________
+
+bias_jive = abs(theta_jive - TRUE_EFFECT)
+print(f"JIVE:  estimate={theta_jive:.3f}, bias={bias_jive:.3f}, R²={r2_jive:.3f}")
+print(f"  -> 2SLS overfits: inflated R² by {r2_2sls - r2_jive:.3f}")
+print(f"  -> JIVE bias reduction: {bias_2sls - bias_jive:.3f}")
+
+
+============================================================
+### Q1.2 Interpretation
+
+**Task**: Answer briefly.
+
+1. Why does 2SLS produce an inflated first-stage $R^2$ compared to JIVE?
+2. Which estimator is closer to the true effect of 1.0? Why?
+
+------------------------------------------------------------
+[CODE CELL]
+# TODO: Write your answers below (as comments or in a markdown cell)
+# 1. _________________________________________________________________
+# 2. _________________________________________________________________
+
+
+============================================================
+---
+
+## Part 2: RJIVE — Regularized JIVE with Sparse vs Dense IV Structure
+
+When $p > n$ or $p \approx n$, we need regularization in the first stage. The key question is: **Is the IV structure sparse or dense?**
+
+------------------------------------------------------------
+[CODE CELL]
+n = 300
+p = 100
+Z = np.random.randn(n, p)
+ability = np.random.randn(n)
+
+# Sparse structure (3 strong IVs)
+beta_sparse = np.zeros(p)
+beta_sparse[:3] = [1.0, 0.8, 0.6]
+D_sparse = Z @ beta_sparse + 0.5 * ability + np.random.randn(n)
+y_sparse = TRUE_EFFECT * D_sparse + 0.5 * ability + np.random.randn(n)
+
+# Dense structure (100 weak IVs)
+beta_dense = np.random.uniform(0.08, 0.12, p)
+D_dense = Z @ beta_dense + 0.3 * ability + np.random.randn(n)
+y_dense = TRUE_EFFECT * D_dense + 0.3 * ability + np.random.randn(n)
+
+print("Data generated: sparse (3 strong IVs) and dense (100 weak IVs)")
+
+
+============================================================
+### Q2.1 K-Fold Jackknife Helper
+
+**Task**: Implement `kfold_jackknife(Z, D, model, K=5)`.
+
+Algorithm: split into K folds; for each fold, train on the rest and predict out-of-sample.
+
+------------------------------------------------------------
+[CODE CELL]
+def kfold_jackknife(Z, D, model, K=5):
+    """K-fold Jackknife first stage."""
+    n = len(D)
+    D_hat = np.zeros(n)
+    
+    # TODO: Implement K-fold cross-fitting
+    # Hint: Use KFold from sklearn.model_selection
+    #       For each fold: model.fit(Z_train, D_train), D_hat[test] = model.predict(Z_test)
+    _________________________________________________________________
+    
+    return D_hat
+
+
+============================================================
+### Q2.2 Sparse vs Dense in Practice
+
+Use your `kfold_jackknife` to compare Lasso-JIVE vs Ridge-JIVE under sparse and dense structures. Also compute the CV diagnostic.
+
+------------------------------------------------------------
+[CODE CELL]
+# TODO: Compare Lasso-JIVE vs Ridge-JIVE and compute CV diagnostic
+# HINT: The instructor will run the full comparison code below in class.
+#       Your job is to understand which regularizer wins in each case.
+
+# Sparse IV structure:
+#   - Lasso-JIVE (correct) vs Ridge-JIVE (wrong)
+#   - CV R²: Lasso should win
+
+# Dense IV structure:
+#   - Lasso-JIVE (wrong) vs Ridge-JIVE (correct) vs PCA-IV
+#   - CV R²: Ridge should win
+
+# TODO: Which regularizer should you use for sparse IVs?  ____________
+# TODO: Which regularizer should you use for dense IVs?   ____________
+
+
+============================================================
+### Q2.3 Interpretation
+
+**Task**: Answer briefly.
+
+1. Why does Lasso-JIVE fail under dense IV structure?
+2. How do you decide between Lasso and Ridge in practice?
+
+------------------------------------------------------------
+[CODE CELL]
+# TODO: Write your answers below
+# 1. _________________________________________________________________
+# 2. _________________________________________________________________
+
+
+============================================================
+---
+
+## Part 3: IV with Random Forests — Heterogeneous Effects
+
+Treatment effects often vary by covariates. Classical 2SLS gives a single number (LATE), but we may want to better estimate the ATE by flexibly controlling for $X$.
+
+**True ATE**: $\theta_0 = 1.0$
+
+------------------------------------------------------------
+[CODE CELL]
+np.random.seed(123)
+n = 2000
+X = np.random.randn(n, 5)
+X1 = X[:, 0]
+Z = np.random.randn(n)
+ability = np.random.randn(n)
+
+true_theta_x = TRUE_EFFECT - 0.5 * X1
+D = 0.7 * Z + 0.4 * X1 + 0.4 * ability + np.random.randn(n)
+y = true_theta_x * D + 0.4 * ability + 0.2 * X1 + np.random.randn(n)
+
+# 2SLS
+cov_yz = np.cov(y, Z)[0, 1]
+cov_Dz = np.cov(D, Z)[0, 1]
+theta_2sls_hte = cov_yz / cov_Dz
+bias_2sls_hte = abs(theta_2sls_hte - TRUE_EFFECT)
+print(f"2SLS:  {theta_2sls_hte:.3f}  (bias vs ATE: {bias_2sls_hte:.3f})")
+
+
+------------------------------------------------------------
+[CODE CELL]
+# TODO: Implement RF-IV with sample splitting
+# HINT: Use train_test_split to create train/test sets.
+#       Train RandomForestRegressor on X_train to predict y and D.
+#       Compute residuals on X_test: y_resid = y_test - rf_y.predict(X_test)
+#       Estimate theta = cov(y_resid, Z_test) / cov(D_resid, Z_test)
+
+# TODO: Fill in the key steps below
+X_train, X_test, D_train, D_test, y_train, y_test, Z_train, Z_test = ___________________________
+
+# TODO: Train random forests
+rf_y = _____________________________________________________________
+rf_D = _____________________________________________________________
+
+# TODO: Compute residuals on test set
+y_resid = __________________________________________________________
+D_resid = __________________________________________________________
+
+# TODO: Compute RF-IV estimate
+theta_rf = _________________________________________________________
+bias_rf = abs(theta_rf - TRUE_EFFECT)
+print(f"RF-IV: {theta_rf:.3f}  (bias vs ATE: {bias_rf:.3f})")
+
+
+============================================================
+### Q3.1 Interpretation
+
+**Task**: Answer briefly.
+
+1. Why does 2SLS have bias relative to the ATE when effects are heterogeneous?
+2. How does RF-IV reduce this bias?
+
+------------------------------------------------------------
+[CODE CELL]
+# TODO: Write your answers below
+# 1. _________________________________________________________________
+# 2. _________________________________________________________________
+
+
+============================================================
+---
+
+## Part 4: DML-IV with Non-Linear Confounding
+
+Now suppose confounders are high-dimensional and non-linear. Standard linear methods fail to capture confounding, leading to biased estimates even with an instrument.
+
+**True treatment effect**: $\theta_0 = 1.0$
+
+------------------------------------------------------------
+[CODE CELL]
+np.random.seed(456)
+n, p = 1000, 15
+X_hd = np.random.randn(n, p)
+Z_hd = np.random.randn(n)
+ability_hd = np.random.randn(n)
+
+X1, X2 = X_hd[:, 0], X_hd[:, 1]
+confound = 3.0 * (X2 ** 2) - 2.0 * X1 * X2 + 1.5 * X1**2
+
+D_hd = 0.8 * Z_hd + confound + 0.6 * ability_hd + np.random.randn(n)
+y_hd = TRUE_EFFECT * D_hd + confound + 0.5 * ability_hd + np.random.randn(n)
+
+# Naive OLS
+naive_coef = LinearRegression().fit(
+    np.hstack([D_hd.reshape(-1, 1), X_hd[:, :5]]), y_hd
+).coef_[0]
+bias_ols = abs(naive_coef - TRUE_EFFECT)
+print(f"Naive OLS (linear):   {naive_coef:.3f}  (bias: {bias_ols:.3f})")
+
+# 2SLS linear
+fs_lin = LinearRegression().fit(np.hstack([Z_hd.reshape(-1, 1), X_hd[:, :5]]), D_hd)
+D_hat_lin = fs_lin.predict(np.hstack([Z_hd.reshape(-1, 1), X_hd[:, :5]]))
+theta_2sls_hd = LinearRegression().fit(D_hat_lin.reshape(-1, 1), y_hd).coef_[0]
+bias_2sls_hd = abs(theta_2sls_hd - TRUE_EFFECT)
+print(f"2SLS (linear X):      {theta_2sls_hd:.3f}  (bias: {bias_2sls_hd:.3f})")
+
+
+============================================================
+### Q4.1 Implement DML-IV with Cross-Fitting
+
+Use DML-IV to capture the non-linearity:
+1. Expand $X$ to degree-2 polynomials
+2. Use 3-fold cross-fitting to get out-of-sample residuals
+3. Estimate $\hat{\theta} = \frac{\mathbb{E}[\tilde{Y} \cdot Z]}{\mathbb{E}[\tilde{D} \cdot Z]}$
+
+**Task**: Fill in the blanks below.
+
+------------------------------------------------------------
+[CODE CELL]
+# TODO: Create polynomial features (degree 2)
+poly = _____________________________________________________________
+X_poly = ___________________________________________________________
+
+# TODO: Implement 3-fold cross-fitting
+kf = _______________________________________________________________
+y_resid = np.zeros(n)
+D_resid = np.zeros(n)
+
+for train_idx, test_idx in kf.split(X_poly):
+    # TODO: Train Ridge on other folds, predict residuals on test fold
+    _________________________________________________________________
+    _________________________________________________________________
+
+# TODO: Compute DML-IV estimate
+theta_dml = ________________________________________________________
+
+bias_dml = abs(theta_dml - TRUE_EFFECT)
+print(f"DML-IV (polynomial):  {theta_dml:.3f}  (bias: {bias_dml:.3f})")
+
+
+============================================================
+### Q4.2 Summary and Interpretation
+
+**Task**:
+1. Fill in the summary table.
+2. Answer: Why do linear methods fail here? What is the role of cross-fitting?
+
+------------------------------------------------------------
+[CODE CELL]
+# TODO: Append all results to results_summary
+# Instructor will run the full summary code in class.
+
+# TODO: Complete the table below (fill in estimates and biases)
+#
+# | Part      | Scenario      | Method       | Estimate | True | Bias |
+# |-----------|---------------|--------------|----------|------|------|
+# | I. JIVE   | Many Weak IVs | 2SLS         | ________ | 1.0  | ____ |
+# | I. JIVE   | Many Weak IVs | JIVE         | ________ | 1.0  | ____ |
+# | II. RJIVE | Sparse IV     | Lasso-JIVE   | ________ | 1.0  | ____ |
+# | II. RJIVE | Sparse IV     | Ridge-JIVE   | ________ | 1.0  | ____ |
+# | II. RJIVE | Dense IV      | Lasso-JIVE   | ________ | 1.0  | ____ |
+# | II. RJIVE | Dense IV      | Ridge-JIVE   | ________ | 1.0  | ____ |
+# | II. RJIVE | Dense IV      | PCA-IV       | ________ | 1.0  | ____ |
+# | III. RF   | Heterogeneous | 2SLS         | ________ | 1.0  | ____ |
+# | III. RF   | Heterogeneous | RF-IV        | ________ | 1.0  | ____ |
+# | IV. DML   | Non-linear X  | Naive OLS    | ________ | 1.0  | ____ |
+# | IV. DML   | Non-linear X  | 2SLS         | ________ | 1.0  | ____ |
+# | IV. DML   | Non-linear X  | DML-IV       | ________ | 1.0  | ____ |
+
+
+------------------------------------------------------------
+[CODE CELL]
+# TODO: Interpretation questions
+# 1. Why do linear methods fail with non-linear confounding?
+#    _________________________________________________________________
+#
+# 2. What is the role of cross-fitting in DML-IV?
+#    _________________________________________________________________
+

@@ -1,0 +1,426 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+<title>Research | Jasmine Hao</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" crossorigin href="/assets/index-BNX6aAKW.css">
+<link rel="stylesheet" href="/assets/custom.css">
+<script>
+  (function() {
+    const theme = localStorage.getItem('theme') || 'light';
+    if (theme === 'dark') document.documentElement.classList.add('dark');
+  })();
+</script>
+<style>
+  :root {
+    --bg: #fafaf9;
+    --surface: #f5f5f4;
+    --card: #ffffff;
+    --main: #1c1917;
+    --muted: #57534e;
+    --stroke: #e7e5e4;
+    --primary: #2563eb;
+    --primary-fg: #ffffff;
+    --accent: #f5f5f4;
+    --accent-fg: #1c1917;
+    --ring: #2563eb;
+  }
+  html.dark {
+    --bg: #0c0a09;
+    --surface: #12100f;
+    --card: #1c1917;
+    --main: #f5f5f4;
+    --muted: #a8a29e;
+    --stroke: #292524;
+    --primary: #60a5fa;
+    --primary-fg: #020617;
+    --accent: #292524;
+    --accent-fg: #f5f5f4;
+    --ring: #60a5fa;
+  }
+  body { background-color: var(--bg); color: var(--main); }
+  .bg-surface { background-color: var(--surface); }
+  .text-main { color: var(--main); }
+  .text-muted { color: var(--muted); }
+  .text-primary { color: var(--primary); }
+  .bg-primary { background-color: var(--primary); }
+  .border-stroke { border-color: var(--stroke); }
+  .card {
+    background-color: var(--card);
+    border: 1px solid var(--stroke);
+    border-radius: 1rem;
+    transition: transform .25s ease, box-shadow .25s ease, background-color .25s ease, border-color .25s ease;
+  }
+  .card:hover { transform: translateY(-3px); box-shadow: 0 10px 25px -8px rgba(0,0,0,.08); }
+  html.dark .card:hover { box-shadow: 0 12px 30px -8px rgba(0,0,0,.35); }
+  .hero-bg {
+    background: radial-gradient(1200px 600px at 10% -10%, rgba(37,99,235,.08), transparent),
+                radial-gradient(900px 500px at 90% 10%, rgba(225,29,72,.06), transparent),
+                var(--bg);
+  }
+  html.dark .hero-bg {
+    background: radial-gradient(1200px 600px at 10% -10%, rgba(96,165,250,.10), transparent),
+                radial-gradient(900px 500px at 90% 10%, rgba(244,63,94,.08), transparent),
+                var(--bg);
+  }
+  /* Sidebar */
+  .sidebar {
+    background-color: var(--card);
+    border-right: 1px solid var(--stroke);
+  }
+  .nav-link { color: var(--muted); }
+  .nav-link:hover, .nav-link.active { background-color: var(--accent); color: var(--main); }
+  .nav-link.active { font-weight: 500; }
+  /* Toggle */
+  .theme-toggle {
+    position: fixed; bottom: 1.5rem; right: 1.5rem; z-index: 9999;
+    width: 3.25rem; height: 3.25rem; border-radius: 9999px;
+    border: 1px solid var(--stroke); background: var(--card);
+    cursor: pointer; display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 6px 20px -6px rgba(0,0,0,.12);
+    transition: transform .2s ease, background-color .25s ease, border-color .25s ease;
+  }
+  .theme-toggle:hover { transform: scale(1.08); }
+  .theme-toggle svg { width: 1.35rem; height: 1.35rem; color: var(--main); transition: transform .4s cubic-bezier(.34,1.56,.64,1), opacity .25s ease; }
+  .theme-toggle .sun { position: absolute; }
+  .theme-toggle .moon { position: absolute; opacity: 0; transform: rotate(-90deg) scale(.6); }
+  html.dark .theme-toggle .sun { opacity: 0; transform: rotate(90deg) scale(.6); }
+  html.dark .theme-toggle .moon { opacity: 1; transform: rotate(0) scale(1); }
+  /* Mobile header */
+  .mobile-header { background-color: rgba(250,250,249,.85); backdrop-filter: blur(10px); border-bottom: 1px solid var(--stroke); }
+  html.dark .mobile-header { background-color: rgba(12,10,9,.85); }
+  .tag-btn {
+    background-color: #52525b;
+    color: #ffffff;
+  }
+  html.dark .tag-btn {
+    background-color: #d4d4d8;
+    color: #000000;
+  }
+</style>
+</head>
+<body class="min-h-screen antialiased">
+
+<!-- Mobile Header -->
+<div class="lg:hidden fixed top-0 left-0 right-0 z-50 mobile-header px-5 py-3.5 flex items-center justify-between">
+  <a href="/" class="text-lg font-semibold text-main hover:text-primary transition">Jasmine Hao</a>
+  <button id="menuBtn" class="p-2 rounded-lg hover:bg-black/5 dark:hover:bg-white/5 transition" aria-label="Toggle menu">
+    <svg id="iconMenu" class="w-6 h-6 text-main" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+    <svg id="iconClose" class="w-6 h-6 text-main hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+  </button>
+</div>
+
+<!-- Mobile Drawer -->
+<div id="drawer" class="lg:hidden fixed top-0 right-0 h-screen w-64 sidebar z-40 transform translate-x-full transition-transform duration-300 ease-out flex flex-col px-6 py-20">
+  <nav class="space-y-1"><a href="/" class="nav-link block px-3 py-2 rounded-lg text-[15px] transition">About</a>
+<a href="/research/" class="nav-link active block px-3 py-2 rounded-lg text-[15px] transition">Research</a>
+<a href="/teaching/" class="nav-link block px-3 py-2 rounded-lg text-[15px] transition">Teaching</a>
+<a href="/cv/" class="nav-link block px-3 py-2 rounded-lg text-[15px] transition">C.V.</a>
+<a href="/other/" class="nav-link block px-3 py-2 rounded-lg text-[15px] transition">Other</a>
+</nav>
+  <div class="mt-auto pt-8 border-t border-stroke text-sm text-muted space-y-1">
+    <p class="font-medium text-main">Contact</p>
+    <a href="mailto:haoyu@hku.hk" class="block hover:text-primary transition">haoyu@hku.hk</a>
+    <p class="text-xs">(+852)-3917-7759</p>
+  </div>
+</div>
+<div id="overlay" class="lg:hidden fixed inset-0 bg-black/40 z-30 opacity-0 pointer-events-none transition-opacity duration-300"></div>
+
+<!-- Desktop Sidebar -->
+<aside class="hidden lg:flex fixed left-0 top-0 h-screen w-64 sidebar flex-col overflow-y-auto px-6 py-10">
+  <div class="mb-14">
+    <a href="/" class="inline-block">
+      <h1 class="text-2xl font-serif font-semibold text-main hover:text-primary transition">Yu (Jasmine) Hao</h1>
+      <p class="text-sm text-muted mt-1">郝宇</p>
+    </a>
+    <p class="text-xs text-muted mt-6 leading-relaxed">Assistant Professor<br>Faculty of Business and Economics<br>The University of Hong Kong</p>
+  </div>
+  <nav class="space-y-2"><a href="/" class="nav-link block px-3 py-2 rounded-lg text-[15px] transition">About</a>
+<a href="/research/" class="nav-link active block px-3 py-2 rounded-lg text-[15px] transition">Research</a>
+<a href="/teaching/" class="nav-link block px-3 py-2 rounded-lg text-[15px] transition">Teaching</a>
+<a href="/cv/" class="nav-link block px-3 py-2 rounded-lg text-[15px] transition">C.V.</a>
+<a href="/other/" class="nav-link block px-3 py-2 rounded-lg text-[15px] transition">Other</a>
+</nav>
+  <div class="mt-auto pt-8 border-t border-stroke text-sm text-muted space-y-1">
+    <p class="font-medium text-main">Contact</p>
+    <a href="mailto:haoyu@hku.hk" class="block hover:text-primary transition">haoyu@hku.hk</a>
+    <p class="text-xs">(+852)-3917-7759</p>
+  </div>
+</aside>
+
+<!-- Main -->
+<main class="lg:ml-64 min-h-screen pt-16 lg:pt-0">
+  
+<section class="relative overflow-hidden">
+  <div class="hero-bg absolute inset-0 -z-10"></div>
+  <div class="max-w-4xl mx-auto px-6 py-14 md:py-20">
+    <p class="text-sm font-medium tracking-widest uppercase text-muted mb-3">Research</p>
+    <h1 class="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold text-main leading-tight">Publications, Working Papers & Interests</h1>
+    <div class="h-1 w-16 bg-primary mt-6 rounded-full"></div>
+  </div>
+</section>
+
+<section class="py-12 md:py-16">
+  <div class="max-w-4xl mx-auto px-6 space-y-6">
+
+    <!-- Publications -->
+    <div>
+      <h2 class="font-serif text-lg md:text-xl font-semibold text-main mb-2 border-l-2 border-primary pl-3">Publications</h2>
+      <div class="card p-3">
+        <h3 class="text-base font-semibold text-main mb-1">The Dynamics of Competition in the Chinese Electric Vehicle Market: Insights from BYD's Market Evolution</h3>
+        <div class="text-sm text-muted inline-flex flex-wrap items-center gap-x-2 gap-y-1 mb-1">
+          <span>with Yiran Hao</span>
+          <span class="text-gray-400 mx-2">|</span>
+          <em class="text-primary">International Journal of Industrial Organization, 2026</em>
+          <span class="text-gray-400 mx-2">|</span>
+          <a href="http://www.google.com/url?q=http%3A%2F%2Faguirregabiria.net%2Fwpapers%2Fbyd_ev_14042022.pdf&sa=D&sntz=1&usg=AOvVaw2QBMzYE2Kt-BvnZ9SlMko9" class="text-primary hover:underline">earlier version</a>
+          <span class="text-gray-400 mx-2">|</span>
+          <a href="https://doi.org/10.1016/j.ijindorg.2026.103256" class="text-primary hover:underline">Journal Link</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Working Papers -->
+    <div>
+      <h2 class="font-serif text-lg md:text-xl font-semibold text-main mb-2 border-l-2 border-primary pl-3">Working Papers</h2>
+      <div class="space-y-1">
+        <div class="card p-3">
+          <h3 class="text-base font-semibold text-main mb-1">Equilibrium Transition from Loss-Leader Competition: How Advertising Restrictions Facilitate Price Coordination in Chilean Pharmaceutical Retail</h3>
+          <div class="text-sm text-muted inline-flex flex-wrap items-center gap-x-2 gap-y-1 mb-1">
+            <em class="text-primary">Job Market Paper | Resubmitted to The RAND Journal of Economics</em>
+            <span class="text-gray-400 mx-2">|</span>
+            <button type="button" class="text-primary hover:underline bg-transparent border-0 p-0 cursor-pointer text-sm" onclick="const p=this.closest('div').nextElementSibling; p.classList.toggle('hidden'); this.textContent = p.classList.contains('hidden') ? 'Show abstract →' : 'Hide abstract ↑'">Show abstract →</button>
+            <span class="text-gray-400 mx-2">|</span>
+            <a href="/files/_Presentation__Dynamic_Collusion.pdf" class="text-primary hover:underline">Slides</a>
+            <span class="text-gray-400 mx-2">|</span>
+            <a href="/files/CollusionDynamic.pdf" class="text-primary hover:underline">JMP Version</a>
+            <span class="text-gray-400 mx-2">|</span>
+            <a href="https://papers.ssrn.com/abstract=4666555" class="text-primary hover:underline">Earlier Version</a>
+            <span class="text-gray-400 mx-2">|</span>
+            <a href="/files/LossLeaderCollusion_2026-06-20.pdf" class="text-primary hover:underline">Draft Paper (June 2026)</a>
+            <span class="text-gray-400 mx-2">|</span>
+            <a href="/files/LossLeaderCollusion_Appendix_2026-06-20.pdf" class="text-primary hover:underline">Online Appendix</a>
+            <span class="text-gray-400 mx-2">|</span>
+            <a href="/files/LossLeaderCollusion_replication.zip" class="text-primary hover:underline">Replication Package</a>
+            <span class="text-gray-400 mx-2">|</span>
+            <a href="https://arxiv.org/abs/2512.22917" class="text-primary hover:underline">arXiv</a>
+          </div>
+          <p class="text-sm text-muted leading-snug hidden mb-1">This paper examines how regulation can push an oligopoly from one pricing regime to another. It uses rich data from Chilean pharmacy chains to study a ban on comparative price advertising. Before the ban, ads created demand spillovers across products, making aggressive loss-leader pricing profitable. Once these spillovers were removed, selling below cost became unattractive for any firm, and prices quickly shifted to a coordinated, higher level. A structural demand model shows that the ban reduced both price elasticity and cross-product spillovers, and counterfactuals indicate that the loss of spillovers, rather than just lower elasticity, mainly explains the move to the new coordinated pricing regime. The results show how well-intentioned regulation can unintentionally promote price coordination by weakening the mechanisms that support competitive outcomes.</p>
+        </div>
+        <div class="card p-3">
+          <h3 class="text-base font-semibold text-main mb-1">Estimating the Number of Components in Panel Data Finite Mixture Regression Models with an Application to Production Function Heterogeneity</h3>
+          <div class="text-sm text-muted inline-flex flex-wrap items-center gap-x-2 gap-y-1 mb-1">
+            <em class="text-primary">Resubmitted to Quantitative Economics</em>
+            <span class="text-gray-400 mx-2">|</span>
+            <span>with <a href="https://economics.ubc.ca/faculty-and-staff/hiro-kasahara/" class="text-primary hover:underline">Hiro Kasahara</a></span>
+            <span class="text-gray-400 mx-2">|</span>
+            <button type="button" class="text-primary hover:underline bg-transparent border-0 p-0 cursor-pointer text-sm" onclick="const p=this.closest('div').nextElementSibling; p.classList.toggle('hidden'); this.textContent = p.classList.contains('hidden') ? 'Show abstract →' : 'Hide abstract ↑'">Show abstract →</button>
+            <span class="text-gray-400 mx-2">|</span>
+            <a href="/files/IAAE_2019.pdf" class="text-primary hover:underline">Slides</a>
+            <span class="text-gray-400 mx-2">|</span>
+            <a href="/files/NumComponentPanelMain_2026-06-20.pdf" class="text-primary hover:underline">Paper</a>
+            <span class="text-gray-400 mx-2">|</span>
+            <a href="/files/NumComponentPanelMain_Appendix_2026-06-20.pdf" class="text-primary hover:underline">Online Appendix</a>
+          </div>
+          <p class="text-sm text-muted leading-snug hidden mb-1">This paper develops the likelihood ratio-based test of the null hypothesis of a M0-component model against an alternative of (M0 + 1)-component model in the normal mixture panel regression by extending the Expectation-Maximization (EM) test of Chen and Li (2009a) and Kasahara and Shimotsu (2015) to the case of panel data. We show that, unlike the cross-sectional normal mixture, the first-order derivative of the density function for the variance parameter in the panel normal mixture is linearly independent of its second-order derivatives for the mean parameter. On the other hand, like the cross-sectional normal mixture, the likelihood ratio test statistic of the panel normal mixture is unbounded. We consider the Penalized Maximum Likelihood Estimator to deal with the unboundedness, where we obtain the data-driven penalty function via computational experiments. We derive the asymptotic distribution of the Penalized Likelihood Ratio Test (PLRT) and EM test statistics by expanding the log-likelihood function up to five times for the reparameterized parameters. The simulation experiment indicates good finite sample performance of the proposed EM test. We apply our EM test to estimate the number of production technology types for the finite mixture Cobb-Douglas production function model studied by Kasahara et al. (2022) using the panel data of the Japanese and Chilean manufacturing firms. We find the evidence of heterogeneity in elasticities of output for intermediate goods, suggesting that production function is heterogeneous across firms beyond their Hicks-neutral productivity terms.</p>
+        </div>
+        <div class="card p-3">
+          <h3 class="text-base font-semibold text-main mb-1">Semiparametric Identification of the Discount Factor and Payoff Function in Dynamic Discrete Choice Models</h3>
+          <div class="text-sm text-muted inline-flex flex-wrap items-center gap-x-2 gap-y-1 mb-1">
+            <span>with <a href="https://economics.ubc.ca/faculty-and-staff/hiro-kasahara/" class="text-primary hover:underline">Hiro Kasahara</a> and <a href="https://sites.google.com/view/katsumishimotsu/home" class="text-primary hover:underline">Katsumi Shimotsu</a></span>
+            <span class="text-gray-400 mx-2">|</span>
+            <em class="text-primary">Submitted</em>
+            <span class="text-gray-400 mx-2">|</span>
+            <button type="button" class="text-primary hover:underline bg-transparent border-0 p-0 cursor-pointer text-sm" onclick="const p=this.closest('div').nextElementSibling; p.classList.toggle('hidden'); this.textContent = p.classList.contains('hidden') ? 'Show abstract →' : 'Hide abstract ↑'">Show abstract →</button>
+            <span class="text-gray-400 mx-2">|</span>
+            <a href="https://arxiv.org/abs/2507.19814" class="text-primary hover:underline">Paper</a>
+          </div>
+          <p class="text-sm text-muted leading-snug hidden mb-1">This paper investigates how the discount factor and payoff functions can be identified in stationary infinite-horizon dynamic discrete choice models. In single-agent models, we show that common nonparametric assumptions on per-period payoffs -- such as homogeneity of degree one, monotonicity, concavity, zero cross-differences, and complementarity -- provide identifying restrictions on the discount factor. These restrictions take the form of polynomial equalities and inequalities with degrees bounded by the cardinality of the state space. These restrictions also identify payoff functions under standard normalization at one action. In dynamic game models, we show that firm-specific discount factors can be identified using assumptions such as irrelevance of other firms' lagged actions, exchangeability, and the independence of adjustment costs from other firms' actions. Our results demonstrate that widely used nonparametric assumptions in economic analysis can provide substantial identifying power in dynamic structural models.</p>
+        </div>
+        <div class="card p-3">
+          <h3 class="text-base font-semibold text-main mb-1">Heterogeneous Diffusion of Electric Vehicles in China: Demand, Learning, Product Entry, and the Incidence of Industrial Policy</h3>
+          <div class="text-sm text-muted inline-flex flex-wrap items-center gap-x-2 gap-y-1 mb-1">
+            <span>with <a href="https://environment.yale.edu/directory/student/jinge-li" class="text-primary hover:underline" target="_blank">Jinge Li</a></span>
+            <span class="text-gray-400 mx-2">|</span>
+            <button type="button" class="text-primary hover:underline bg-transparent border-0 p-0 cursor-pointer text-sm" onclick="const p=this.closest('div').nextElementSibling; p.classList.toggle('hidden'); this.textContent = p.classList.contains('hidden') ? 'Show abstract →' : 'Hide abstract ↑'">Show abstract →</button>
+            <span class="text-gray-400 mx-2">|</span>
+            <a href="/files/Heterogeneous_Diffusion_2026-06-30.pdf" class="text-primary hover:underline">Draft Paper (June 2026)</a>
+            <span class="text-gray-400 mx-2">|</span>
+            <a href="/files/Heterogeneous_Diffusion_Slides_2026-06-04.pdf" class="text-primary hover:underline">Slides</a>
+            <span class="text-gray-400 mx-2">|</span>
+            <a href="/files/Heterogeneous_Diffusion_replication.tar.gz" class="text-primary hover:underline">Replication Code</a>
+          </div>
+          <p class="text-sm text-muted leading-snug hidden mb-1">China's electric-vehicle (EV) sales share rose from about 1% of passenger-vehicle sales in 2015 to roughly 45% in 2024. This paper studies this rapid technology diffusion using an equilibrium differentiated-products model of the automobile market and a Shapley decomposition of the model-implied 2015–2024 change in national EV share. The decomposition separates six complementary channels: Quality, Variety, Battery, Subsidy, Residual, and Market. Product improvement is the dominant force, with Quality contributing 45.47% in EV-share units, followed by Variety expansion at 14.82% and Battery-related cost decline at 8.19%. The Subsidy block contributes −13.63% because direct purchase subsidies were phased down relative to the 2015 regime, but a separate no-subsidy counterfactual shows that subsidies still increased adoption and private surplus by supporting demand, battery-cost learning, and product availability. The diffusion path is also heterogeneous across cities, firms, and consumers: Tier 1 cities reached double-digit EV penetration years before lower-tier cities, EV-native firms retain a substantially larger share of their 2024 EV business under subsidy removal than legacy OEMs do, and per-capita consumer-surplus loss from subsidy removal is roughly five times larger in Tier 1 than in the residual “Rest” tier.</p>
+        </div>
+        <div class="card p-3">
+          <h3 class="text-base font-semibold text-main mb-1">A Generalized Finite Dependence Framework for Dynamic Discrete Choice Models</h3>
+          <div class="text-sm text-muted inline-flex flex-wrap items-center gap-x-2 gap-y-1 mb-1">
+            <span>with <a href="https://economics.ubc.ca/faculty-and-staff/hiro-kasahara/" class="text-primary hover:underline">Hiro Kasahara</a> and <a href="https://sites.google.com/view/katsumishimotsu/home" class="text-primary hover:underline">Katsumi Shimotsu</a></span>
+            <span class="text-gray-400 mx-2">|</span>
+            <button type="button" class="text-primary hover:underline bg-transparent border-0 p-0 cursor-pointer text-sm" onclick="const p=this.closest('div').nextElementSibling; p.classList.toggle('hidden'); this.textContent = p.classList.contains('hidden') ? 'Show abstract →' : 'Hide abstract ↑'">Show abstract →</button>
+            <span class="text-gray-400 mx-2">|</span>
+            <a href="/files/Finite_Dependence_June2026.pdf" class="text-primary hover:underline">Draft Paper (June 2026)</a>
+            <span class="text-gray-400 mx-2">|</span>
+            <a href="/files/Finite_Dependence_replication.zip" class="text-primary hover:underline">Replication Code</a>
+          </div>
+          <p class="text-sm text-muted leading-snug hidden mb-1">This paper extends the finite dependence framework of Arcidiacono and Miller (2011, 2020) for dynamic discrete choice models. For dependence horizons ρ ≥ 2, the joint weight over a future path is a product of per-step decision weights, making the search for valid weighting schemes a nonlinear problem. We introduce a flow parameterization that linearizes this product structure, reducing the problem to a linear optimization with linear constraints—a convex quadratic program solvable via a single sparse linear system. This linearization enables algorithmic discovery of finite dependence representations, extending the framework beyond models with renewal actions to environments with persistent state variables, including capital accumulation, dynamic games, and models with high-order state dependence.</p>
+        </div>
+      </div>
+    </div>
+    <div>
+      <h2 class="font-serif text-lg md:text-xl font-semibold text-main mb-2 border-l-2 border-primary pl-3">Work in Progress</h2>
+      <div class="space-y-1">
+        <div class="card p-3">
+          <h3 class="text-base font-semibold text-main mb-1">The Green Transformation</h3>
+          <div class="text-sm text-muted inline-flex flex-wrap items-center gap-x-2 gap-y-1 mb-1">
+            <span>with <a href="https://fba.um.edu.mo/faculty/hongchuanshen/" class="text-primary hover:underline" target="_blank">Hongchuan Shen</a> and <a href="https://www.yanhuiwu.com/" class="text-primary hover:underline" target="_blank">Yanhui Wu</a></span>
+            <span class="text-gray-400 mx-2">|</span>
+            <button type="button" class="text-primary hover:underline bg-transparent border-0 p-0 cursor-pointer text-sm" onclick="const p=this.closest('div').nextElementSibling; p.classList.toggle('hidden'); this.textContent = p.classList.contains('hidden') ? 'Show abstract →' : 'Hide abstract ↑'">Show abstract →</button>
+            <span class="text-gray-400 mx-2">|</span>
+            <span class="text-muted italic">In progress</span>
+          </div>
+          <p class="text-sm text-muted leading-snug hidden mb-1">This paper empirically examines the evolution of product space choices in the Chinese automobile market, focusing on the strategic entry decisions of firms into the electric vehicle (EV) segment. We investigate how the prior production of plug-in hybrid electric vehicles (PHEVs) or hybrid electric vehicles (HEVs) by firms reduces their entry costs into the battery electric vehicle (BEV) market. Our findings suggest that firms can adopt a stepwise approach to product development, gradually moving from conventional vehicles to PHEVs, then to HEVs, and finally to BEVs, to ease the adoption costs associated with the transition to fully electric models. We analyze the impact of this strategic behavior on the broader automotive market and explore the implications for policy design, particularly in the context of subsidies aimed at promoting EV adoption. By understanding the dynamics of firms' product space choices and their response to policy incentives, this study contributes to the ongoing debate on how to effectively accelerate the transition to sustainable transportation solutions.</p>
+        </div>
+        <div class="card p-3">
+          <h3 class="text-base font-semibold text-main mb-1">Regulating the Traffic Economy: Salary Caps and Vertical Integration in Streaming</h3>
+          <div class="text-sm text-muted inline-flex flex-wrap items-center gap-x-2 gap-y-1 mb-1">
+            <span>with <a href="https://www.hkubs.hku.hk/people/ma-yele/" class="text-primary hover:underline" target="_blank">Yele Ma</a></span>
+            <span class="text-gray-400 mx-2">|</span>
+            <button type="button" class="text-primary hover:underline bg-transparent border-0 p-0 cursor-pointer text-sm" onclick="const p=this.closest('div').nextElementSibling; p.classList.toggle('hidden'); this.textContent = p.classList.contains('hidden') ? 'Show abstract →' : 'Hide abstract ↑'">Show abstract →</button>
+            <span class="text-gray-400 mx-2">|</span>
+            <span class="text-muted italic">Coming Soon</span>
+          </div>
+          <p class="text-sm text-muted leading-snug hidden mb-1">This paper studies how the 2018 actor salary-cap regulation reshaped competition in the Chinese long-form video streaming industry. We model the pre-regulation equilibrium as a prisoner's dilemma in which platforms bid aggressively for a small set of traffic-generating stars, driving up costs and eroding profits. We interpret the salary cap as a public and enforceable constraint that limited bidding competition and shifted the market toward a lower-cost equilibrium. To quantify these effects, we develop and estimate a unified structural model of consumer demand, actors' dynamic career choices, and platform sourcing decisions. The model implies a shift away from advertising-driven traffic acquisition and toward subscription-oriented competition based more heavily on content quality, with implications for production incentives, vertical integration, and bargaining outcomes. The model also matches key post-regulation patterns in the data, including changes in actors' career choices and in the relationship between quality and viewership. More broadly, our results show how a targeted wage constraint in a key upstream input market can reshape business models, bargaining outcomes, and the basis of competition in a digital media industry.</p>
+        </div>
+        <div class="card p-3">
+          <h3 class="text-base font-semibold text-main mb-1">Dual Network Effects in the EV Transition: Rise of Charging, Decline of Gas Stations</h3>
+          <div class="text-sm text-muted inline-flex flex-wrap items-center gap-x-2 gap-y-1 mb-1">
+            <span>with <a href="https://harris.uchicago.edu/directory/hyuk-soo-kwon" class="text-primary hover:underline" target="_blank">Hyuk-soo Kwon</a> and <a href="https://environment.yale.edu/directory/student/jinge-li" class="text-primary hover:underline" target="_blank">Jinge Li</a></span>
+            <span class="text-gray-400 mx-2">|</span>
+            <button type="button" class="text-primary hover:underline bg-transparent border-0 p-0 cursor-pointer text-sm" onclick="const p=this.closest('div').nextElementSibling; p.classList.toggle('hidden'); this.textContent = p.classList.contains('hidden') ? 'Show abstract →' : 'Hide abstract ↑'">Show abstract →</button>
+            <span class="text-gray-400 mx-2">|</span>
+            <a href="/files/Dual_Network_Effect_April2026.pdf" class="text-primary hover:underline">Draft Paper (April 2026)</a>
+          </div>
+          <p class="text-sm text-muted leading-snug hidden mb-1">The transition from internal combustion engine vehicles (ICEs) to electric vehicles (EVs) is shaped by dual network effects: positive feedback between EV adoption and charging-station deployment, and opposing feedback between ICE ownership and gas-station viability. We develop a theoretical and empirical framework in which the two networks co-evolve and compete, generating tipping dynamics in which a market converges to an EV- or ICE-dominated equilibrium according to whether adoption crosses a critical threshold. Using city-level data from China, 2015–2024, we estimate a structural model with random-coefficient demand, dynamic charging-station entry, and Bertrand-Nash pricing on the supply side. Estimated tipping thresholds vary widely across cities and are linked through cross-market spillovers from national pricing, product variety, and battery-cost learning. Counterfactuals show that uniform subsidies are dominated by spatially targeted policies that prioritize low-threshold markets, lowering the cumulative subsidy needed to ignite a self-sustaining transition and informing the optimal timing of policy withdrawal.</p>
+        </div>
+        <div class="card p-3">
+          <h3 class="text-base font-semibold text-main mb-1">Dynamic Decision Models with Continuous-Discrete Mix Choices</h3>
+          <div class="text-sm text-muted inline-flex flex-wrap items-center gap-x-2 gap-y-1 mb-1">
+            <button type="button" class="text-primary hover:underline bg-transparent border-0 p-0 cursor-pointer text-sm" onclick="const p=this.closest('div').nextElementSibling; p.classList.toggle('hidden'); this.textContent = p.classList.contains('hidden') ? 'Show abstract →' : 'Hide abstract ↑'">Show abstract →</button>
+          </div>
+          <p class="text-sm text-muted leading-snug hidden mb-1">This paper develops a framework for estimating dynamic decision models in which agents simultaneously make continuous and discrete choices. We derive identification conditions and propose an estimation strategy that accommodates mixed choice sets in a unified dynamic programming framework.</p>
+        </div>
+      </div>
+    </div>
+
+    <hr class="border-stroke my-6">
+
+    <!-- Older Working Papers -->
+    <div>
+      <h2 class="font-serif text-lg md:text-xl font-semibold text-main mb-2 border-l-2 border-primary pl-3">Older Working Papers</h2>
+      <div class="space-y-1">
+        <div class="card p-3">
+          <h3 class="text-base font-semibold text-main mb-1">Using Euler equation to estimate non-finite-dependent dynamic discrete choice model with unobserved heterogeneity</h3>
+          <div class="text-sm text-muted inline-flex flex-wrap items-center gap-x-2 gap-y-1 mb-1">
+            <span>with <a href="https://economics.ubc.ca/faculty-and-staff/hiro-kasahara/" class="text-primary hover:underline">Hiro Kasahara</a></span>
+            <span class="text-gray-400 mx-2">|</span>
+            <a href="/files/DDC_CEA2019.pdf" class="text-primary hover:underline">Slides</a>
+            <span class="text-gray-400 mx-2">|</span>
+            <a href="/files/DDCMain.pdf" class="text-primary hover:underline">Draft Paper</a>
+          </div>
+        </div>
+        <div class="card p-3">
+          <h3 class="text-base font-semibold text-main mb-1">Building up Trust in a Dynamic Game: A Study on Collusive Price-fixing in the Chilean Pharmaceutical Retail Industry</h3>
+          <div class="text-sm text-muted inline-flex flex-wrap items-center gap-x-2 gap-y-1 mb-1">
+            <span>Original version of the Job Market Paper (December 2020 preliminary draft)</span>
+            <span class="text-gray-400 mx-2">|</span>
+            <a href="/files/CollusionDynamic.pdf" class="text-primary hover:underline">Draft Paper</a>
+          </div>
+        </div>
+        <div class="card p-3">
+          <h3 class="text-base font-semibold text-main mb-1">Losing Market Share in a Growing Industry: BYD Company and Electric Vehicles in China</h3>
+          <div class="text-sm text-muted inline-flex flex-wrap items-center gap-x-2 gap-y-1 mb-1">
+            <span>with Victor Aguirregabiria and Yiran Hao</span>
+            <span class="text-gray-400 mx-2">|</span>
+            <a href="http://www.google.com/url?q=http%3A%2F%2Faguirregabiria.net%2Fwpapers%2Fbyd_ev_14042022.pdf&sa=D&sntz=1&usg=AOvVaw2QBMzYE2Kt-BvnZ9SlMko9" class="text-primary hover:underline">Draft Paper</a>
+          </div>
+        </div>
+        <div class="card p-3">
+          <h3 class="text-base font-semibold text-main mb-1">Conditional Choice Probability Estimation of Dynamic Discrete Choice Models with 2-period Finite Dependence</h3>
+          <div class="text-sm text-muted inline-flex flex-wrap items-center gap-x-2 gap-y-1 mb-1">
+            <span>with <a href="https://economics.ubc.ca/faculty-and-staff/hiro-kasahara/" class="text-primary hover:underline">Hiro Kasahara</a> and <a href="https://sites.google.com/view/katsumishimotsu/home" class="text-primary hover:underline">Katsumi Shimotsu</a></span>
+            <span class="text-gray-400 mx-2">|</span>
+            <em class="text-primary">New Version Coming Soon</em>
+            <span class="text-gray-400 mx-2">|</span>
+            <a href="/files/Presentation_DynamicDiscreteChoiceFiniteDependence.pdf" class="text-primary hover:underline">Slides</a>
+            <span class="text-gray-400 mx-2">|</span>
+            <a href="/files/DynamicProbabilityChoice_2FD.pdf" class="text-primary hover:underline">Paper</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Research Interests -->
+<div>
+      <h2 class="font-serif text-lg md:text-xl font-semibold text-main mb-2 border-l-2 border-primary pl-3">Research Interests</h2>
+      <div class="card p-3">
+        <ul class="grid sm:grid-cols-2 gap-2 text-sm text-muted">
+          <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span>Industrial Organization</li>
+          <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span>Econometrics</li>
+          <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span>Dynamic Discrete Choice Models</li>
+          <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span>Competition Policy and Collusion</li>
+          <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span>Empirical Market Analysis</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+<!-- Theme Toggle -->
+<button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">
+  <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+  <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+</button>
+
+<script>
+(function(){
+  const html = document.documentElement;
+  const btn = document.getElementById('themeToggle');
+  function updateIcon(){
+    // css handles the icon transition via .dark class on <html>
+  }
+  btn.addEventListener('click', function(){
+    const isDark = html.classList.contains('dark');
+    if (isDark) { html.classList.remove('dark'); localStorage.setItem('theme','light'); }
+    else { html.classList.add('dark'); localStorage.setItem('theme','dark'); }
+  });
+
+  const menuBtn = document.getElementById('menuBtn');
+  const drawer = document.getElementById('drawer');
+  const overlay = document.getElementById('overlay');
+  const iconMenu = document.getElementById('iconMenu');
+  const iconClose = document.getElementById('iconClose');
+  let open = false;
+  function setMenu(state){
+    open = state;
+    drawer.classList.toggle('translate-x-0', open);
+    drawer.classList.toggle('translate-x-full', !open);
+    overlay.classList.toggle('opacity-0', !open);
+    overlay.classList.toggle('pointer-events-none', !open);
+    iconMenu.classList.toggle('hidden', open);
+    iconClose.classList.toggle('hidden', !open);
+  }
+  menuBtn.addEventListener('click', ()=>setMenu(!open));
+  overlay.addEventListener('click', ()=>setMenu(false));
+})();
+</script>
+
+</body>
+</html>

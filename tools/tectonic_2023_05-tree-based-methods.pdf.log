@@ -1,0 +1,134 @@
+note: "version 2" Tectonic command-line interface activated
+note: Running TeX ...
+Fontconfig error: Cannot load default config file: No such file: (null)
+warning: 2_1_tree_based_method.tex:45: Missing character: There is no 5 ("35) in font nullfont!
+warning: could not represent character "5" (0x35) in font "nullfont"
+warning:   you may need to load the `fontspec` package and use (e.g.) \setmainfont to
+warning:   choose a different font that covers the unrepresentable character(s)
+warning: 2_1_tree_based_method.tex:45: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 2_1_tree_based_method.tex:62: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 2_1_tree_based_method.tex:78: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 2_1_tree_based_method.tex:102: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 2_1_tree_based_method.tex:135: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 2_1_tree_based_method.tex:144: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 2_1_tree_based_method.tex:162: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 2_1_tree_based_method.tex:177: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 2_1_tree_based_method.tex:194: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 2_1_tree_based_method.tex:208: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 2_1_tree_based_method.tex:223: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 2_1_tree_based_method.tex:238: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 2_1_tree_based_method.tex:252: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 2_1_tree_based_method.tex:268: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 2_1_tree_based_method.tex:280: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 2_1_tree_based_method.tex:289: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 2_1_tree_based_method.tex:305: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 2_1_tree_based_method.tex:317: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 2_1_tree_based_method.tex:332: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 2_1_tree_based_method.tex:343: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 2_1_tree_based_method.tex:351: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 2_1_tree_based_method.tex:359: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 2_1_tree_based_method.tex:379: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 2_1_tree_based_method.tex:379: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 2_1_tree_based_method.tex:392: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 2_1_tree_based_method.tex:401: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 2_1_tree_based_method.tex:403: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 2_1_tree_based_method.tex:424: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 2_1_tree_based_method.tex:432: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 2_1_tree_based_method.tex:455: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 2_1_tree_based_method.tex:462: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 2_1_tree_based_method.tex:490: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 2_1_tree_based_method.tex:511: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 2_1_tree_based_method.tex:530: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 2_1_tree_based_method.tex:544: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 2_1_tree_based_method.tex:557: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 2_1_tree_based_method.tex:569: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 2_1_tree_based_method.tex:586: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 2_1_tree_based_method.tex:594: Overfull \vbox (7.15193pt too high) detected at line 594
+
+warning: 2_1_tree_based_method.tex:594: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 2_1_tree_based_method.tex:602: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 2_1_tree_based_method.tex:646: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 2_1_tree_based_method.tex:658: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 2_1_tree_based_method.tex:669: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 2_1_tree_based_method.tex:677: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 2_1_tree_based_method.tex:706: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 2_1_tree_based_method.tex:715: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 2_1_tree_based_method.tex:740: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 2_1_tree_based_method.tex:768: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 2_1_tree_based_method.tex:777: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 2_1_tree_based_method.tex:799: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 2_1_tree_based_method.tex:809: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 2_1_tree_based_method.tex:826: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 2_1_tree_based_method.tex:835: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 2_1_tree_based_method.tex:854: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 2_1_tree_based_method.tex:863: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 2_1_tree_based_method.tex:890: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 2_1_tree_based_method.tex:955: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+note: Rerunning TeX because "2_1_tree_based_method.aux" changed ...
+warning: 2_1_tree_based_method.tex:45: Missing character: There is no 5 ("35) in font nullfont!
+warning: could not represent character "5" (0x35) in font "nullfont"
+warning:   you may need to load the `fontspec` package and use (e.g.) \setmainfont to
+warning:   choose a different font that covers the unrepresentable character(s)
+warning: 2_1_tree_based_method.tex:45: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 2_1_tree_based_method.tex:62: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 2_1_tree_based_method.tex:78: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 2_1_tree_based_method.tex:102: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 2_1_tree_based_method.tex:135: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 2_1_tree_based_method.tex:144: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 2_1_tree_based_method.tex:162: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 2_1_tree_based_method.tex:177: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 2_1_tree_based_method.tex:194: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 2_1_tree_based_method.tex:208: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 2_1_tree_based_method.tex:223: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 2_1_tree_based_method.tex:238: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 2_1_tree_based_method.tex:252: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 2_1_tree_based_method.tex:268: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 2_1_tree_based_method.tex:280: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 2_1_tree_based_method.tex:289: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 2_1_tree_based_method.tex:305: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 2_1_tree_based_method.tex:317: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 2_1_tree_based_method.tex:332: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 2_1_tree_based_method.tex:343: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 2_1_tree_based_method.tex:351: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 2_1_tree_based_method.tex:359: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 2_1_tree_based_method.tex:379: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 2_1_tree_based_method.tex:379: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 2_1_tree_based_method.tex:392: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 2_1_tree_based_method.tex:401: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 2_1_tree_based_method.tex:403: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 2_1_tree_based_method.tex:424: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 2_1_tree_based_method.tex:432: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 2_1_tree_based_method.tex:455: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 2_1_tree_based_method.tex:462: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 2_1_tree_based_method.tex:490: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 2_1_tree_based_method.tex:511: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 2_1_tree_based_method.tex:530: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 2_1_tree_based_method.tex:544: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 2_1_tree_based_method.tex:557: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 2_1_tree_based_method.tex:569: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 2_1_tree_based_method.tex:586: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 2_1_tree_based_method.tex:594: Overfull \vbox (7.15193pt too high) detected at line 594
+
+warning: 2_1_tree_based_method.tex:594: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 2_1_tree_based_method.tex:602: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 2_1_tree_based_method.tex:646: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 2_1_tree_based_method.tex:658: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 2_1_tree_based_method.tex:669: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 2_1_tree_based_method.tex:677: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 2_1_tree_based_method.tex:706: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 2_1_tree_based_method.tex:715: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 2_1_tree_based_method.tex:740: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 2_1_tree_based_method.tex:768: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 2_1_tree_based_method.tex:777: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 2_1_tree_based_method.tex:799: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 2_1_tree_based_method.tex:809: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 2_1_tree_based_method.tex:826: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 2_1_tree_based_method.tex:835: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 2_1_tree_based_method.tex:854: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 2_1_tree_based_method.tex:863: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 2_1_tree_based_method.tex:890: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 2_1_tree_based_method.tex:955: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: warnings were issued by the TeX engine; use --print and/or --keep-logs for details.
+note: Running xdvipdfmx ...
+note: Writing `2_1_tree_based_method.pdf` (1.0786256790161133 MiB)
+note: Skipped writing 5 intermediate files (use --keep-intermediates to keep them)

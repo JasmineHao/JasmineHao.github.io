@@ -1,0 +1,155 @@
+note: "version 2" Tectonic command-line interface activated
+note: Running TeX ...
+Fontconfig error: Cannot load default config file: No such file: (null)
+warning: 4_2_Grimmer_Stewart_2013.tex:45: Missing character: There is no 5 ("35) in font nullfont!
+warning: could not represent character "5" (0x35) in font "nullfont"
+warning:   you may need to load the `fontspec` package and use (e.g.) \setmainfont to
+warning:   choose a different font that covers the unrepresentable character(s)
+warning: 4_2_Grimmer_Stewart_2013.tex:45: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 4_2_Grimmer_Stewart_2013.tex:62: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 4_2_Grimmer_Stewart_2013.tex:82: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 4_2_Grimmer_Stewart_2013.tex:103: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 4_2_Grimmer_Stewart_2013.tex:127: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 4_2_Grimmer_Stewart_2013.tex:143: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 4_2_Grimmer_Stewart_2013.tex:150: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 4_2_Grimmer_Stewart_2013.tex:192: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 4_2_Grimmer_Stewart_2013.tex:220: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 4_2_Grimmer_Stewart_2013.tex:246: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 4_2_Grimmer_Stewart_2013.tex:275: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 4_2_Grimmer_Stewart_2013.tex:303: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 4_2_Grimmer_Stewart_2013.tex:336: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 4_2_Grimmer_Stewart_2013.tex:373: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 4_2_Grimmer_Stewart_2013.tex:373: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 4_2_Grimmer_Stewart_2013.tex:407: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 4_2_Grimmer_Stewart_2013.tex:407: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 4_2_Grimmer_Stewart_2013.tex:422: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 4_2_Grimmer_Stewart_2013.tex:460: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 4_2_Grimmer_Stewart_2013.tex:460: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 4_2_Grimmer_Stewart_2013.tex:484: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 4_2_Grimmer_Stewart_2013.tex:535: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 4_2_Grimmer_Stewart_2013.tex:566: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 4_2_Grimmer_Stewart_2013.tex:573: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 4_2_Grimmer_Stewart_2013.tex:634: 
+Missing character: There is no ��� ("2014) in font ec-lmr9!
+warning: could not represent character "—" (0x2014) in font "ec-lmr9"
+warning: 4_2_Grimmer_Stewart_2013.tex:634: Missing character: There is no ��� ("2014) in font ec-lmr9!
+warning: could not represent character "—" (0x2014) in font "ec-lmr9"
+warning: 4_2_Grimmer_Stewart_2013.tex:634: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 4_2_Grimmer_Stewart_2013.tex:634: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 4_2_Grimmer_Stewart_2013.tex:634: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 4_2_Grimmer_Stewart_2013.tex:634: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 4_2_Grimmer_Stewart_2013.tex:658: 
+Missing character: There is no ��� ("2019) in font ec-lmr10!
+warning: could not represent character "’" (0x2019) in font "ec-lmr10"
+warning: 4_2_Grimmer_Stewart_2013.tex:658: Missing character: There is no ��� ("2019) in font ec-lmr8!
+warning: could not represent character "’" (0x2019) in font "ec-lmr8"
+warning: 4_2_Grimmer_Stewart_2013.tex:658: Missing character: There is no ��� ("2019) in font ec-lmr8!
+warning: could not represent character "’" (0x2019) in font "ec-lmr8"
+warning: 4_2_Grimmer_Stewart_2013.tex:658: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 4_2_Grimmer_Stewart_2013.tex:658: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 4_2_Grimmer_Stewart_2013.tex:685: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 4_2_Grimmer_Stewart_2013.tex:691: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+note: Running BibTeX on 4_2_Grimmer_Stewart_2013.aux ...
+note: Rerunning TeX because bibtex was run ...
+warning: 4_2_Grimmer_Stewart_2013.tex:45: Missing character: There is no 5 ("35) in font nullfont!
+warning: could not represent character "5" (0x35) in font "nullfont"
+warning:   you may need to load the `fontspec` package and use (e.g.) \setmainfont to
+warning:   choose a different font that covers the unrepresentable character(s)
+warning: 4_2_Grimmer_Stewart_2013.tex:45: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 4_2_Grimmer_Stewart_2013.tex:62: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 4_2_Grimmer_Stewart_2013.tex:82: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 4_2_Grimmer_Stewart_2013.tex:103: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 4_2_Grimmer_Stewart_2013.tex:127: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 4_2_Grimmer_Stewart_2013.tex:143: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 4_2_Grimmer_Stewart_2013.tex:150: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 4_2_Grimmer_Stewart_2013.tex:192: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 4_2_Grimmer_Stewart_2013.tex:220: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 4_2_Grimmer_Stewart_2013.tex:246: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 4_2_Grimmer_Stewart_2013.tex:275: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 4_2_Grimmer_Stewart_2013.tex:303: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 4_2_Grimmer_Stewart_2013.tex:336: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 4_2_Grimmer_Stewart_2013.tex:373: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 4_2_Grimmer_Stewart_2013.tex:373: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 4_2_Grimmer_Stewart_2013.tex:407: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 4_2_Grimmer_Stewart_2013.tex:407: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 4_2_Grimmer_Stewart_2013.tex:422: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 4_2_Grimmer_Stewart_2013.tex:460: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 4_2_Grimmer_Stewart_2013.tex:460: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 4_2_Grimmer_Stewart_2013.tex:484: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 4_2_Grimmer_Stewart_2013.tex:535: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 4_2_Grimmer_Stewart_2013.tex:566: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 4_2_Grimmer_Stewart_2013.tex:573: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 4_2_Grimmer_Stewart_2013.tex:634: 
+Missing character: There is no ��� ("2014) in font ec-lmr9!
+warning: could not represent character "—" (0x2014) in font "ec-lmr9"
+warning: 4_2_Grimmer_Stewart_2013.tex:634: Missing character: There is no ��� ("2014) in font ec-lmr9!
+warning: could not represent character "—" (0x2014) in font "ec-lmr9"
+warning: 4_2_Grimmer_Stewart_2013.tex:634: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 4_2_Grimmer_Stewart_2013.tex:634: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 4_2_Grimmer_Stewart_2013.tex:634: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 4_2_Grimmer_Stewart_2013.tex:634: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 4_2_Grimmer_Stewart_2013.tex:658: 
+Missing character: There is no ��� ("2019) in font ec-lmr10!
+warning: could not represent character "’" (0x2019) in font "ec-lmr10"
+warning: 4_2_Grimmer_Stewart_2013.tex:658: Missing character: There is no ��� ("2019) in font ec-lmr8!
+warning: could not represent character "’" (0x2019) in font "ec-lmr8"
+warning: 4_2_Grimmer_Stewart_2013.tex:658: Missing character: There is no ��� ("2019) in font ec-lmr8!
+warning: could not represent character "’" (0x2019) in font "ec-lmr8"
+warning: 4_2_Grimmer_Stewart_2013.tex:658: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 4_2_Grimmer_Stewart_2013.tex:658: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 4_2_Grimmer_Stewart_2013.tex:685: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 4_2_Grimmer_Stewart_2013.tex:691: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+note: Rerunning TeX because "4_2_Grimmer_Stewart_2013.aux" changed ...
+warning: 4_2_Grimmer_Stewart_2013.tex:45: 
+Missing character: There is no 5 ("35) in font nullfont!
+warning: could not represent character "5" (0x35) in font "nullfont"
+warning:   you may need to load the `fontspec` package and use (e.g.) \setmainfont to
+warning:   choose a different font that covers the unrepresentable character(s)
+warning: 4_2_Grimmer_Stewart_2013.tex:45: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 4_2_Grimmer_Stewart_2013.tex:62: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 4_2_Grimmer_Stewart_2013.tex:82: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 4_2_Grimmer_Stewart_2013.tex:103: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 4_2_Grimmer_Stewart_2013.tex:127: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 4_2_Grimmer_Stewart_2013.tex:143: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 4_2_Grimmer_Stewart_2013.tex:150: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 4_2_Grimmer_Stewart_2013.tex:192: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 4_2_Grimmer_Stewart_2013.tex:220: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 4_2_Grimmer_Stewart_2013.tex:246: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 4_2_Grimmer_Stewart_2013.tex:275: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 4_2_Grimmer_Stewart_2013.tex:303: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 4_2_Grimmer_Stewart_2013.tex:336: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 4_2_Grimmer_Stewart_2013.tex:373: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 4_2_Grimmer_Stewart_2013.tex:373: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 4_2_Grimmer_Stewart_2013.tex:407: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 4_2_Grimmer_Stewart_2013.tex:407: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 4_2_Grimmer_Stewart_2013.tex:422: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 4_2_Grimmer_Stewart_2013.tex:460: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 4_2_Grimmer_Stewart_2013.tex:460: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 4_2_Grimmer_Stewart_2013.tex:484: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 4_2_Grimmer_Stewart_2013.tex:535: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 4_2_Grimmer_Stewart_2013.tex:566: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 4_2_Grimmer_Stewart_2013.tex:573: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 4_2_Grimmer_Stewart_2013.tex:634: 
+Missing character: There is no ��� ("2014) in font ec-lmr9!
+warning: could not represent character "—" (0x2014) in font "ec-lmr9"
+warning: 4_2_Grimmer_Stewart_2013.tex:634: Missing character: There is no ��� ("2014) in font ec-lmr9!
+warning: could not represent character "—" (0x2014) in font "ec-lmr9"
+warning: 4_2_Grimmer_Stewart_2013.tex:634: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 4_2_Grimmer_Stewart_2013.tex:634: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 4_2_Grimmer_Stewart_2013.tex:634: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 4_2_Grimmer_Stewart_2013.tex:634: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 4_2_Grimmer_Stewart_2013.tex:658: 
+Missing character: There is no ��� ("2019) in font ec-lmr10!
+warning: could not represent character "’" (0x2019) in font "ec-lmr10"
+warning: 4_2_Grimmer_Stewart_2013.tex:658: Missing character: There is no ��� ("2019) in font ec-lmr8!
+warning: could not represent character "’" (0x2019) in font "ec-lmr8"
+warning: 4_2_Grimmer_Stewart_2013.tex:658: Missing character: There is no ��� ("2019) in font ec-lmr8!
+warning: could not represent character "’" (0x2019) in font "ec-lmr8"
+warning: 4_2_Grimmer_Stewart_2013.tex:658: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 4_2_Grimmer_Stewart_2013.tex:658: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 4_2_Grimmer_Stewart_2013.tex:685: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 4_2_Grimmer_Stewart_2013.tex:691: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: warnings were issued by the TeX engine; use --print and/or --keep-logs for details.
+note: Running xdvipdfmx ...
+note: Writing `4_2_Grimmer_Stewart_2013.pdf` (276.869140625 KiB)
+note: Skipped writing 6 intermediate files (use --keep-intermediates to keep them)

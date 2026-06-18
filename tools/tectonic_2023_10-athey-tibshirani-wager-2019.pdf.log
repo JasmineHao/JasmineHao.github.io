@@ -1,0 +1,135 @@
+note: "version 2" Tectonic command-line interface activated
+note: Running TeX ...
+Fontconfig error: Cannot load default config file: No such file: (null)
+warning: 3_2_athay_tibshirani_wagner_2019.tex:46: Missing character: There is no 5 ("35) in font nullfont!
+warning: could not represent character "5" (0x35) in font "nullfont"
+warning:   you may need to load the `fontspec` package and use (e.g.) \setmainfont to
+warning:   choose a different font that covers the unrepresentable character(s)
+warning: 3_2_athay_tibshirani_wagner_2019.tex:46: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_2_athay_tibshirani_wagner_2019.tex:63: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_2_athay_tibshirani_wagner_2019.tex:83: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_2_athay_tibshirani_wagner_2019.tex:95: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_2_athay_tibshirani_wagner_2019.tex:126: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_2_athay_tibshirani_wagner_2019.tex:134: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_2_athay_tibshirani_wagner_2019.tex:142: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_2_athay_tibshirani_wagner_2019.tex:155: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_2_athay_tibshirani_wagner_2019.tex:164: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_2_athay_tibshirani_wagner_2019.tex:176: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_2_athay_tibshirani_wagner_2019.tex:187: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_2_athay_tibshirani_wagner_2019.tex:199: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_2_athay_tibshirani_wagner_2019.tex:206: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_2_athay_tibshirani_wagner_2019.tex:216: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_2_athay_tibshirani_wagner_2019.tex:227: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_2_athay_tibshirani_wagner_2019.tex:249: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_2_athay_tibshirani_wagner_2019.tex:249: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_2_athay_tibshirani_wagner_2019.tex:262: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_2_athay_tibshirani_wagner_2019.tex:271: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_2_athay_tibshirani_wagner_2019.tex:281: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_2_athay_tibshirani_wagner_2019.tex:297: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_2_athay_tibshirani_wagner_2019.tex:315: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_2_athay_tibshirani_wagner_2019.tex:342: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_2_athay_tibshirani_wagner_2019.tex:350: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_2_athay_tibshirani_wagner_2019.tex:362: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_2_athay_tibshirani_wagner_2019.tex:374: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_2_athay_tibshirani_wagner_2019.tex:390: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_2_athay_tibshirani_wagner_2019.tex:404: 
+Missing character: There is no ��� ("2013) in font ec-lmr10!
+warning: could not represent character "–" (0x2013) in font "ec-lmr10"
+warning: 3_2_athay_tibshirani_wagner_2019.tex:404: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_2_athay_tibshirani_wagner_2019.tex:424: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_2_athay_tibshirani_wagner_2019.tex:436: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_2_athay_tibshirani_wagner_2019.tex:447: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_2_athay_tibshirani_wagner_2019.tex:465: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_2_athay_tibshirani_wagner_2019.tex:475: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_2_athay_tibshirani_wagner_2019.tex:480: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+note: Running BibTeX on 3_2_athay_tibshirani_wagner_2019.aux ...
+note: warnings were issued by BibTeX; use --print and/or --keep-logs for details.
+note: Rerunning TeX because bibtex was run ...
+warning: 3_2_athay_tibshirani_wagner_2019.tex:46: Missing character: There is no 5 ("35) in font nullfont!
+warning: could not represent character "5" (0x35) in font "nullfont"
+warning:   you may need to load the `fontspec` package and use (e.g.) \setmainfont to
+warning:   choose a different font that covers the unrepresentable character(s)
+warning: 3_2_athay_tibshirani_wagner_2019.tex:46: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_2_athay_tibshirani_wagner_2019.tex:63: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_2_athay_tibshirani_wagner_2019.tex:83: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_2_athay_tibshirani_wagner_2019.tex:95: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_2_athay_tibshirani_wagner_2019.tex:126: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_2_athay_tibshirani_wagner_2019.tex:134: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_2_athay_tibshirani_wagner_2019.tex:142: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_2_athay_tibshirani_wagner_2019.tex:155: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_2_athay_tibshirani_wagner_2019.tex:164: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_2_athay_tibshirani_wagner_2019.tex:176: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_2_athay_tibshirani_wagner_2019.tex:187: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_2_athay_tibshirani_wagner_2019.tex:199: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_2_athay_tibshirani_wagner_2019.tex:206: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_2_athay_tibshirani_wagner_2019.tex:216: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_2_athay_tibshirani_wagner_2019.tex:227: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_2_athay_tibshirani_wagner_2019.tex:249: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_2_athay_tibshirani_wagner_2019.tex:249: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_2_athay_tibshirani_wagner_2019.tex:262: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_2_athay_tibshirani_wagner_2019.tex:271: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_2_athay_tibshirani_wagner_2019.tex:281: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_2_athay_tibshirani_wagner_2019.tex:297: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_2_athay_tibshirani_wagner_2019.tex:315: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_2_athay_tibshirani_wagner_2019.tex:342: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_2_athay_tibshirani_wagner_2019.tex:350: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_2_athay_tibshirani_wagner_2019.tex:362: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_2_athay_tibshirani_wagner_2019.tex:374: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_2_athay_tibshirani_wagner_2019.tex:390: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_2_athay_tibshirani_wagner_2019.tex:404: 
+Missing character: There is no ��� ("2013) in font ec-lmr10!
+warning: could not represent character "–" (0x2013) in font "ec-lmr10"
+warning: 3_2_athay_tibshirani_wagner_2019.tex:404: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_2_athay_tibshirani_wagner_2019.tex:424: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_2_athay_tibshirani_wagner_2019.tex:436: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_2_athay_tibshirani_wagner_2019.tex:447: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_2_athay_tibshirani_wagner_2019.tex:465: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_2_athay_tibshirani_wagner_2019.tex:475: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_2_athay_tibshirani_wagner_2019.tex:480: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+note: Rerunning TeX because "3_2_athay_tibshirani_wagner_2019.aux" changed ...
+warning: 3_2_athay_tibshirani_wagner_2019.tex:46: 
+Missing character: There is no 5 ("35) in font nullfont!
+warning: could not represent character "5" (0x35) in font "nullfont"
+warning:   you may need to load the `fontspec` package and use (e.g.) \setmainfont to
+warning:   choose a different font that covers the unrepresentable character(s)
+warning: 3_2_athay_tibshirani_wagner_2019.tex:46: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_2_athay_tibshirani_wagner_2019.tex:63: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_2_athay_tibshirani_wagner_2019.tex:83: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_2_athay_tibshirani_wagner_2019.tex:95: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_2_athay_tibshirani_wagner_2019.tex:126: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_2_athay_tibshirani_wagner_2019.tex:134: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_2_athay_tibshirani_wagner_2019.tex:142: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_2_athay_tibshirani_wagner_2019.tex:155: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_2_athay_tibshirani_wagner_2019.tex:164: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_2_athay_tibshirani_wagner_2019.tex:176: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_2_athay_tibshirani_wagner_2019.tex:187: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_2_athay_tibshirani_wagner_2019.tex:199: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_2_athay_tibshirani_wagner_2019.tex:206: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_2_athay_tibshirani_wagner_2019.tex:216: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_2_athay_tibshirani_wagner_2019.tex:227: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_2_athay_tibshirani_wagner_2019.tex:249: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_2_athay_tibshirani_wagner_2019.tex:249: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_2_athay_tibshirani_wagner_2019.tex:262: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_2_athay_tibshirani_wagner_2019.tex:271: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_2_athay_tibshirani_wagner_2019.tex:281: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_2_athay_tibshirani_wagner_2019.tex:297: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_2_athay_tibshirani_wagner_2019.tex:315: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_2_athay_tibshirani_wagner_2019.tex:342: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_2_athay_tibshirani_wagner_2019.tex:350: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_2_athay_tibshirani_wagner_2019.tex:362: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_2_athay_tibshirani_wagner_2019.tex:374: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_2_athay_tibshirani_wagner_2019.tex:390: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_2_athay_tibshirani_wagner_2019.tex:404: 
+Missing character: There is no ��� ("2013) in font ec-lmr10!
+warning: could not represent character "–" (0x2013) in font "ec-lmr10"
+warning: 3_2_athay_tibshirani_wagner_2019.tex:404: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_2_athay_tibshirani_wagner_2019.tex:424: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_2_athay_tibshirani_wagner_2019.tex:436: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_2_athay_tibshirani_wagner_2019.tex:447: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_2_athay_tibshirani_wagner_2019.tex:465: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_2_athay_tibshirani_wagner_2019.tex:475: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: 3_2_athay_tibshirani_wagner_2019.tex:480: Overfull \hbox (4.0025pt too wide) has occurred while \output is active
+warning: warnings were issued by the TeX engine; use --print and/or --keep-logs for details.
+note: Running xdvipdfmx ...
+note: Writing `3_2_athay_tibshirani_wagner_2019.pdf` (384.2333984375 KiB)
+note: Skipped writing 6 intermediate files (use --keep-intermediates to keep them)

@@ -1,0 +1,27 @@
+note: "version 2" Tectonic command-line interface activated
+note: Running TeX ...
+Fontconfig error: Cannot load default config file: No such file: (null)
+warning: Lect8_support_vector_machine.tex:45: Missing character: There is no 5 ("35) in font nullfont!
+warning: could not represent character "5" (0x35) in font "nullfont"
+warning:   you may need to load the `fontspec` package and use (e.g.) \setmainfont to
+warning:   choose a different font that covers the unrepresentable character(s)
+note: downloading ts1phv.fd
+note: downloading phvr8c.tfm
+warning: Lect8_support_vector_machine.tex:238: Overfull \vbox (6.54495pt too high) detected at line 238
+
+warning: Lect8_support_vector_machine.tex:397: Overfull \vbox (3.8465pt too high) detected at line 397
+
+note: Rerunning TeX because "Lect8_support_vector_machine.nav" changed ...
+warning: Lect8_support_vector_machine.tex:45: Missing character: There is no 5 ("35) in font nullfont!
+warning: could not represent character "5" (0x35) in font "nullfont"
+warning:   you may need to load the `fontspec` package and use (e.g.) \setmainfont to
+warning:   choose a different font that covers the unrepresentable character(s)
+warning: Lect8_support_vector_machine.tex:238: Overfull \vbox (6.54495pt too high) detected at line 238
+
+warning: Lect8_support_vector_machine.tex:397: Overfull \vbox (3.8465pt too high) detected at line 397
+
+warning: warnings were issued by the TeX engine; use --print and/or --keep-logs for details.
+note: Running xdvipdfmx ...
+note: downloading phvr8c.vf
+note: Writing `Lect8_support_vector_machine.pdf` (1.8078393936157227 MiB)
+note: Skipped writing 5 intermediate files (use --keep-intermediates to keep them)
